@@ -1,0 +1,447 @@
+﻿@{
+    Layout = "~/Views/Shared/WebGD.cshtml";
+    ViewData["Title"] = "Quản lý hồ sơ";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <title>@ViewData["Title"] - Quản Lý Nhân Sự</title>
+    <link rel="stylesheet" href="~/css/Menu.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/ThemmoiLL.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jstree@3.3.12/dist/themes/default/style.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jstree@3.3.12/dist/jstree.min.js"></script>
+</head>
+<body>
+    <div class="col-xxl-12">
+        <div class="page-content">
+            <div class="card border card-border-primary">
+                <div class="card-header border border-danger rounded p-3">
+                    <style>
+                        .highlight-red-box {
+                            border: 2px solid red;
+                            border-radius: 8px;
+                            background-color: #7b0d0d;
+                            padding: 16px;
+                        }
+                    </style>
+                    <h6 class="card-title mb-0">
+                        <span class="badge bg-info align-middle fs-13">Hồ sơ lý lịch</span>
+                    </h6>
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label class="form-label">Từ khóa tìm kiếm</label>
+                            <input class="form-control" id="txtSearchKeywords" />
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Mã</label>
+                            <input class="form-control" id="txtSearchMaCB" />
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Tên</label>
+                            <input class="form-control" id="txtSearchTenCB" />
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Trạng thái</label>
+                            <select class="form-control" id="ddlSearchStatus" onchange="loadTableBySelect()">
+                                <option value="">-- Tất cả --</option>
+                                <option value="1">Thôi việc</option>
+                                <option value="2">Chuyển công tác</option>
+                                <option value="4">Tử tuất</option>
+                                <option value="5">Nghỉ hưu</option>
+                                <option value="6">Đang công tác</option>
+                                <option value="7">GV bổ nhiệm 111</option>
+                                <option value="8">Mời giảng</option>
+                            </select>
+                        </div>
+                        <div class="col-md-1">
+                            <label class="form-label">&nbsp;</label>
+                            <button type="button" id="btnSearch" class="btn form-control btn-outline-light w-md">
+                                <i class="fa fa-search"></i> Tìm kiếm
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="d-sm-flex justify-content-between align-items-center mb-3" style="min-height: 50px;">
+                    <h5 class="mb-0">Danh sách nhân viên</h5>
+                    <a href="/Quanlyhoso/ThemmoiSYLL" class="btn btn-outline-primary d-flex align-items-center">
+                        <i class="fa fa-plus-circle me-2"></i> Thêm mới
+                    </a>
+                </div>
+
+                <div class="row">
+                    <!-- Bộ lọc trái -->
+                    <div class="col-md-3">
+                        <div class="card border-primary mb-3">
+                            <div class="card-header bg-primary text-white">Cây Phòng Ban</div>
+                            <div class="card-body p-2" style="max-height: 400px; overflow-y: auto;">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Phòng Hành chính</li>
+                                    <li class="list-group-item">Phòng Kỹ thuật</li>
+                                    <li class="list-group-item">Phòng Nhân sự</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Danh sách nhân viên -->
+                    <div class="col-md-9">
+                        <style>
+                            .table-container {
+                                border: 1px solid #ccc;
+                                border-radius: 8px;
+                                padding: 16px;
+                                background-color: white;
+                                box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+                                overflow-x: auto;
+                            }
+
+                            .custom-table th, .custom-table td {
+                                vertical-align: middle;
+                                text-align: center;
+                            }
+                        </style>
+
+                        <div class="table-container">
+                            <table class="table table-bordered table-striped custom-table" style="min-width: 1200px;">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Mã VC/NLD</th>
+                                        <th>Họ tên</th>
+                                        <th>Giới Tính</th>
+                                        <th>Ngày Sinh</th>
+                                        <th>Phòng Ban</th>
+                                        <th>Số Điện Thoại</th>
+                                        <th>Email</th>
+                                        <th>Nơi cấp CCCD</th>
+                                        <th>Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tblNhanVien">
+                                    @* Dữ liệu nhân viên sẽ được load từ controller *@
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- PHÂN TRANG -->
+                        <nav aria-label="Phân trang">
+                            <ul class="pagination justify-content-center">
+                                @{
+                                    int currentPage = ViewBag.CurrentPage ?? 1;
+                                    int totalPages = ViewBag.TotalPages ?? 1;
+
+                                    for (int i = 1; i <= totalPages; i++)
+                                    {
+                                        <li class="page-item @(i == currentPage ? "active" : "")">
+                                            <a class="page-link" href="@Url.Action("Soyeu", "Home", new { page = i, pageSize = ViewBag.PageSize })">@i</a>
+                                        </li>
+                                    }
+                                }
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Modal Chi tiết (form giống ThemMoiSYLL) -->
+
+        <div class="modal fade" id="modalDetail" tabindex="-1" role="dialog" aria-labelledby="detailLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen" role="document">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="myExtraLargeModalLabel">Chi Tiết</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="d-sm-flex flex-wrap">
+                                    <h4 class="card-title mb-0">Thông tin tài khoản - hồ sơ</h4>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                            </div>
+                            <form id="formNhanVienDetail" enctype="multipart/form-data">
+                                <input type="hidden" id="ID_NV_Detail" name="ID_NV" />
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label class="form-label">Mã VC/NLĐ (đăng nhập): <b class="color-dg">(*)</b></label>
+                                        <input type="text" class="form-control" id="MaNhanVienDetail" name="MaNhanVien">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">Họ tên: <b class="color-dg">(*)</b></label>
+                                        <input type="text" class="form-control" id="HoTenDetail" name="HoTen">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label class="form-label">Giới tính:</label>
+                                        <select class="form-control" id="GioiTinhDetail" name="GioiTinh">
+                                            <option value="">-- Chọn giới tính --</option>
+                                            <option value="Nam">Nam</option>
+                                            <option value="Nữ">Nữ</option>
+                                            <option value="Khác">Khác</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label class="form-label">Ngày sinh:</label>
+                                        <input type="date" class="form-control" id="NgaySinhDetail" name="NgaySinh">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label class="form-label">CCCD:</label>
+                                        <input type="text" class="form-control" id="CCCDDetail" name="CCCD" maxlength="12">
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-2">
+                                        <label class="form-label">Ngày cấp CCCD:</label>
+                                        <input type="date" class="form-control" id="NgayCapCCCDDetail" name="NgayCapCCCD">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">Nơi cấp CCCD:</label>
+                                        <input type="text" class="form-control" id="NoiCapCCCDDetail" name="NoiCapCCCD">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Địa chỉ:</label>
+                                        <input type="text" class="form-control" id="DiaChiDetail" name="DiaChi">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">Số điện thoại:</label>
+                                        <input type="tel" class="form-control" id="SoDienThoaiDetail" name="SoDienThoai">
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-4">
+                                        <label class="form-label">Email:</label>
+                                        <input type="email" class="form-control" id="EmailDetail" name="Email">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Phòng ban:</label>
+                                        <select class="form-control" id="ID_PhongBanDetail" name="ID_PhongBan">
+                                            <option value="">-- Chọn phòng ban --</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Chức vụ:</label>
+                                        <select class="form-control" id="ID_ChucVuDetail" name="ID_ChucVu">
+                                            <option value="">-- Chọn chức vụ --</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-4">
+                                        <label class="form-label">Trình độ:</label>
+                                        <select class="form-control" id="ID_TrinhDoDetail" name="ID_TrinhDo">
+                                            <option value="">-- Chọn trình độ --</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Loại Hợp Đồng:</label>
+                                        <select class="form-control" id="ID_LoaiHopDongDetail" name="ID_LoaiHopDong">
+                                            <option value="">-- Chọn loại hợp đồng --</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Ngày vào làm:</label>
+                                        <input type="date" class="form-control" id="NgayVaoLamDetail" name="NgayVaoLam">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Hình ảnh:</label>
+                                        <input type="file" id="HinhAnhDetail" accept="image/*" />
+                                        <img id="previewImageDetail"
+                                             src="#"
+                                             alt="Ảnh xem trước"
+                                             style="display: none; max-width: 100%; height: auto; border: 1px solid #ddd; padding: 5px; margin-top: 10px;" />
+                                    </div>
+
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-4">
+                                        <label class="form-label">Trạng thái làm việc:</label>
+                                        <select class="form-control" id="ID_TrangThaiDetail" name="ID_TrangThai">
+                                            <option value="">-- Chọn trạng thái --</option>
+                                            <option value="1">Đang làm</option>
+                                            <option value="2">Nghỉ việc</option>
+                                            <option value="3">Tạm nghỉ</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <label class="form-label">Ghi chú:</label>
+                                        <textarea class="form-control" id="GhiChuDetail" name="GhiChu" rows="2" placeholder="Nhập ghi chú nếu có"></textarea>
+                                    </div>
+                                </div>
+                                <div class="text-end mt-4">
+                                    <button type="button" class="btn btn-primary" onclick="luuNhanVienDetail()">Lưu</button>
+                                </div>
+                            </form>
+                            <div id="thongBaoDetail"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/LoadHoso.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            loadNhanVien();
+        });
+
+               function loadNhanVien() {
+            fetch('/api/QuanlyhosoApi/get-nhanvien')
+                .then(response => response.json())
+                .then(data => {
+                    if (Array.isArray(data)) {
+                        let html = '';
+                        data.forEach((nv, index) => {
+                            html += `<tr>
+                                <td>${index + 1}</td>
+                                <td>${nv.MaNhanVien}</td>
+                                <td>${nv.HoTen}</td>
+                                <td>${nv.GioiTinh}</td>
+                                <td>${nv.NgaySinh ? nv.NgaySinh.substring(0, 10) : ''}</td>
+                                <td>${nv.TenPhongBan ?? ''}</td>
+                                <td>${nv.SoDienThoai}</td>
+                                <td>${nv.Email}</td>
+                                <td>${nv.CCCD ?? ''}</td>
+                                <td><button class="btn btn-sm btn-primary" onclick="ChiTietHR('${nv.ID_NV}')">Chi tiết</button></td>
+                            </tr>`;
+                        });
+                        document.getElementById('tblNhanVien').innerHTML = html;
+                    }
+                })
+                .catch(err => console.error("Error:", err));
+        }
+        // Hàm mở modal và load dữ liệu chi tiết
+                   function ChiTietHR(id) {
+            fetch('/api/QuanlyhosoApi/get-nhanvien-by-id/' + id)
+                .then(response => response.json())
+                .then(res => {
+                    if (!res.success) {
+                        alert(res.message || "Không tìm thấy nhân viên!");
+                        return;
+                    }
+                    const nv = res.data;
+                    loadAllDropdownsDetail(nv);
+
+                    document.getElementById('ID_NV_Detail').value = nv.ID_NV || '';
+                    document.getElementById('MaNhanVienDetail').value = nv.MaNhanVien || '';
+                    document.getElementById('HoTenDetail').value = nv.HoTen || '';
+                    document.getElementById('GioiTinhDetail').value = nv.GioiTinh || '';
+                    document.getElementById('NgaySinhDetail').value = nv.NgaySinh ? nv.NgaySinh.substring(0, 10) : '';
+                    document.getElementById('CCCDDetail').value = nv.CCCD || '';
+                    document.getElementById('NgayCapCCCDDetail').value = nv.NgayCapCCCD ? nv.NgayCapCCCD.substring(0, 10) : '';
+                    document.getElementById('NoiCapCCCDDetail').value = nv.NoiCapCCCD || '';
+                    document.getElementById('DiaChiDetail').value = nv.DiaChi || '';
+                    document.getElementById('SoDienThoaiDetail').value = nv.SoDienThoai || '';
+                    document.getElementById('EmailDetail').value = nv.Email || '';
+                    document.getElementById('ID_PhongBanDetail').value = nv.ID_PhongBan || '';
+                    document.getElementById('ID_ChucVuDetail').value = nv.ID_ChucVu || '';
+                    document.getElementById('ID_TrinhDoDetail').value = nv.ID_TrinhDo || '';
+                    document.getElementById('ID_LoaiHopDongDetail').value = nv.ID_LoaiHopDong || '';
+                    document.getElementById('NgayVaoLamDetail').value = nv.NgayVaoLam ? nv.NgayVaoLam.substring(0, 10) : '';
+                    document.getElementById('ID_TrangThaiDetail').value = nv.ID_TrangThai || '';
+                    document.getElementById('GhiChuDetail').value = nv.GhiChu || '';
+
+                    // Handle image preview
+                    const preview = document.getElementById('previewImageDetail');
+                    if (nv.HinhAnh) {
+                        preview.src = nv.HinhAnh;
+                        preview.style.display = 'block';
+                    } else {
+                        preview.src = '#';
+                        preview.style.display = 'none';
+                    }
+
+                    // Show modal
+                    var modal = new bootstrap.Modal(document.getElementById('modalDetail'));
+                    modal.show();
+                });
+        }
+
+        // Hàm lưu chỉnh sửa nhân viên
+              function luuNhanVienDetail() {
+            const id_nv = document.getElementById('ID_NV_Detail').value;
+            const formData = new FormData();
+
+            // Add all form fields
+            formData.append('ID_NV', id_nv);
+            formData.append('MaNhanVien', document.getElementById('MaNhanVienDetail').value);
+            formData.append('HoTen', document.getElementById('HoTenDetail').value);
+            formData.append('GioiTinh', document.getElementById('GioiTinhDetail').value);
+            formData.append('NgaySinh', document.getElementById('NgaySinhDetail').value);
+            formData.append('CCCD', document.getElementById('CCCDDetail').value);
+            formData.append('NgayCapCCCD', document.getElementById('NgayCapCCCDDetail').value);
+            formData.append('NoiCapCCCD', document.getElementById('NoiCapCCCDDetail').value);
+            formData.append('DiaChi', document.getElementById('DiaChiDetail').value);
+            formData.append('SoDienThoai', document.getElementById('SoDienThoaiDetail').value);
+            formData.append('Email', document.getElementById('EmailDetail').value);
+            formData.append('ID_PhongBan', document.getElementById('ID_PhongBanDetail').value);
+            formData.append('ID_ChucVu', document.getElementById('ID_ChucVuDetail').value);
+            formData.append('ID_TrinhDo', document.getElementById('ID_TrinhDoDetail').value);
+            formData.append('ID_LoaiHopDong', document.getElementById('ID_LoaiHopDongDetail').value);
+            formData.append('NgayVaoLam', document.getElementById('NgayVaoLamDetail').value);
+            formData.append('ID_TrangThai', document.getElementById('ID_TrangThaiDetail').value);
+            formData.append('GhiChu', document.getElementById('GhiChuDetail').value);
+
+            // Handle file upload
+            const fileInput = document.getElementById('HinhAnhDetail');
+            if (fileInput && fileInput.files.length > 0) {
+                formData.append('HinhAnhFile', fileInput.files[0]);
+            }
+
+            fetch('/api/QuanlyhosoApi/update-nhanvien/' + id_nv, {
+                method: 'PUT',
+                body: formData
+            })
+            .then(async response => {
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(errorText);
+                }
+                return response.json();
+            })
+            .then(result => {
+                alert('✅ Cập nhật thành công!');
+                loadNhanVien();
+                $('#modalDetail').modal('hide');
+            })
+            .catch(error => {
+                console.error('❌ Lỗi khi cập nhật:', error.message);
+                alert('Lỗi khi cập nhật: ' + error.message);
+            });
+        }
+
+
+        // Xem trước hình ảnh khi chọn file mới
+               document.getElementById('HinhAnhDetail').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            const preview = document.getElementById('previewImageDetail');
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                }
+                reader.readAsDataURL(file);
+            } else {
+                preview.src = '#';
+                preview.style.display = 'none';
+            }
+        });
+
+    </script>
+</body>
+</html>

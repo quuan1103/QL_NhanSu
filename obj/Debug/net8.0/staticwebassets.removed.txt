@@ -1,0 +1,2 @@
+D:\HOC\WebAPP\wwwroot\build\asset-manifest.json
+D:\HOC\WebAPP\wwwroot\build\manifest.json

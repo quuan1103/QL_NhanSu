@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "Trang chủ";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Đăng Nhập</title>
+    <link rel="stylesheet" href="~/css/login.css" />
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Đăng Nhập</h2>
+
+        @* Form đăng nhập *@
+        <form method="post" asp-controller="Login" asp-action="indexDangnhap">
+            <div class="input-field">
+                <input type="text" name="TenDangNhap" placeholder="Tên đăng nhập" required />
+            </div>
+
+            <div class="input-field" style="position: relative;">
+                <input type="password" name="password" placeholder="Mật khẩu" id="passwordField" required style="padding-right: 40px;" />
+                <span id="togglePassword" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+                    👁️
+                </span>
+            </div>
+
+            <button type="submit" class="login-btn">Đăng Nhập</button>
+        </form>
+
+        @* Thông báo lỗi *@
+        @if (ViewBag.ErrorMessage != null)
+        {
+            <div class="message" style="color:red;">@ViewBag.ErrorMessage</div>
+        }
+
+        @* Thông báo thành công (nếu từ TempData) *@
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="message" style="color:green;">@TempData["SuccessMessage"]</div>
+        }
+
+        <div class="link">
+            <a asp-controller="Login" asp-action="Dangky">Chưa có tài khoản? Đăng ký</a>
+        </div>
+    </div>
+    <script>
+    const togglePassword = document.getElementById("togglePassword");
+    const passwordField = document.getElementById("passwordField");
+
+    if (togglePassword && passwordField) {
+    togglePassword.addEventListener("click", function () {
+    const type = passwordField.type === "password" ? "text" : "password";
+    passwordField.type = type;
+    
+    // Đổi biểu tượng 👁️ <=> 🙈
+    this.textContent = type === "password" ? "👁️" : "🙈";
+    });
+    }
+    </script>
+    <script src="~/js/site.js"></script>
+</body>
+</html>

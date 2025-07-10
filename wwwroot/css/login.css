@@ -1,0 +1,84 @@
+/* login.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    background: white;
+    padding: 40px 30px;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+    text-align: center;
+}
+
+    .login-container h2 {
+        margin-bottom: 25px;
+        color: #333;
+    }
+
+.input-field {
+    margin-bottom: 20px;
+}
+
+    .input-field input {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 14px;
+        transition: border 0.3s;
+    }
+
+        .input-field input:focus {
+            border-color: #5b9bd5;
+            outline: none;
+        }
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #5b9bd5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+    .login-btn:hover {
+        background-color: #4a8ac5;
+    }
+
+.message {
+    margin-top: 15px;
+    color: red;
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,470 @@
+[
+  {
+    "ContainingType": "ChucVuController",
+    "Method": "PostChucVu",
+    "RelativePath": "api/ChucVu",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chucvu",
+        "Type": "WebAPP.Models.ModelDanhMuc.ChucVuDM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChucVuController",
+    "Method": "GetAll",
+    "RelativePath": "api/ChucVu",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChucVuController",
+    "Method": "Delete",
+    "RelativePath": "api/ChucVu/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChucVuController",
+    "Method": "PutChucVu",
+    "RelativePath": "api/ChucVu/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "chucvu",
+        "Type": "WebAPP.Models.ModelDanhMuc.ChucVuDM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DaoTaoController",
+    "Method": "GetAll",
+    "RelativePath": "api/DaoTao",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DaoTaoController",
+    "Method": "Create",
+    "RelativePath": "api/DaoTao",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "WebAPP.Models.DaoTao.Daotao",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.DanhMucController.LoaiHopDongLaoDongDM",
+    "Method": "PostLoaiHopDongLaoDong",
+    "RelativePath": "api/LoaiHopDong",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loaihopdong",
+        "Type": "WebAPP.Models.ModelDanhMuc.LoaiHopDong",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.DanhMucController.LoaiHopDongLaoDongDM",
+    "Method": "GetAll",
+    "RelativePath": "api/LoaiHopDong",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.DanhMucController.LoaiHopDongLaoDongDM",
+    "Method": "Delete",
+    "RelativePath": "api/LoaiHopDong/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.DanhMucController.LoaiHopDongLaoDongDM",
+    "Method": "Update",
+    "RelativePath": "api/LoaiHopDong/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "loaihopdong",
+        "Type": "WebAPP.Models.ModelDanhMuc.LoaiHopDong",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.DanhMucController.PhongBanController",
+    "Method": "PostPhongBan",
+    "RelativePath": "api/PhongBan",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phongban",
+        "Type": "WebAPP.Models.ModelDanhMuc.Phongban",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.DanhMucController.PhongBanController",
+    "Method": "GetAll",
+    "RelativePath": "api/PhongBan",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.DanhMucController.PhongBanController",
+    "Method": "Delete",
+    "RelativePath": "api/PhongBan/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.DanhMucController.PhongBanController",
+    "Method": "PutPhongBan",
+    "RelativePath": "api/PhongBan/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "phongban",
+        "Type": "WebAPP.Models.ModelDanhMuc.Phongban",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.QuanlyhosoApiController",
+    "Method": "GetNhanVien",
+    "RelativePath": "api/QuanlyhosoApi/get-nhanvien",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.QuanlyhosoApiController",
+    "Method": "GetNhanVienById",
+    "RelativePath": "api/QuanlyhosoApi/get-nhanvien-by-id/{ID_NV}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID_NV",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.QuanlyhosoApiController",
+    "Method": "InsertNhanVien",
+    "RelativePath": "api/QuanlyhosoApi/insert-nhanvien",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "WebAPP.Models.HoSo.LyLich",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.QuanlyhosoApiController",
+    "Method": "UpdateNhanVien",
+    "RelativePath": "api/QuanlyhosoApi/update-nhanvien/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "ID_NV",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "MaNhanVien",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "HoTen",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GioiTinh",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NgaySinh",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CCCD",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NgayCapCCCD",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "NoiCapCCCD",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DiaChi",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SoDienThoai",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ID_PhongBan",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ID_ChucVu",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ID_TrinhDo",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "NgayVaoLam",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "HinhAnh",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "HinhAnhFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "ID_TrangThai",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "GhiChu",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ID_LoaiHopDong",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.QuanlyhosoApiController",
+    "Method": "UploadHinhAnh",
+    "RelativePath": "api/QuanlyhosoApi/upload-hinhanh",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.DanhMucController.TrinhDoDanhMuc",
+    "Method": "PostTrinhDo",
+    "RelativePath": "api/TrinhDo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trinhdo",
+        "Type": "WebAPP.Models.ModelDanhMuc.TrinhDoDM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.DanhMucController.TrinhDoDanhMuc",
+    "Method": "GetAll",
+    "RelativePath": "api/TrinhDo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.DanhMucController.TrinhDoDanhMuc",
+    "Method": "Delete",
+    "RelativePath": "api/TrinhDo/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.DanhMucController.TrinhDoDanhMuc",
+    "Method": "Update",
+    "RelativePath": "api/TrinhDo/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "trinhdo",
+        "Type": "WebAPP.Models.ModelDanhMuc.TrinhDoDM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DanhMucController",
+    "Method": "GetDanhMuc",
+    "RelativePath": "GetDanhMuc",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "type",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

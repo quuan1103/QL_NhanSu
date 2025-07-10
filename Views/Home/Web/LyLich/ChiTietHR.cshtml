@@ -1,0 +1,8 @@
+﻿@model WebAPP.Models.HoSo.LyLich
+@{
+    ViewData["Title"] = "Chi tiết hồ sơ";
+}
+<div class="container">
+    <h3>Chi tiết hồ sơ nhân viên</h3>
+    @await Html.PartialAsync("_HoSoPartial", Model)
+</div>

@@ -1,0 +1,428 @@
+﻿@{
+    Layout = "~/Views/Shared/WebGD.cshtml";
+    ViewData["Title"] = "Danh mục";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <!-- Style và Font -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+        <style>
+            .nav-pills .nav-link {
+                display: flex;
+                align-items: center;
+                padding: 10px 15px;
+                border-radius: 8px;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                color: #333;
+            }
+
+                .nav-pills .nav-link i {
+                    margin-right: 8px;
+                    font-size: 16px;
+                    color: #555;
+                }
+
+                .nav-pills .nav-link:hover {
+                    background-color: #f0f0f0;
+                    color: #000;
+                }
+
+                .nav-pills .nav-link.active {
+                    background-color: #06693a;
+                    color: #fff;
+                }
+
+                    .nav-pills .nav-link.active i {
+                        color: #fff;
+                    }
+        </style>
+
+        <!-- Page Title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0 font-size-18">Danh mục</h4>
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="/home/index">Trang chủ</a></li>
+                            <li class="breadcrumb-item active">Danh mục</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nội dung danh mục -->
+        <div class="row">
+            <div class="col-md-3">
+                <div class="nav flex-column nav-pills" role="tablist">
+                    <h5 style="color: #556ee6">- Lý lịch</h5>
+                    <a id="btnPhongBan" class="nav-link active mb-2" role="tab">Phòng Ban</a>
+                    <a id="btnChucVu" class="nav-link mb-2" role="tab">Chức Vụ</a>
+                    <a id="btnTrinhDo" class="nav-link mb-2" role="tab">Trình Độ</a>
+                    <a id="btnLoaiHopDong" class="nav-link mb-2" role="tab">Loại hợp đồng</a>
+                </div>
+            </div>
+
+            <!-- Nội dung phải -->
+            <div class="col-md-9">
+
+                <!-- PHÒNG BAN -->
+                <div id="formPhongBan">
+                    <form id="frmPhongban">
+                        <input type="hidden" id="txtType" />
+                        <input type="hidden" id="ID_Phongban" />
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Phòng Ban</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Mã phòng ban</label>
+                                            <input class="form-control" id="Maphongban" name="Maphongban" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Tên phòng ban</label>
+                                            <input class="form-control" id="TenPhongBan" name="TenPhongBan" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">Mô tả</label>
+                                            <textarea id="MoTa" class="form-control" placeholder="Nhập mô tả"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <button type="button" class="btn btn-outline-primary" onclick="PhongBanModule.SavePhongBan()">
+                                        <i class="fa fa-save"></i> Lưu
+                                    </button>
+
+                                    <button type="button" class="btn btn-outline-danger" onclick="PhongBanModule.DeletePhongBan()">
+                                        <i class="fas fa-trash-alt"></i> Xoá
+                                    </button>
+
+                                    <button type="button" class="btn btn-outline-info" onclick="PhongBanModule.fnClearPhongBan()">
+                                        <i class="fas fa-sync"></i> Làm mới
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="row mt-3">
+                        <div class="table-responsive">
+                            <table id="tblDataPhongban" class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Mã</th>
+                                        <th>Tên</th>
+                                        <th>Mô tả</th>
+                                        <th>Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Dữ liệu sẽ được đổ vào đây bằng JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CHỨC VỤ -->
+                <div id="formChucVu" style="display: none;">
+                    <form id="frmChucVu">
+                        <input type="hidden" id="txtTypeCV" />
+                        <input type="hidden" id="ID_ChucVu" />
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Chức Vụ</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Tên chức vụ</label>
+                                            <input class="form-control" id="TenChucVu" name="TenChucVu" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">Mô tả</label>
+                                            <textarea id="MotaCV" class="form-control" placeholder="Nhập mô tả"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <button type="button" class="btn btn-outline-primary" onclick="ChucVuDMModule.SaveChucVu()">
+                                        <i class="fa fa-save"></i> Lưu
+                                    </button>
+
+                                    <button type="button" class="btn btn-outline-danger" onclick="ChucVuDMModule.DeleteChucVu()">
+                                        <i class="fas fa-trash-alt"></i> Xoá
+                                    </button>
+
+                                    <button type="button" class="btn btn-outline-info" onclick="ChucVuDMModule.fnClearChucVu()">
+                                        <i class="fas fa-sync"></i> Làm mới
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="row mt-3">
+                        <div class="table-responsive">
+                            <table id="tblDataChucVu" class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Tên</th>
+                                        <th>Mô tả</th>
+                                        <th>Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Dữ liệu sẽ được đổ vào đây bằng JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                @* Trình ĐỘ *@
+                <div id="formTrinhDo" style="display: none;">
+                    <form id="frmTrinhDo">
+                        <input type="hidden" id="txtTypeTD" />
+                        <input type="hidden" id="ID_TrinhDo" />
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Trình Độ</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Tên Trình Độ</label>
+                                            <input class="form-control" id="TenTrinhDo" name="TenTrinhDo" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">Mô tả </label>
+                                            <textarea id="MoTaTD" class="form-control" placeholder="Nhập mô tả"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <button type="button" class="btn btn-outline-primary" onclick="TrinhDoDMModule.SaveTrinhDo()">
+                                        <i class="fa fa-save"></i> Lưu
+                                    </button>
+
+                                    <button type="button" class="btn btn-outline-danger" onclick="TrinhDoDMModule.DeleteTrinhDo()">
+                                        <i class="fas fa-trash-alt"></i> Xoá
+                                    </button>
+
+                                    <button type="button" class="btn btn-outline-info" onclick="TrinhDoDMModule.fnClearTrinhDo()">
+                                        <i class="fas fa-sync"></i> Làm mới
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="row mt-3">
+                        <div class="table-responsive">
+                            <table id="tblDataTrinhDo" class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Tên trình độ</th>
+                                        <th>Mô tả 1</th>
+                                        <th>Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Dữ liệu sẽ được đổ vào đây bằng JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+               @*  LOẠI HỢP ĐỒNG *@
+                <div id="formLoaiHD" style="display: none;">
+                    <form id="frmLoaiHD">
+                        <input type="hidden" id="txtTypeHD" />
+                        <input type="hidden" id="ID_LoaiHopDong" />
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Loại Hợp Đồng</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Loại Hợp Đồng</label>
+                                            <input class="form-control" id="TenLoaiHopDong" name="TenLoaiHopDong" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">Mô tả </label>
+                                            <textarea id="MoTaLHD" class="form-control" placeholder="Nhập mô tả"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <button type="button" class="btn btn-outline-primary" onclick="LoaiHopDongDMModule.SaveLoaiHopDong()">
+                                        <i class="fa fa-save"></i> Lưu
+                                    </button>
+
+                                    <button type="button" class="btn btn-outline-danger" onclick="LoaiHopDongDMModule.DeleteLoaiHopDong()">
+                                        <i class="fas fa-trash-alt"></i> Xoá
+                                    </button>
+
+                                    <button type="button" class="btn btn-outline-info" onclick="LoaiHopDongDMModule.fnClearLoaiHopDong()">
+                                        <i class="fas fa-sync"></i> Làm mới
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="row mt-3">
+                        <div class="table-responsive">
+                            <table id="tblDataLoaiHopDong" class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Tên loại hợp đồng</th>
+                                        <th>Mô tả</th>
+                                        <th>Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Dữ liệu sẽ được đổ vào đây bằng JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- col-md-9 -->
+        </div> <!-- row -->
+
+    </div> <!-- container-fluid -->
+</div> <!-- page-content -->
+<!-- Script -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/js/Alldanhmuc.js"></script>
+<script>
+        $(document).ready(function () {
+        // Mặc định hiển thị form Phòng Ban
+        ShowFormPhongBan();
+
+        $("#btnPhongBan").click(function () {
+            ShowFormPhongBan();
+        });
+
+        $("#btnChucVu").click(function () {
+            ShowFormChucVu();
+        });
+        $("#btnTrinhDo").click(function () {
+            ShowFormTrinhDo();
+        });
+         $("#btnLoaiHopDong").click(function () {
+            ShowFormLoaiHD();
+        });
+    });
+
+    function ShowFormPhongBan() {
+        // Hiện Phòng Ban
+        $("#formPhongBan").show();
+        // Ẩn Chức Vụ
+        $("#formChucVu").hide();
+        // Ẩn Trình Độ
+        $("#formTrinhDo").hide();
+        // Ẩn Loại Hợp Đồng
+        $("#formLoaiHD").hide();
+
+        // Active menu
+        $("#btnPhongBan").addClass("active");
+        $("#btnChucVu").removeClass("active");
+        $("#btnTrinhDo").removeClass("active");
+        $("#btnLoaiHopDong").removeClass("active");
+
+        // Load data Phòng Ban
+        if (typeof PhongBanModule !== "undefined") {
+            PhongBanModule.LoadPhongBan();
+        }
+    }
+
+    function ShowFormChucVu() {
+        // Hiện Chức Vụ
+        $("#formChucVu").show();
+        // Ẩn Phòng Ban
+        $("#formPhongBan").hide();
+        // Ẩn Trình Độ
+        $("#formTrinhDo").hide();
+        // Ẩn Loại Hợp Đồng
+        $("#formLoaiHD").hide();
+
+        // Active menu
+        $("#btnChucVu").addClass("active");
+        $("#btnPhongBan").removeClass("active");
+        $("#btnTrinhDo").removeClass("active");
+        $("#btnLoaiHopDong").removeClass("active");
+
+        // Load data Chức Vụ
+        if (typeof ChucVuDMModule !== "undefined") {
+            ChucVuDMModule.LoadChucVu();
+        }
+    }
+    function ShowFormTrinhDo() {
+            $("#formTrinhDo").show();
+            // Ẩn Phòng Ban và Chức Vụ
+            $("#formPhongBan").hide();
+            $("#formChucVu").hide();
+            // Ẩn Loại Hợp Đồng
+            $("#formLoaiHD").hide();
+            // Active menu
+            $("#btnTrinhDo").addClass("active");
+            $("#btnPhongBan").removeClass("active");
+            $("#btnChucVu").removeClass("active");
+            $("#btnLoaiHopDong").removeClass("active");
+            // Load data Trình Độ
+            if (typeof TrinhDoDMModule !== "undefined") {
+                TrinhDoDMModule.LoadTrinhDo();
+            }
+     }
+     function ShowFormLoaiHD() {
+            $("#formLoaiHD").show();
+            // Ẩn Phòng Ban, Chức Vụ và Trình Độ
+            $("#formPhongBan").hide();
+            $("#formChucVu").hide();
+            $("#formTrinhDo").hide();
+            // Active menu
+            $("#btnLoaiHopDong").addClass("active");
+            $("#btnPhongBan").removeClass("active");
+            $("#btnChucVu").removeClass("active");
+            $("#btnTrinhDo").removeClass("active");
+            // Load data Loại Hợp Đồng
+            if (typeof LoaiHopDongDMModule !== "undefined") {
+                LoaiHopDongDMModule.LoadLoaiHopDong();
+            }
+     }
+</script>

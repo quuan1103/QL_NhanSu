@@ -1,0 +1,76 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+@model WebAPP.Models.TaiKhoanNhanVien
+@{
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký</title>
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: #f2f2f2;
+           
+        }
+
+        .form-container {
+            width: 300px;
+            margin: 100px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .link {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Đăng ký</h2>
+        <form asp-controller="DangKy" asp-action="dangky" method="post">
+            <input type="text" name="Username" placeholder="Tên đăng nhập" required>
+            <input type="email" name="Email" placeholder="Email" required>
+            <input type="password" name="MatKhau" placeholder="Mật khẩu" required>
+            @* <input type="password" name="confirmPassword" placeholder="Nhập lại mật khẩu" required> *@
+            <button type="submit">Gửi Email</button>
+        </form>
+        <div class="link">
+            <a asp-controller="Login" asp-action="indexDangnhap">Đã có tài khoản?Đăng nhập</a>
+        </div>
+    </div>
+
+</body>
+</html>
+@* @section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+} *@

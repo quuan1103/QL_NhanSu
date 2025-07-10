@@ -1,0 +1,101 @@
+﻿@model WebAPP.Models.HoSo.LyLich
+
+@using (Html.BeginForm("Save", "NhanVien", FormMethod.Post, new { enctype = "multipart/form-data", id = "formNhanVien" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+        <div class="col-md-3">
+            @Html.LabelFor(m => m.MaNhanVien, "Mã VC/NLĐ (đăng nhập):")
+            @Html.TextBoxFor(m => m.MaNhanVien, new { @class = "form-control", placeholder = "Không dấu, không khoảng trắng" })
+        </div>
+        <div class="col-md-3">
+            @Html.LabelFor(m => m.HoTen)
+            @Html.TextBoxFor(m => m.HoTen, new { @class = "form-control" })
+        </div>
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.GioiTinh)
+            @Html.DropDownListFor(m => m.GioiTinh, new SelectList(new[] { "Nam", "Nữ", "Khác" }), "-- Chọn giới tính --", new { @class = "form-control" })
+        </div>
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.NgaySinh)
+            @Html.TextBoxFor(m => m.NgaySinh, "{0:yyyy-MM-dd}", new { type = "date", @class = "form-control" })
+        </div>
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.CCCD)
+            @Html.TextBoxFor(m => m.CCCD, new { @class = "form-control", maxlength = 12 })
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.NgayCapCCCD)
+            @Html.TextBoxFor(m => m.NgayCapCCCD, "{0:yyyy-MM-dd}", new { type = "date", @class = "form-control" })
+        </div>
+        <div class="col-md-3">
+            @Html.LabelFor(m => m.NoiCapCCCD)
+            @Html.TextBoxFor(m => m.NoiCapCCCD, new { @class = "form-control" })
+        </div>
+        <div class="col-md-4">
+            @Html.LabelFor(m => m.DiaChi)
+            @Html.TextBoxFor(m => m.DiaChi, new { @class = "form-control" })
+        </div>
+        <div class="col-md-3">
+            @Html.LabelFor(m => m.SoDienThoai)
+            @Html.TextBoxFor(m => m.SoDienThoai, new { @class = "form-control", type = "tel" })
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-4">
+            @Html.LabelFor(m => m.Email)
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email" })
+        </div>
+        <div class="col-md-4">
+            @Html.LabelFor(m => m.ID_PhongBan, "Phòng ban")
+            @Html.DropDownListFor(m => m.ID_PhongBan, new SelectList(Enumerable.Empty<SelectListItem>()), "-- Chọn phòng ban --", new { @class = "form-control" })
+        </div>
+        <div class="col-md-4">
+            @Html.LabelFor(m => m.ID_ChucVu, "Chức vụ")
+            @Html.DropDownListFor(m => m.ID_ChucVu, new SelectList(Enumerable.Empty<SelectListItem>()), "-- Chọn chức vụ --", new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-4">
+            @Html.LabelFor(m => m.ID_TrinhDo, "Trình độ")
+            @Html.DropDownListFor(m => m.ID_TrinhDo, new SelectList(Enumerable.Empty<SelectListItem>()), "-- Chọn trình độ --", new { @class = "form-control" })
+        </div>
+        <div class="col-md-4">
+            @Html.LabelFor(m => m.NgayVaoLam)
+            @Html.TextBoxFor(m => m.NgayVaoLam, "{0:yyyy-MM-dd}", new { type = "date", @class = "form-control" })
+        </div>
+        <div class="col-md-4">
+            @Html.LabelFor(m => m.ID_TrangThai, "Trạng thái làm việc")
+            @Html.DropDownListFor(m => m.ID_TrangThai,
+                     new SelectList(new[] {
+        new { ID = 1, Name = "Đang làm" },
+        new { ID = 2, Name = "Nghỉ việc" },
+        new { ID = 3, Name = "Tạm nghỉ" }
+        }, "ID", "Name"),
+                     "-- Chọn trạng thái --", new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-4">
+            @Html.LabelFor(m => m.HinhAnh)
+            <input type="file" name="HinhAnhFile" id="HinhAnhFile" class="form-control" accept="image/*" />
+            <br />
+            <img id="previewImage" src="#" alt="Ảnh xem trước" style="max-width: 100%; height: auto; display: none; border: 1px solid #ddd; padding: 5px;">
+        </div>
+        <div class="col-md-8">
+            @Html.LabelFor(m => m.GhiChu)
+            @Html.TextAreaFor(m => m.GhiChu, new { @class = "form-control", rows = 3 })
+        </div>
+    </div>
+
+    <div class="text-end mt-4">
+        <button type="submit" class="btn btn-primary">Lưu</button>
+    </div>
+}
