@@ -42,7 +42,7 @@ namespace WebAPP.Controllers
                     if (user.PasswordHash.SequenceEqual(hashedInput))
                     {
                         // Đăng nhập thành công
-                        return View("~/Views/Home/Web/Soyeu.cshtml");
+                        return View("~/Views/Home/Web/LyLich/Soyeu.cshtml");
                     }
                 }
 

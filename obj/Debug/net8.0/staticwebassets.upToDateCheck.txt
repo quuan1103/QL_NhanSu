@@ -2,6 +2,7 @@ wwwroot\css\login.css
 wwwroot\css\Menu.css
 wwwroot\css\ThemmoiLL.css
 wwwroot\favicon.ico
+wwwroot\img\logo4.png
 wwwroot\js\Alldanhmuc.js
 wwwroot\js\script.js
 wwwroot\js\site.js

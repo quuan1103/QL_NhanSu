@@ -1,0 +1,221 @@
+﻿@{
+    Layout = "~/Views/Shared/WebGD.cshtml";
+    ViewData["Title"] = "Quản lý nhân sự - Đào tạo";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <title>@ViewData["Title"]</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="~/css/Menu.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <style>
+        .navbar-header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .btn-light:hover {
+            background-color: #f0f0f0;
+        }
+
+        .dropdown-menu {
+            min-width: 200px;
+        }
+
+        #userDropdown:hover {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+    </style>
+   
+    <div class="container mt-4">
+        <div class="col-xxl-12">
+            <div class="page-content">                
+                <div class="card border card-border-primary">
+                    <div class="card-header bg-danger text-white rounded p-3">
+                       
+                        <h6 class="card-title mb-0">
+                            <span class="badge bg-info align-middle fs-13">Quản lý quá trình đào tạo</span>
+                        </h6>
+
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label class="form-label">Hình Thức Đào Tạo</label>
+                                <input class="form-control" id="txtSearchKeywords" />
+                            </div>
+                            <div class="col-md-2">
+                                <label class="form-label">Đơn Vị</label>
+                                <input class="form-control" id="txtSearchMaCB" />
+                            </div>
+                            <div class="col-md-2">
+                                <label class="form-label">Nhân Viên</label>
+                                <input class="form-control" id="txtSearchTenCB" />
+                            </div>
+                            <div class="col-md-2">
+                                <label class="form-label">Trạng thái</label>
+                                <select class="form-control" id="ddlSearchStatus" onchange="loadTableBySelect()">
+                                    <option value="">-- Tất cả --</option>
+                                    <option value="1">Đã Duyệt</option>
+                                    <option value="2">Chưa Duyệt</option>
+                                   
+                                </select>
+                            </div>
+                            <div class="col-md-1">
+                                <label class="form-label">&nbsp;</label>
+                                <button type="button" id="btnSearch" class="btn form-control btn-outline-light w-md">
+                                    <i class="fa fa-search"></i> Tìm kiếm
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="d-sm-flex justify-content-between align-items-center mb-3" style="min-height: 50px;">
+                        <h5 class="mb-0">Danh sách quá trình đào tạo</h5>
+                        <a href="javascript:void(0);"
+                           class="btn btn-outline-primary d-flex align-items-center"
+                           data-bs-toggle="modal"
+                           data-bs-target="#modalThemMoi">
+                            <i class="fa fa-plus-circle me-2"></i> Thêm mới
+                        </a>
+                        
+                    </div>
+
+
+
+                    <!-- Danh sách nhân viên -->
+                    <div class="col-md-12">
+                        <style>
+                            .table-container {
+                                border: 1px solid #ccc;
+                                border-radius: 8px;
+                                padding: 16px;
+                                background-color: white;
+                                box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+                                overflow-x: auto;
+                            }
+
+                            .custom-table th, .custom-table td {
+                                vertical-align: middle;
+                                text-align: center;
+                            }
+                        </style>
+
+                        <div class="table-container">
+                            <table class="table table-bordered table-striped custom-table" style="width: 1200px;">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Mã VC/NLĐ</th>
+                                        <th>Họ tên</th>
+                                        <th>Đơn Vị</th>
+                                        <th>Từ Ngày</th>
+                                        <th>Đến Ngày</th>
+                                        <th>Hình Thức Đào Tạo</th>
+                                        
+                                        
+                                        <th>Trạng thái</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody id="tblNhanVien">
+                                    @* Dữ liệu nhân viên sẽ được load từ controller *@
+                                </tbody>
+                            </table>
+                        </div>
+
+                        @*  <!-- PHÂN TRANG -->
+                        <nav aria-label="Phân trang">
+                            <ul class="pagination justify-content-center">
+                                @{
+                                    int currentPage = ViewBag.CurrentPage ?? 1;
+                                    int totalPages = ViewBag.TotalPages ?? 1;
+
+                                    for (int i = 1; i <= totalPages; i++)
+                                    {
+                                        <li class="page-item @(i == currentPage ? "active" : "")">
+                                            <a class="page-link" href="@Url.Action("Soyeu", "Home", new { page = i, pageSize = ViewBag.PageSize })">@i</a>
+                                        </li>
+                                    }
+                                }
+                            </ul>
+                        </nav> *@
+
+
+                    </div>
+
+                    <!-- Modal Thêm Mới -->
+                    <div class="modal fade" id="modalThemMoi" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header bg-success text-white">
+                                    <h5 class="modal-title" id="modalLabel">Thêm mới quá trình đào tạo</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="formDaoTao">
+                                        <div class="row mb-2">
+                                            <div class="col-md-6">
+                                                <label>Mã Viên Chức</label>
+                                                <input name="HinhThucDaoTao" class="form-control" required />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>Họ Và Tên</label>
+                                                <input name="HinhThucDaoTao" class="form-control" required />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>Đơn Vị</label>
+                                                <input name="HinhThucDaoTao" class="form-control" required />
+                                            </div>
+                                          
+                                            <div class="col-md-6">
+                                                <label>Hình thức đào tạo</label>
+                                                <input name="HinhThucDaoTao" class="form-control" required />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>Quốc gia</label>
+                                                <input name="QuocGiaDaoTao" class="form-control" />
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-md-6">
+                                                <label>Từ ngày</label>
+                                                <input name="TuNgay" type="date" class="form-control" required />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>Đến ngày</label>
+                                                <input name="DenNgay" type="date" class="form-control" />
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-md-6">
+                                                <label>Quyết định</label>
+                                                <input name="QuyetDinh" class="form-control" />
+                                            </div>
+                                           
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                    <button type="button" class="btn btn-primary" id="btnLuuDaoTao">Lưu</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

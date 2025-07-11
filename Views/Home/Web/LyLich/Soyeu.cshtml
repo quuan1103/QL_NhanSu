@@ -18,10 +18,21 @@
     <script src="https://cdn.jsdelivr.net/npm/jstree@3.3.12/dist/jstree.min.js"></script>
 </head>
 <body>
+    <div class="container-wrapper-gray">
     <div class="col-xxl-12">
         <div class="page-content">
             <div class="card border card-border-primary">
-                <div class="card-header border border-danger rounded p-3">
+                <div class="card-header bg-danger text-white rounded p-3">
+                        <style>
+                            .container-wrapper-gray {
+                                border: 1px solid #ced4da; /* Viền xám nhẹ */
+                                background-color: #ffffff; /* Nền trắng */
+                                border-radius: 8px; /* Bo góc nhẹ hơn */
+                                padding: 16px; /* Thu nhỏ khoảng cách trong */
+                                margin: 20px 0; /* Cách đều trên dưới */
+                                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Đổ bóng đậm hơn */
+                            }
+                        </style>
                     <style>
                         .highlight-red-box {
                             border: 2px solid red;
@@ -154,6 +165,7 @@
             </div>
         </div>
     </div>
+    </div>
         <!-- Modal Chi tiết (form giống ThemMoiSYLL) -->
 
         <div class="modal fade" id="modalDetail" tabindex="-1" role="dialog" aria-labelledby="detailLabel" aria-hidden="true">
@@ -173,6 +185,7 @@
                             </div>
                             <div class="card-body">
                             </div>
+                        <div class="border rounded p-3 mt-2" style="background-color: #f8f9fa;">
                             <form id="formNhanVienDetail" enctype="multipart/form-data">
                                 <input type="hidden" id="ID_NV_Detail" name="ID_NV" />
                                 <div class="row">
@@ -284,6 +297,7 @@
                                     <button type="button" class="btn btn-primary" onclick="luuNhanVienDetail()">Lưu</button>
                                 </div>
                             </form>
+                            </div>
                             <div id="thongBaoDetail"></div>
                         </div>
                     </div>

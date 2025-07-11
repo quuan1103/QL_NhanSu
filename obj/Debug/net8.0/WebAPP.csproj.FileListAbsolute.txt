@@ -1,4 +1,6 @@
 D:\HOC\WebAPP\bin\Debug\net8.0\wwwroot\js\Alldanhmuc.js
+D:\HOC\WebAPP\bin\Debug\net8.0\wwwroot\react\daotao\build\asset-manifest.json
+D:\HOC\WebAPP\bin\Debug\net8.0\wwwroot\react\daotao\build\manifest.json
 D:\HOC\WebAPP\bin\Debug\net8.0\appsettings.Development.json
 D:\HOC\WebAPP\bin\Debug\net8.0\appsettings.json
 D:\HOC\WebAPP\bin\Debug\net8.0\HR_ClientApp\daotao\build\asset-manifest.json
@@ -269,6 +271,7 @@ D:\HOC\WebAPP\obj\Debug\net8.0\WebAPP.MvcApplicationPartsAssemblyInfo.cs
 D:\HOC\WebAPP\obj\Debug\net8.0\WebAPP.MvcApplicationPartsAssemblyInfo.cache
 D:\HOC\WebAPP\obj\Debug\net8.0\WebAPP.RazorAssemblyInfo.cache
 D:\HOC\WebAPP\obj\Debug\net8.0\WebAPP.RazorAssemblyInfo.cs
+D:\HOC\WebAPP\obj\Debug\net8.0\WebAPP.sourcelink.json
 D:\HOC\WebAPP\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\HOC\WebAPP\obj\Debug\net8.0\scopedcss\bundle\WebAPP.styles.css
 D:\HOC\WebAPP\obj\Debug\net8.0\scopedcss\projectbundle\WebAPP.bundle.scp.css
@@ -288,5 +291,3 @@ D:\HOC\WebAPP\obj\Debug\net8.0\refint\WebAPP.dll
 D:\HOC\WebAPP\obj\Debug\net8.0\WebAPP.pdb
 D:\HOC\WebAPP\obj\Debug\net8.0\WebAPP.genruntimeconfig.cache
 D:\HOC\WebAPP\obj\Debug\net8.0\ref\WebAPP.dll
-D:\HOC\WebAPP\bin\Debug\net8.0\wwwroot\react\daotao\build\asset-manifest.json
-D:\HOC\WebAPP\bin\Debug\net8.0\wwwroot\react\daotao\build\manifest.json

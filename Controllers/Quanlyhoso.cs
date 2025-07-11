@@ -40,15 +40,20 @@ namespace WebAPP.Controllers
             ViewBag.TotalRecords = totalRecords;
             ViewBag.TotalPages = (int)Math.Ceiling((double)totalRecords / pageSize);
 
-            return View("~/Views/Home/Web/Soyeu.cshtml", listNhanVien);
+            return View("~/Views/Home/Web/LyLich/Soyeu.cshtml", listNhanVien);
         }
         public IActionResult Quatrinhdaotao()
         {
-            return View("~/Views/Home/Web/Quatrinhdaotao.cshtml");
+            return View("~/Views/Home/Web/QT_DaoTao/Quatrinhdaotao.cshtml");
         }
+        //Lý lịch - Thêm mới
         public IActionResult ThemmoiSYLL()
         {
-            return View("~/Views/Home/Web/ThemmoiSYLL.cshtml");
+            return View("~/Views/Home/Web/LyLich/ThemmoiSYLL.cshtml");
+        }
+        public IActionResult ThemMoiDT()
+        {
+            return View("~/Views/Home/Web/QT_DaoTao/ThemMoiDT.cshtml");
         }
         public IActionResult ChiTietHR(Guid id)
         {

@@ -3,180 +3,68 @@
   "WorkspaceRootPath": "D:\\HOC\\WebAPP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\home\\web\\quatrinhdaotao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\home\\web\\quatrinhdaotao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\home\\web\\soyeu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\home\\web\\soyeu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\shared\\webgd.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\shared\\webgd.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\home\\web\\web.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\home\\web\\web.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\home\\web\\lylich\\soyeu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\home\\web\\lylich\\soyeu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\quanlyhoso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\quanlyhoso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\daotao\\daotaocontrollerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\daotao\\daotaocontrollerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\danhmuccontroller\\trinhdodanhmuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\danhmuccontroller\\trinhdodanhmuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\danhmuccontroller\\phongbandanhmuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\danhmuccontroller\\phongbandanhmuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\danhmuccontroller\\loaihopdonglaodongdm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\danhmuccontroller\\loaihopdonglaodongdm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\danhmuccontroller\\chucvudanhmuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\danhmuccontroller\\chucvudanhmuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\hoso\\themmoillapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\hoso\\themmoillapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\wwwroot\\js\\loadhoso.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:wwwroot\\js\\loadhoso.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\home\\login\\indexdangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\home\\login\\indexdangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\home\\web\\qt_daotao\\quatrinhdaotao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\home\\web\\qt_daotao\\quatrinhdaotao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\models\\hoso\\lylich.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:models\\hoso\\lylich.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\home\\web\\themmoisyll.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\home\\web\\themmoisyll.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\home\\web\\qt_daotao\\themmoidt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\home\\web\\qt_daotao\\themmoidt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\home\\web\\lylich\\themmoisyll.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\home\\web\\lylich\\themmoisyll.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\wwwroot\\js\\chitiethr.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:wwwroot\\js\\chitiethr.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\data\\dappercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:data\\dappercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\models\\modeldanhmuc\\loaihopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:models\\modeldanhmuc\\loaihopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\shared\\_hosopartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\shared\\_hosopartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\wwwroot\\js\\alldanhmuc.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:wwwroot\\js\\alldanhmuc.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\wwwroot\\js\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:wwwroot\\js\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\wwwroot\\js\\loadhoso.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:wwwroot\\js\\loadhoso.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\wwwroot\\css\\menu.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:wwwroot\\css\\menu.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\quanlyhoso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\quanlyhoso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\danhmuc_phongban\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\danhmuc_phongban\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\wwwroot\\css\\themmoill.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:wwwroot\\css\\themmoill.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\models\\modeldanhmuc\\trinhdodm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:models\\modeldanhmuc\\trinhdodm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\models\\modeldanhmuc\\chucvudm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:models\\modeldanhmuc\\chucvudm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\models\\modeldanhmuc\\phongban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:models\\modeldanhmuc\\phongban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\danhmuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\danhmuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\models\\quoctich.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:models\\quoctich.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\models\\taikhoannhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:models\\taikhoannhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\danhmuc_phongban\\_chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\danhmuc_phongban\\_chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\danhmuc_phongban\\_danhsach.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\danhmuc_phongban\\_danhsach.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\home\\login\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\home\\login\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\models\\daotao\\daotao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:models\\daotao\\daotao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\wwwroot\\js\\alldanhmuc.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:wwwroot\\js\\alldanhmuc.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -186,559 +74,223 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Alldanhmuc.js",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\wwwroot\\js\\Alldanhmuc.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\Alldanhmuc.js",
-              "ToolTip": "D:\\HOC\\WebAPP\\wwwroot\\js\\Alldanhmuc.js",
-              "RelativeToolTip": "wwwroot\\js\\Alldanhmuc.js",
-              "ViewState": "AgIAADsAAAAAAAAAAAAAwGMAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-06-09T08:16:20.605Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\DanhMuc_Phongban\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\DanhMuc_Phongban\\Index.cshtml",
-              "ToolTip": "D:\\HOC\\WebAPP\\Views\\DanhMuc_Phongban\\Index.cshtml",
-              "RelativeToolTip": "Views\\DanhMuc_Phongban\\Index.cshtml",
-              "ViewState": "AgIAAB4BAAAAAAAAAAAYwCABAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-05T17:39:51.348Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Soyeu.cshtml",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\Home\\Web\\Soyeu.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Web\\Soyeu.cshtml",
-              "ToolTip": "D:\\HOC\\WebAPP\\Views\\Home\\Web\\Soyeu.cshtml",
-              "RelativeToolTip": "Views\\Home\\Web\\Soyeu.cshtml",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\HOC\\WebAPP\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-03T21:31:23.182Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Quatrinhdaotao.cshtml",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\Home\\Web\\Quatrinhdaotao.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Web\\Quatrinhdaotao.cshtml",
-              "ToolTip": "D:\\HOC\\WebAPP\\Views\\Home\\Web\\Quatrinhdaotao.cshtml",
-              "RelativeToolTip": "Views\\Home\\Web\\Quatrinhdaotao.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-09T12:06:53.456Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "Daotao.cs",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Models\\DaoTao\\Daotao.cs",
-              "RelativeDocumentMoniker": "Models\\DaoTao\\Daotao.cs",
-              "ToolTip": "D:\\HOC\\WebAPP\\Models\\DaoTao\\Daotao.cs",
-              "RelativeToolTip": "Models\\DaoTao\\Daotao.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T19:51:35.63Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DaoTaoControllerBase.cs",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\DaoTao\\DaoTaoControllerBase.cs",
-              "RelativeDocumentMoniker": "Controllers\\DaoTao\\DaoTaoControllerBase.cs",
-              "ToolTip": "D:\\HOC\\WebAPP\\Controllers\\DaoTao\\DaoTaoControllerBase.cs",
-              "RelativeToolTip": "Controllers\\DaoTao\\DaoTaoControllerBase.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T19:49:10.672Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "_HoSoPartial.cshtml",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\Shared\\_HoSoPartial.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_HoSoPartial.cshtml",
-              "ToolTip": "D:\\HOC\\WebAPP\\Views\\Shared\\_HoSoPartial.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_HoSoPartial.cshtml",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFUAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-28T15:26:08.006Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "LoadHoso.js",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\wwwroot\\js\\LoadHoso.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\LoadHoso.js",
-              "ToolTip": "D:\\HOC\\WebAPP\\wwwroot\\js\\LoadHoso.js",
-              "RelativeToolTip": "wwwroot\\js\\LoadHoso.js",
-              "ViewState": "AgIAAPwAAAAAAAAAAAAAwBgBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-06-18T09:20:18.712Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ChiTietHR.js",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\wwwroot\\js\\ChiTietHR.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\ChiTietHR.js",
-              "ToolTip": "D:\\HOC\\WebAPP\\wwwroot\\js\\ChiTietHR.js",
-              "RelativeToolTip": "wwwroot\\js\\ChiTietHR.js",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAUAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-06-28T07:52:09.711Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ThemmoiSYLL.cshtml",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\Home\\Web\\ThemmoiSYLL.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Web\\ThemmoiSYLL.cshtml",
-              "ToolTip": "D:\\HOC\\WebAPP\\Views\\Home\\Web\\ThemmoiSYLL.cshtml",
-              "RelativeToolTip": "Views\\Home\\Web\\ThemmoiSYLL.cshtml",
-              "ViewState": "AgIAADAAAAAAAAAAAADwv88AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-31T17:30:17.785Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ThemMoiLLAPI.cs",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\HoSo\\ThemMoiLLAPI.cs",
-              "RelativeDocumentMoniker": "Controllers\\HoSo\\ThemMoiLLAPI.cs",
-              "ToolTip": "D:\\HOC\\WebAPP\\Controllers\\HoSo\\ThemMoiLLAPI.cs",
-              "RelativeToolTip": "Controllers\\HoSo\\ThemMoiLLAPI.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAAwGEAAABhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T20:20:15.626Z",
+              "WhenOpened": "2025-07-11T00:53:50.934Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Quanlyhoso.cs",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\Quanlyhoso.cs",
-              "RelativeDocumentMoniker": "Controllers\\Quanlyhoso.cs",
-              "ToolTip": "D:\\HOC\\WebAPP\\Controllers\\Quanlyhoso.cs",
-              "RelativeToolTip": "Controllers\\Quanlyhoso.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwC4AAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T20:58:53.047Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
               "Title": "LyLich.cs",
               "DocumentMoniker": "D:\\HOC\\WebAPP\\Models\\HoSo\\LyLich.cs",
               "RelativeDocumentMoniker": "Models\\HoSo\\LyLich.cs",
               "ToolTip": "D:\\HOC\\WebAPP\\Models\\HoSo\\LyLich.cs",
               "RelativeToolTip": "Models\\HoSo\\LyLich.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAiwA4AAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAIA8wAsAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T20:07:57.852Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "LoaiHopDong.cs",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Models\\ModelDanhMuc\\LoaiHopDong.cs",
-              "RelativeDocumentMoniker": "Models\\ModelDanhMuc\\LoaiHopDong.cs",
-              "ToolTip": "D:\\HOC\\WebAPP\\Models\\ModelDanhMuc\\LoaiHopDong.cs",
-              "RelativeToolTip": "Models\\ModelDanhMuc\\LoaiHopDong.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T08:28:50.392Z"
+              "WhenOpened": "2025-07-10T18:07:52.825Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "LoaiHopDongLaoDongDM.cs",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\DanhMucController\\LoaiHopDongLaoDongDM.cs",
-              "RelativeDocumentMoniker": "Controllers\\DanhMucController\\LoaiHopDongLaoDongDM.cs",
-              "ToolTip": "D:\\HOC\\WebAPP\\Controllers\\DanhMucController\\LoaiHopDongLaoDongDM.cs",
-              "RelativeToolTip": "Controllers\\DanhMucController\\LoaiHopDongLaoDongDM.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAgwDgAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T08:12:12.095Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TrinhDoDanhMuc.cs",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\DanhMucController\\TrinhDoDanhMuc.cs",
-              "RelativeDocumentMoniker": "Controllers\\DanhMucController\\TrinhDoDanhMuc.cs",
-              "ToolTip": "D:\\HOC\\WebAPP\\Controllers\\DanhMucController\\TrinhDoDanhMuc.cs",
-              "RelativeToolTip": "Controllers\\DanhMucController\\TrinhDoDanhMuc.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwE8AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T16:07:27.383Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ChucVuDanhMuc.cs",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\DanhMucController\\ChucVuDanhMuc.cs",
-              "RelativeDocumentMoniker": "Controllers\\DanhMucController\\ChucVuDanhMuc.cs",
-              "ToolTip": "D:\\HOC\\WebAPP\\Controllers\\DanhMucController\\ChucVuDanhMuc.cs",
-              "RelativeToolTip": "Controllers\\DanhMucController\\ChucVuDanhMuc.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAkwFYAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T08:01:14.009Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "TrinhDoDM.cs",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Models\\ModelDanhMuc\\TrinhDoDM.cs",
-              "RelativeDocumentMoniker": "Models\\ModelDanhMuc\\TrinhDoDM.cs",
-              "ToolTip": "D:\\HOC\\WebAPP\\Models\\ModelDanhMuc\\TrinhDoDM.cs",
-              "RelativeToolTip": "Models\\ModelDanhMuc\\TrinhDoDM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T16:04:15.887Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "D:\\HOC\\WebAPP\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-15T10:05:05.623Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\HOC\\WebAPP\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "Title": "ChiTietHR.js",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\wwwroot\\js\\ChiTietHR.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\ChiTietHR.js",
+              "ToolTip": "D:\\HOC\\WebAPP\\wwwroot\\js\\ChiTietHR.js",
+              "RelativeToolTip": "wwwroot\\js\\ChiTietHR.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T09:51:03.787Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "DapperContext.cs",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Data\\DapperContext.cs",
-              "RelativeDocumentMoniker": "Data\\DapperContext.cs",
-              "ToolTip": "D:\\HOC\\WebAPP\\Data\\DapperContext.cs",
-              "RelativeToolTip": "Data\\DapperContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T19:36:52.638Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\HOC\\WebAPP\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAQwDsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T02:55:31.256Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "ChucVuDM.cs",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Models\\ModelDanhMuc\\ChucVuDM.cs",
-              "RelativeDocumentMoniker": "Models\\ModelDanhMuc\\ChucVuDM.cs",
-              "ToolTip": "D:\\HOC\\WebAPP\\Models\\ModelDanhMuc\\ChucVuDM.cs",
-              "RelativeToolTip": "Models\\ModelDanhMuc\\ChucVuDM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T08:02:50.886Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\HOC\\WebAPP\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-12T09:11:39.092Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PhongBanDanhMuc.cs",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\DanhMucController\\PhongBanDanhMuc.cs",
-              "RelativeDocumentMoniker": "Controllers\\DanhMucController\\PhongBanDanhMuc.cs",
-              "ToolTip": "D:\\HOC\\WebAPP\\Controllers\\DanhMucController\\PhongBanDanhMuc.cs",
-              "RelativeToolTip": "Controllers\\DanhMucController\\PhongBanDanhMuc.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T10:12:39.529Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "QuocTich.cs",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Models\\QuocTich.cs",
-              "RelativeDocumentMoniker": "Models\\QuocTich.cs",
-              "ToolTip": "D:\\HOC\\WebAPP\\Models\\QuocTich.cs",
-              "RelativeToolTip": "Models\\QuocTich.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T17:47:20.947Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "TaiKhoanNhanVien.cs",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Models\\TaiKhoanNhanVien.cs",
-              "RelativeDocumentMoniker": "Models\\TaiKhoanNhanVien.cs",
-              "ToolTip": "D:\\HOC\\WebAPP\\Models\\TaiKhoanNhanVien.cs",
-              "RelativeToolTip": "Models\\TaiKhoanNhanVien.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T02:56:55.059Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Phongban.cs",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Models\\ModelDanhMuc\\Phongban.cs",
-              "RelativeDocumentMoniker": "Models\\ModelDanhMuc\\Phongban.cs",
-              "ToolTip": "D:\\HOC\\WebAPP\\Models\\ModelDanhMuc\\Phongban.cs",
-              "RelativeToolTip": "Models\\ModelDanhMuc\\Phongban.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T10:17:53.475Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
-              "ToolTip": "D:\\HOC\\WebAPP\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "Models\\ErrorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T17:49:02.969Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "DanhMuc.cs",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\DanhMuc.cs",
-              "RelativeDocumentMoniker": "Controllers\\DanhMuc.cs",
-              "ToolTip": "D:\\HOC\\WebAPP\\Controllers\\DanhMuc.cs",
-              "RelativeToolTip": "Controllers\\DanhMuc.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T07:27:47.069Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "WebGD.cshtml",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\Shared\\WebGD.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\WebGD.cshtml",
-              "ToolTip": "D:\\HOC\\WebAPP\\Views\\Shared\\WebGD.cshtml",
-              "RelativeToolTip": "Views\\Shared\\WebGD.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB8AAABfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-05T08:00:28.229Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Login.cs",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\Login.cs",
-              "RelativeDocumentMoniker": "Controllers\\Login.cs",
-              "ToolTip": "D:\\HOC\\WebAPP\\Controllers\\Login.cs",
-              "RelativeToolTip": "Controllers\\Login.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAA3wB4AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T02:57:46.314Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "D:\\HOC\\WebAPP\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAUwEEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T02:56:20.267Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "_Chitiet.cshtml",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\DanhMuc_Phongban\\_Chitiet.cshtml",
-              "RelativeDocumentMoniker": "Views\\DanhMuc_Phongban\\_Chitiet.cshtml",
-              "ToolTip": "D:\\HOC\\WebAPP\\Views\\DanhMuc_Phongban\\_Chitiet.cshtml",
-              "RelativeToolTip": "Views\\DanhMuc_Phongban\\_Chitiet.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-05T17:39:08.432Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "_Danhsach.cshtml",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\DanhMuc_Phongban\\_Danhsach.cshtml",
-              "RelativeDocumentMoniker": "Views\\DanhMuc_Phongban\\_Danhsach.cshtml",
-              "ToolTip": "D:\\HOC\\WebAPP\\Views\\DanhMuc_Phongban\\_Danhsach.cshtml",
-              "RelativeToolTip": "Views\\DanhMuc_Phongban\\_Danhsach.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-05T17:39:37.163Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "script.js",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\wwwroot\\js\\script.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\script.js",
-              "ToolTip": "D:\\HOC\\WebAPP\\wwwroot\\js\\script.js",
-              "RelativeToolTip": "wwwroot\\js\\script.js",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAABAAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-06-06T10:18:41.813Z"
+              "WhenOpened": "2025-07-10T18:02:46.808Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 5,
               "Title": "site.js",
               "DocumentMoniker": "D:\\HOC\\WebAPP\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
               "ToolTip": "D:\\HOC\\WebAPP\\wwwroot\\js\\site.js",
               "RelativeToolTip": "wwwroot\\js\\site.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAArwAcAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-06-06T06:25:42.859Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "indexDangnhap.cshtml",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\Home\\Login\\indexDangnhap.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Login\\indexDangnhap.cshtml",
-              "ToolTip": "D:\\HOC\\WebAPP\\Views\\Home\\Login\\indexDangnhap.cshtml",
-              "RelativeToolTip": "Views\\Home\\Login\\indexDangnhap.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAABEAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-04T03:31:55.473Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Web.cshtml",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\Home\\Web\\Web.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Web\\Web.cshtml",
-              "ToolTip": "D:\\HOC\\WebAPP\\Views\\Home\\Web\\Web.cshtml",
-              "RelativeToolTip": "Views\\Home\\Web\\Web.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-05T08:00:25.245Z",
+              "WhenOpened": "2025-07-10T18:02:44.367Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Menu.css",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\wwwroot\\css\\Menu.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\Menu.css",
-              "ToolTip": "D:\\HOC\\WebAPP\\wwwroot\\css\\Menu.css",
-              "RelativeToolTip": "wwwroot\\css\\Menu.css",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACUAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-06-05T08:01:56.821Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "DangKy.cs",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\DangKy.cs",
-              "RelativeDocumentMoniker": "Controllers\\DangKy.cs",
-              "ToolTip": "D:\\HOC\\WebAPP\\Controllers\\DangKy.cs",
-              "RelativeToolTip": "Controllers\\DangKy.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAlwCMAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T03:09:54.68Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "dangky.cshtml",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\Home\\Login\\dangky.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Login\\dangky.cshtml",
-              "ToolTip": "D:\\HOC\\WebAPP\\Views\\Home\\Login\\dangky.cshtml",
-              "RelativeToolTip": "Views\\Home\\Login\\dangky.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-04T03:15:03.899Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "appsettings.Development.json",
-              "ToolTip": "D:\\HOC\\WebAPP\\appsettings.Development.json",
-              "RelativeToolTip": "appsettings.Development.json",
+              "DocumentIndex": 9,
+              "Title": "script.js",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\wwwroot\\js\\script.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\script.js",
+              "ToolTip": "D:\\HOC\\WebAPP\\wwwroot\\js\\script.js",
+              "RelativeToolTip": "wwwroot\\js\\script.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-04T02:56:25.424Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-07-10T18:02:42.207Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ThemmoiLL.css",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\wwwroot\\css\\ThemmoiLL.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\ThemmoiLL.css",
-              "ToolTip": "D:\\HOC\\WebAPP\\wwwroot\\css\\ThemmoiLL.css",
-              "RelativeToolTip": "wwwroot\\css\\ThemmoiLL.css",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAAE8AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-31T17:31:26.85Z"
+              "DocumentIndex": 6,
+              "Title": "ThemMoiDT.cshtml",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\Home\\Web\\QT_DaoTao\\ThemMoiDT.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Web\\QT_DaoTao\\ThemMoiDT.cshtml",
+              "ToolTip": "D:\\HOC\\WebAPP\\Views\\Home\\Web\\QT_DaoTao\\ThemMoiDT.cshtml",
+              "RelativeToolTip": "Views\\Home\\Web\\QT_DaoTao\\ThemMoiDT.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAkwEgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-10T17:46:30.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoadHoso.js",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\wwwroot\\js\\LoadHoso.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\LoadHoso.js",
+              "ToolTip": "D:\\HOC\\WebAPP\\wwwroot\\js\\LoadHoso.js",
+              "RelativeToolTip": "wwwroot\\js\\LoadHoso.js",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAAAA8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-07-10T17:32:42.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WebGD.cshtml",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\Shared\\WebGD.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\WebGD.cshtml",
+              "ToolTip": "D:\\HOC\\WebAPP\\Views\\Shared\\WebGD.cshtml",
+              "RelativeToolTip": "Views\\Shared\\WebGD.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACsAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-10T17:32:34.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ThemmoiSYLL.cshtml",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\Home\\Web\\LyLich\\ThemmoiSYLL.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Web\\LyLich\\ThemmoiSYLL.cshtml",
+              "ToolTip": "D:\\HOC\\WebAPP\\Views\\Home\\Web\\LyLich\\ThemmoiSYLL.cshtml",
+              "RelativeToolTip": "Views\\Home\\Web\\LyLich\\ThemmoiSYLL.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-10T17:32:23.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Soyeu.cshtml",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\Home\\Web\\LyLich\\Soyeu.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Web\\LyLich\\Soyeu.cshtml",
+              "ToolTip": "D:\\HOC\\WebAPP\\Views\\Home\\Web\\LyLich\\Soyeu.cshtml",
+              "RelativeToolTip": "Views\\Home\\Web\\LyLich\\Soyeu.cshtml",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAABQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-10T17:32:17.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\Login.cs",
+              "RelativeDocumentMoniker": "Controllers\\Login.cs",
+              "ToolTip": "D:\\HOC\\WebAPP\\Controllers\\Login.cs",
+              "RelativeToolTip": "Controllers\\Login.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAswCwAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T17:31:33.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\HOC\\WebAPP\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowDsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T17:31:24.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Quatrinhdaotao.cshtml",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\Home\\Web\\QT_DaoTao\\Quatrinhdaotao.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Web\\QT_DaoTao\\Quatrinhdaotao.cshtml",
+              "ToolTip": "D:\\HOC\\WebAPP\\Views\\Home\\Web\\QT_DaoTao\\Quatrinhdaotao.cshtml",
+              "RelativeToolTip": "Views\\Home\\Web\\QT_DaoTao\\Quatrinhdaotao.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAACgAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-10T17:31:02.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\DanhMuc_Phongban\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\DanhMuc_Phongban\\Index.cshtml",
+              "ToolTip": "D:\\HOC\\WebAPP\\Views\\DanhMuc_Phongban\\Index.cshtml",
+              "RelativeToolTip": "Views\\DanhMuc_Phongban\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-10T17:30:29.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Alldanhmuc.js",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\wwwroot\\js\\Alldanhmuc.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\Alldanhmuc.js",
+              "ToolTip": "D:\\HOC\\WebAPP\\wwwroot\\js\\Alldanhmuc.js",
+              "RelativeToolTip": "wwwroot\\js\\Alldanhmuc.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-07-10T17:30:27.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Quanlyhoso.cs",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\Quanlyhoso.cs",
+              "RelativeDocumentMoniker": "Controllers\\Quanlyhoso.cs",
+              "ToolTip": "D:\\HOC\\WebAPP\\Controllers\\Quanlyhoso.cs",
+              "RelativeToolTip": "Controllers\\Quanlyhoso.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAiwDcAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T17:29:21.58Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             }
           ]
         }

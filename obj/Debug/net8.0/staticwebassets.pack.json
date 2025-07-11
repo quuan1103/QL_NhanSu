@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\HOC\\WebAPP\\wwwroot\\img\\logo4.png",
+      "PackagePath": "staticwebassets\\img\\logo4.png"
+    },
+    {
       "Id": "D:\\HOC\\WebAPP\\wwwroot\\js\\Alldanhmuc.js",
       "PackagePath": "staticwebassets\\js\\Alldanhmuc.js"
     },

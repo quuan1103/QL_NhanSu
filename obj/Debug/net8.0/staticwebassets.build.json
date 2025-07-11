@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Sfop7NNlcyQ4fE6sq/KEgs4o3aU2tZe+XqVwPKxxtz0=",
+  "Hash": "D8/yTCkS56dssQIJOsFbj+BSrWM1B6y7aPSBTMqJuR4=",
   "Source": "WebAPP",
   "BasePath": "_content/WebAPP",
   "Mode": "Default",
@@ -1401,6 +1401,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\HOC\\WebAPP\\wwwroot\\img\\logo4.png",
+      "SourceId": "WebAPP",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HOC\\WebAPP\\wwwroot\\",
+      "BasePath": "_content/WebAPP",
+      "RelativePath": "img/logo4#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mi2j89phyl",
+      "Integrity": "fi+LKRmqb3YT1iV2HVmn3A8MJUy7TfSad5s0lOXA2O0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\logo4.png"
     },
     {
       "Identity": "D:\\HOC\\WebAPP\\wwwroot\\js\\Alldanhmuc.js",
@@ -5356,6 +5377,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s="
+        }
+      ]
+    },
+    {
+      "Route": "img/logo4.mi2j89phyl.png",
+      "AssetFile": "D:\\HOC\\WebAPP\\wwwroot\\img\\logo4.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "82432"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fi+LKRmqb3YT1iV2HVmn3A8MJUy7TfSad5s0lOXA2O0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 15 Oct 2021 17:18:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mi2j89phyl"
+        },
+        {
+          "Name": "label",
+          "Value": "img/logo4.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fi+LKRmqb3YT1iV2HVmn3A8MJUy7TfSad5s0lOXA2O0="
+        }
+      ]
+    },
+    {
+      "Route": "img/logo4.png",
+      "AssetFile": "D:\\HOC\\WebAPP\\wwwroot\\img\\logo4.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "82432"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fi+LKRmqb3YT1iV2HVmn3A8MJUy7TfSad5s0lOXA2O0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 15 Oct 2021 17:18:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fi+LKRmqb3YT1iV2HVmn3A8MJUy7TfSad5s0lOXA2O0="
         }
       ]
     },
@@ -10876,7 +10979,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Jul 2025 07:27:35 GMT"
+          "Value": "Thu, 10 Jul 2025 18:07:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10921,7 +11024,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Jul 2025 07:27:35 GMT"
+          "Value": "Thu, 10 Jul 2025 18:07:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10966,7 +11069,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Jul 2025 07:27:35 GMT"
+          "Value": "Thu, 10 Jul 2025 18:07:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11003,7 +11106,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Jul 2025 07:27:35 GMT"
+          "Value": "Thu, 10 Jul 2025 18:07:49 GMT"
         },
         {
           "Name": "Cache-Control",
