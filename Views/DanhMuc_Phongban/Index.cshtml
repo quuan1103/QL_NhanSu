@@ -65,6 +65,7 @@
                     <a id="btnChucVu" class="nav-link mb-2" role="tab">Chức Vụ</a>
                     <a id="btnTrinhDo" class="nav-link mb-2" role="tab">Trình Độ</a>
                     <a id="btnLoaiHopDong" class="nav-link mb-2" role="tab">Loại hợp đồng</a>
+                    <a id="btnHTDT" class="nav-link mb-2" role="tab">Hình thức đào tạo</a>
                 </div>
             </div>
 
@@ -321,6 +322,68 @@
                         </div>
                     </div>
                 </div>
+
+@* 
+                Hình Thức đào tạo  *@
+                <div id="formHTDT" style="display: none;">
+                    <form id="formHTDT">
+                        <input type="hidden" id="txtTypeHTDT" />
+                        <input type="hidden" id="ID_htdaotao" />
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Hình Thức Đào Tạo</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Hình Thức Đào Tạo</label>
+                                            <input class="form-control" id="HinhThuc" name="HinhThuc" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">Mô tả </label>
+                                            <textarea id="MoTa_HT" class="form-control" placeholder="Nhập mô tả"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <button type="button" class="btn btn-outline-primary" onclick="HinhThucDaoTaoDMModule.SaveHinhThucDaoTao()">
+                                        <i class="fa fa-save"></i> Lưu
+                                    </button>
+
+                                    <button type="button" class="btn btn-outline-danger" onclick="HinhThucDaoTaoDMModule.DeleteHinhThucDaoTao()">
+                                        <i class="fas fa-trash-alt"></i> Xoá
+                                    </button>
+
+                                    <button type="button" class="btn btn-outline-info" onclick="HinhThucDaoTaoDMModule.fnClearHinhThucDaoTao()">
+                                        <i class="fas fa-sync"></i> Làm mới
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="row mt-3">
+                        <div class="table-responsive">
+                            <table id="tblDataHinhThucDaoTao" class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Tên Hình thức đào tạo</th>
+                                        <th>Mô tả</th>
+                                        <th>Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Dữ liệu sẽ được đổ vào đây bằng JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div> <!-- col-md-9 -->
         </div> <!-- row -->
 
@@ -347,7 +410,11 @@
          $("#btnLoaiHopDong").click(function () {
             ShowFormLoaiHD();
         });
-    });
+        $("#btnHTDT").click(function(){
+            ShowFormHTDT();
+        
+        });
+        });
 
     function ShowFormPhongBan() {
         // Hiện Phòng Ban
@@ -358,12 +425,15 @@
         $("#formTrinhDo").hide();
         // Ẩn Loại Hợp Đồng
         $("#formLoaiHD").hide();
+        // Ẩn Hình thức đào tạo
+        $("#formHTDT").hide();
 
         // Active menu
         $("#btnPhongBan").addClass("active");
         $("#btnChucVu").removeClass("active");
         $("#btnTrinhDo").removeClass("active");
         $("#btnLoaiHopDong").removeClass("active");
+        $("#btnHTDT").removeClass("active");
 
         // Load data Phòng Ban
         if (typeof PhongBanModule !== "undefined") {
@@ -380,13 +450,15 @@
         $("#formTrinhDo").hide();
         // Ẩn Loại Hợp Đồng
         $("#formLoaiHD").hide();
+        // Ẩn Hình thức đào tạo
+        $("#formHTDT").hide();
 
         // Active menu
         $("#btnChucVu").addClass("active");
         $("#btnPhongBan").removeClass("active");
         $("#btnTrinhDo").removeClass("active");
         $("#btnLoaiHopDong").removeClass("active");
-
+        $("#btnHTDT").removeClass("active");
         // Load data Chức Vụ
         if (typeof ChucVuDMModule !== "undefined") {
             ChucVuDMModule.LoadChucVu();
@@ -399,11 +471,16 @@
             $("#formChucVu").hide();
             // Ẩn Loại Hợp Đồng
             $("#formLoaiHD").hide();
+            // Ẩn Hình thức đào tạo
+            $("#formHTDT").hide();
+
             // Active menu
             $("#btnTrinhDo").addClass("active");
             $("#btnPhongBan").removeClass("active");
             $("#btnChucVu").removeClass("active");
             $("#btnLoaiHopDong").removeClass("active");
+            $("#btnHTDT").removeClass("active");
+
             // Load data Trình Độ
             if (typeof TrinhDoDMModule !== "undefined") {
                 TrinhDoDMModule.LoadTrinhDo();
@@ -415,14 +492,39 @@
             $("#formPhongBan").hide();
             $("#formChucVu").hide();
             $("#formTrinhDo").hide();
+            // Ẩn Hình thức đào tạo
+            $("#formHTDT").hide();
+
             // Active menu
             $("#btnLoaiHopDong").addClass("active");
             $("#btnPhongBan").removeClass("active");
             $("#btnChucVu").removeClass("active");
             $("#btnTrinhDo").removeClass("active");
+            $("#btnHTDT").removeClass("active");
             // Load data Loại Hợp Đồng
             if (typeof LoaiHopDongDMModule !== "undefined") {
                 LoaiHopDongDMModule.LoadLoaiHopDong();
+            }
+         }
+     function ShowFormHTDT() {
+            $("#formHTDT").show();
+            // Ẩn Phòng Ban, Chức Vụ và Trình Độ
+            $("#formPhongBan").hide();
+            $("#formChucVu").hide();
+            $("#formTrinhDo").hide();
+            // Ẩn form loại hợp đồng
+            $("#formLoaiHD").hide();
+           
+
+            // Active menu
+            $("#btnHTDT").addClass("active");
+            $("#btnPhongBan").removeClass("active");
+            $("#btnChucVu").removeClass("active");
+            $("#btnTrinhDo").removeClass("active");
+            $("#btnLoaiHopDong").removeClass("active");
+            // Load data Loại Hợp Đồng
+            if (typeof HinhThucDaoTaoDMModule !== "undefined") {
+                HinhThucDaoTaoDMModule.LoadHinhThucDaoTao();
             }
      }
 </script>

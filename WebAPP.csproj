@@ -8,16 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\react\daotao\build\favicon.ico" />
-    <Content Remove="wwwroot\react\daotao\build\index.html" />
-    <Content Remove="wwwroot\react\daotao\build\logo192.png" />
-    <Content Remove="wwwroot\react\daotao\build\logo512.png" />
-    <Content Remove="wwwroot\react\daotao\build\robots.txt" />
-    <Content Remove="wwwroot\react\daotao\build\static\css\main.e6c13ad2.css" />
-    <Content Remove="wwwroot\react\daotao\build\static\css\main.e6c13ad2.css.map" />
-    <Content Remove="wwwroot\react\daotao\build\static\js\main.cac0df49.js" />
-    <Content Remove="wwwroot\react\daotao\build\static\js\main.cac0df49.js.LICENSE.txt" />
-    <Content Remove="wwwroot\react\daotao\build\static\js\main.cac0df49.js.map" />
     <Content Remove="wwwroot\js\ChiTietHR.js" />
     <Content Remove="wwwroot\js\LoadHoso.js" />
   </ItemGroup>
@@ -35,16 +25,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\react\daotao\build\favicon.ico" />
-    <None Include="wwwroot\react\daotao\build\index.html" />
-    <None Include="wwwroot\react\daotao\build\logo192.png" />
-    <None Include="wwwroot\react\daotao\build\logo512.png" />
-    <None Include="wwwroot\react\daotao\build\robots.txt" />
-    <None Include="wwwroot\react\daotao\build\static\css\main.e6c13ad2.css" />
-    <None Include="wwwroot\react\daotao\build\static\css\main.e6c13ad2.css.map" />
-    <None Include="wwwroot\react\daotao\build\static\js\main.cac0df49.js" />
-    <None Include="wwwroot\react\daotao\build\static\js\main.cac0df49.js.LICENSE.txt" />
-    <None Include="wwwroot\react\daotao\build\static\js\main.cac0df49.js.map" />
     <None Include="wwwroot\css\login.css" />
     <None Include="wwwroot\css\Menu.css" />
     <None Include="wwwroot\css\ThemmoiLL.css" />
@@ -118,12 +98,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="wwwroot\react\daotao\build\asset-manifest.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="wwwroot\react\daotao\build\manifest.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Update="wwwroot\js\Alldanhmuc.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

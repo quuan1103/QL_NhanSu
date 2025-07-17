@@ -1,10 +1,15 @@
 ﻿using Microsoft.Extensions.FileProviders;
+using Microsoft.EntityFrameworkCore;
 using WebAPP.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Dapper
 builder.Services.AddSingleton<DapperContext>();
+
+// 🔧 Thêm ApplicationDbContext
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Controller + Razor
 builder.Services.AddControllersWithViews();
@@ -52,8 +57,7 @@ app.MapControllerRoute(
 
 app.MapRazorPages();
 
-
 // Route fallback về React nếu không khớp route API/MVC
-app.MapFallbackToController("ReactApp", "Home");
+//app.MapFallbackToController("ReactApp", "Home");
 
 app.Run();

@@ -585,3 +585,140 @@ const LoaiHopDongDMModule = (function () {
 }
 )();
 
+
+//HÌNH THỨC ĐÀO TẠO
+const HinhThucDaoTaoDMModule = (function () {
+    let isEditMode = false;
+    function SaveHinhThucDaoTao() {
+        const HinhThuc = document.getElementById("HinhThuc").value.trim();
+        const MoTa_HT = document.getElementById("MoTa_HT").value.trim();
+        const ID_htdaotao = document.getElementById("ID_htdaotao") ? document.getElementById("ID_htdaotao").value : "";
+        if (!HinhThuc || !MoTa_HT) {
+            alert("Vui lòng nhập đầy đủ thông tin.");
+            return;
+        }
+        confirmMessage = isEditMode ? "Bạn có chắc muốn cập nhật hình thức đào tạo này không?" : "Bạn có chắc muốn thêm mới hình thức đào tạo này không?";
+        if (!confirm(confirmMessage)) {
+            return;
+        }
+        let htdaotaoObj = {
+            HinhThuc: HinhThuc,
+            MoTa_HT: MoTa_HT
+        };
+        let url = '/api/HinhThucDaoTao';
+        let method = 'POST';
+        if (isEditMode && ID_htdaotao) {
+            htdaotaoObj.ID_htdaotao = ID_htdaotao;
+            url = `/api/HinhThucDaoTao/${ID_htdaotao}`;
+            method = 'PUT';
+        }
+        fetch(url, {
+            method: method,
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(htdaotaoObj)
+        })
+            .then(response => response.json())
+            .then(res => {
+                if (res && res.success) {
+                    alert(isEditMode ? "Cập nhật thành công!" : "Thêm mới thành công!");
+                    LoadHinhThucDaoTao();
+                    fnClearHinhThucDaoTao();
+                } else {
+                    alert("Có lỗi xảy ra.");
+                }
+            })
+            .catch(() => alert("Lỗi khi gửi dữ liệu."));
+    }
+
+        function DeleteHinhThucDaoTao() {
+            const ID_htdaotao = document.getElementById("ID_htdaotao").value;
+            if (!ID_htdaotao) {
+                alert("Vui lòng chọn hình thức đào tạo để xoá.");
+                return;
+            }
+            if (!confirm("Bạn có chắc muốn xoá hình thức đào tạo này?")) {
+                return;
+            }
+            fetch(`/api/HinhThucDaoTao/${ID_htdaotao}`, {
+                method: 'DELETE'
+            })
+                .then(response => response.json())
+                .then(res => {
+                    if (res && res.success) {
+                        alert("Xoá thành công!");
+                        LoadHinhThucDaoTao();
+                        fnClearHinhThucDaoTao();
+                    } else {
+                        alert("Không thể xoá.");
+                    }
+                })
+                .catch(() => alert("Lỗi khi xoá."));
+        }
+
+        function LoadHinhThucDaoTao() {
+            $.ajax({
+                url: '/api/HinhThucDaoTao',
+                type: 'GET',
+                success: function (res) {
+                    if (res.success) {
+                        console.log("Dữ liệu hình thức đào tạo:", res.data);
+                        BindTableHinhThucDaoTao(res.data);
+                    } else {
+                        alert("Không thể tải danh sách.");
+                    }
+                },
+                error: function () {
+                    alert("Lỗi khi tải dữ liệu.");
+                }
+            });
+        }
+
+            function BindTableHinhThucDaoTao(data) {
+                let html = '';
+                data.forEach(item => {
+                    html += `
+                    <tr>
+                        <td>${item.HinhThuc}</td>
+                        <td>${item.MoTa_HT}</td>
+                        <td>
+                            <button class="btnChitietHTDT btn btn-sm btn-info"
+                                data-idhtdt="${item.ID_htdaotao}"
+                                data-hinhthuc="${item.HinhThuc}"
+                                data-motaht="${item.MoTa_HT}">
+                                <i class="fas fa-info-circle"></i> Chi tiết
+                            </button>
+                        </td>
+                    </tr>
+                `;
+                });
+                $("#tblDataHinhThucDaoTao tbody").html(html);
+            }
+            // Sự kiện click nút Chi tiết
+            $(document).on('click', '.btnChitietHTDT', function () {
+                const ID_htdaotao = $(this).data('idhtdt');
+                const HinhThuc = $(this).data('hinhthuc');
+                const MoTa_HT = $(this).data('motaht');
+                console.log("Chi tiết:", {
+                    ID_htdaotao, HinhThuc, MoTa_HT
+                });
+                $("#ID_htdaotao").val(ID_htdaotao);
+                $("#HinhThuc").val(HinhThuc);
+                $("#MoTa_HT").val(MoTa_HT);
+                isEditMode = true;
+            });
+            function fnClearHinhThucDaoTao() {
+                $("#ID_htdaotao").val('');
+                $("#HinhThuc").val('');
+                $("#MoTa_HT").val('');
+                isEditMode = false; // Reset trạng thái
+            }
+            return {
+                LoadHinhThucDaoTao,
+                SaveHinhThucDaoTao,
+                DeleteHinhThucDaoTao,
+                fnClearHinhThucDaoTao
+            };
+        }
+        )();
+
+

@@ -13,9 +13,10 @@
     <link rel="stylesheet" href="~/css/Menu.css" asp-append-version="true" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 <body>
-    
+
     <style>
         .navbar-header {
             background-color: #ffffff;
@@ -35,13 +36,13 @@
             border-radius: 8px;
         }
     </style>
-   
+
     <div class="container mt-4">
         <div class="col-xxl-12">
-            <div class="page-content">                
+            <div class="page-content">
                 <div class="card border card-border-primary">
                     <div class="card-header bg-danger text-white rounded p-3">
-                       
+
                         <h6 class="card-title mb-0">
                             <span class="badge bg-info align-middle fs-13">Quản lý quá trình đào tạo</span>
                         </h6>
@@ -65,7 +66,7 @@
                                     <option value="">-- Tất cả --</option>
                                     <option value="1">Đã Duyệt</option>
                                     <option value="2">Chưa Duyệt</option>
-                                   
+
                                 </select>
                             </div>
                             <div class="col-md-1">
@@ -87,7 +88,7 @@
                            data-bs-target="#modalThemMoi">
                             <i class="fa fa-plus-circle me-2"></i> Thêm mới
                         </a>
-                        
+
                     </div>
 
 
@@ -98,7 +99,7 @@
                             .table-container {
                                 border: 1px solid #ccc;
                                 border-radius: 8px;
-                                padding: 16px;
+                                padding: 20px;
                                 background-color: white;
                                 box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
                                 overflow-x: auto;
@@ -111,111 +112,294 @@
                         </style>
 
                         <div class="table-container">
-                            <table class="table table-bordered table-striped custom-table" style="width: 1200px;">
+                            <table class="table table-bordered table-striped custom-table" style="width: 1250px;">
                                 <thead class="table-light">
                                     <tr>
                                         <th>STT</th>
+
                                         <th>Mã VC/NLĐ</th>
-                                        <th>Họ tên</th>
+                                        <th>Họ Tên</th>
                                         <th>Đơn Vị</th>
+                                        <th>Chức vụ</th>
+                                        <th>Quốc gia</th>
+                                        <th>Hình Thức Đào Tạo</th>
                                         <th>Từ Ngày</th>
                                         <th>Đến Ngày</th>
-                                        <th>Hình Thức Đào Tạo</th>
-                                        
-                                        
-                                        <th>Trạng thái</th>
-                                        
+                                        <th>Quyết định</th>
+                                        <th>Thao tác</th>
+
                                     </tr>
                                 </thead>
-                                <tbody id="tblNhanVien">
+                                <tbody id="tblQTdaotao">
                                     @* Dữ liệu nhân viên sẽ được load từ controller *@
                                 </tbody>
                             </table>
                         </div>
 
-                        @*  <!-- PHÂN TRANG -->
-                        <nav aria-label="Phân trang">
-                            <ul class="pagination justify-content-center">
-                                @{
-                                    int currentPage = ViewBag.CurrentPage ?? 1;
-                                    int totalPages = ViewBag.TotalPages ?? 1;
 
-                                    for (int i = 1; i <= totalPages; i++)
-                                    {
-                                        <li class="page-item @(i == currentPage ? "active" : "")">
-                                            <a class="page-link" href="@Url.Action("Soyeu", "Home", new { page = i, pageSize = ViewBag.PageSize })">@i</a>
-                                        </li>
+                        @*  THÊM MỚI ĐÀO TẠO *@
+                        <div class="modal fade" id="modalThemMoi" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-white text-black">
+                                        <h5 class="modal-title" id="modalLabel">Thêm mới quá trình đào tạo</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng" onclick="resetModalForm()"></button>
+                                        <script>
+                                            function resetModalForm() {
+                                              // reset toàn bộ form
+                                                document.getElementById('formDaoTao').reset();
+                                            }
+                                        </script>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <form id="formDaoTao">
+                                            <div class="row mb-2">
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold">Mã Viên Chức</label>
+                                                    <select id="MaNhanVien" name="MaNhanVien" class="form-select" required>
+                                                        <option value="">-- Chọn mã viên chức --</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold">Họ Và Tên</label>
+                                                    <input id="HoTen" name="HoTen" class="form-control" readonly />
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold">Đơn Vị</label>
+                                                    <input id="TenPhongBan" name="TenPhongBan" class="form-control" readonly />
+                                                    <input type="hidden" id="ID_PhongBan" name="ID_PhongBan" />
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold">Chức Vụ</label>
+                                                    <input id="TenChucVu" name="TenChucVu" class="form-control" readonly />
+                                                    <input type="hidden" id="ID_ChucVu" name="ID_ChucVu" />
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold">Hình thức đào tạo</label>
+                                                    <select class="form-select" id="ID_htdaotao" name="ID_htdaotao">
+                                                        <option value="">-- Chọn hình thức --</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold">Quốc gia đào tạo</label>
+                                                    <select class="form-select" id="ID_QG" name="ID_QG">
+                                                        <option value="">-- Chọn quốc gia --</option>
+                                                    </select>
+                                                </div>
+
+
+                                                <div class="col-md-6">
+                                                    <label class=" =form-label fw-bold">Từ ngày</label>
+                                                    <input name="ThoiGianTu" type="date" class="form-control" required />
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold">Đến ngày</label>
+                                                    <input name="ThoiGianDen" type="date" class="form-control" />
+                                                </div>
+
+
+                                                <div class="mb-3">
+                                                    <label for="QuyetDinh" class="form-label fw-bold">Quyết định</label>
+                                                    <textarea class="form-control" id="QuyetDinh" rows="3" style="resize: both;"></textarea>
+                                                </div>
+
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="resetModalForm()">Đóng</button>
+                                        <script>
+                                            function resetModalForm() {
+                                              // reset toàn bộ form
+                                                document.getElementById('formDaoTao').reset();
+                                            }
+                                        </script>
+
+                                        <button type="button" class="btn btn-primary" onclick="modalXacNhanThemMoiDT()">Lưu</button>
+                                    </div>
+                                </div>
+                                <!-- Modal xác nhận cập nhật -->
+                                <div class="modal fade" id="modalXacNhanCapNhatTM" tabindex="-1" aria-labelledby="xacNhanCapNhatLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content text-center p-4 animate__animated animate__zoomIn animate__faster">
+                                            <div class="mb-3">
+                                                <i class="fa fa-exclamation-circle fa-3x text-warning"></i>
+                                            </div>
+                                            <h5 class="mb-2 fw-bold">Xác nhận cập nhật</h5>
+                                            <p class="text-muted">Bạn có chắc muốn cập nhật thông tin này?</p>
+                                            <div class="d-flex justify-content-center mt-4">
+                                                <button type="button" class="btn btn-success me-2 px-4" id="btnLuuDaoTao">✅ Đồng ý</button>
+                                                <button type="button" class="btn btn-outline-danger px-4" data-bs-dismiss="modal">❌ Hủy</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <style>
+                                    .modal-content {
+                                        border-radius: 1rem;
+                                        box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+                                        transition: all 0.3s ease-in-out;
                                     }
-                                }
-                            </ul>
-                        </nav> *@
+
+                                        .modal-content .btn {
+                                            transition: transform 0.2s;
+                                        }
+
+                                            .modal-content .btn:hover {
+                                                transform: scale(1.05);
+                                            }
+                                </style>
+                                <script>
+                                    function modalXacNhanThemMoiDT() {
+                                        $('#modalXacNhanCapNhatTM').modal('show');
+                                    }
+                                </script>
 
 
-                    </div>
+                            </div>
+                        </div> <!--KẾT THÚC THÊM MỚI-->
 
-                    <!-- Modal Thêm Mới -->
-                    <div class="modal fade" id="modalThemMoi" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header bg-success text-white">
-                                    <h5 class="modal-title" id="modalLabel">Thêm mới quá trình đào tạo</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form id="formDaoTao">
-                                        <div class="row mb-2">
-                                            <div class="col-md-6">
-                                                <label>Mã Viên Chức</label>
-                                                <input name="HinhThucDaoTao" class="form-control" required />
+
+
+
+                        @*  CHI TIẾT ĐÀO TẠO *@
+                        <div class="modal fade" id="modalChiTiet" tabindex="-1" aria-labelledby="modalChiTietLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Chi tiết quá trình đào tạo</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <form>
+
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <label for="MaNhanVienDetail" class="form-label fw-bold">Mã nhân viên</label>
+                                                    <input type="text" class="form-control bg-light" id="MaNhanVienDetail" readonly />
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="HoTenDetail" class="form-label fw-bold">Họ tên</label>
+                                                    <input type="text" class="form-control bg-light" id="HoTenDetail" readonly />
+                                                </div>
                                             </div>
-                                            <div class="col-md-6">
-                                                <label>Họ Và Tên</label>
-                                                <input name="HinhThucDaoTao" class="form-control" required />
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold">Đơn vị:</label>
+                                                    <select class="form-select" id="ID_PhongBanDetail" name="ID_PhongBan">
+                                                        <option value="">-- Chọn đơn vị --</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold">Chức vụ:</label>
+                                                    <select class="form-select" id="ID_ChucVuDetail" name="ID_ChucVu">
+                                                        <option value="">-- Chọn chức vụ --</option>
+                                                    </select>
+                                                </div>
                                             </div>
-                                            <div class="col-md-6">
-                                                <label>Đơn Vị</label>
-                                                <input name="HinhThucDaoTao" class="form-control" required />
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold">Hình thức đào tạo:</label>
+                                                    <select class="form-select" id="ID_htdaotaoDetail" name="ID_htdaotao">
+                                                        <option value="">-- Chọn hình thức --</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold">Quốc gia đào tạo:</label>
+                                                    <select class="form-select" id="ID_QGDetail" name="ID_QG">
+                                                        <option value="">-- Chọn quốc gia --</option>
+                                                    </select>
+                                                </div>
                                             </div>
-                                          
-                                            <div class="col-md-6">
-                                                <label>Hình thức đào tạo</label>
-                                                <input name="HinhThucDaoTao" class="form-control" required />
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <label for="ThoiGianTuDetail" class="form-label fw-bold">Thời gian từ</label>
+                                                    <input type="date" class="form-control" id="ThoiGianTuDetail" />
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="ThoiGianDenDetail" class="form-label fw-bold">Thời gian đến</label>
+                                                    <input type="date" class="form-control" id="ThoiGianDenDetail" />
+                                                </div>
                                             </div>
-                                            <div class="col-md-6">
-                                                <label>Quốc gia</label>
-                                                <input name="QuocGiaDaoTao" class="form-control" />
+                                            <div class="mb-3">
+                                                <label for="QuyetDinhDetail" class="form-label fw-bold">Quyết định</label>
+                                                <textarea class="form-control" id="QuyetDinhDetail" rows="3" style="resize: both;"></textarea>
+                                            </div>
+                                        </form>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                            <button type="button" class="btn btn-primary" onclick="modalXacNhan()">Lưu</button>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- Modal xác nhận cập nhật -->
+                                    <div class="modal fade" id="modalXacNhanCapNhat" tabindex="-1" aria-labelledby="xacNhanCapNhatLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content text-center p-4 animate__animated animate__zoomIn animate__faster">
+                                                <div class="mb-3">
+                                                    <i class="fa fa-exclamation-circle fa-3x text-warning"></i>
+                                                </div>
+                                                <h5 class="mb-2 fw-bold">Xác nhận cập nhật</h5>
+                                                <p class="text-muted">Bạn có chắc muốn cập nhật thông tin này?</p>
+                                                <div class="d-flex justify-content-center mt-4">
+                                                    <button type="button" class="btn btn-success me-2 px-4" onclick="LuuDaoTaoDetail()">✅ Đồng ý</button>
+                                                    <button type="button" class="btn btn-outline-danger px-4" data-bs-dismiss="modal">❌ Hủy</button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="row mb-2">
-                                            <div class="col-md-6">
-                                                <label>Từ ngày</label>
-                                                <input name="TuNgay" type="date" class="form-control" required />
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label>Đến ngày</label>
-                                                <input name="DenNgay" type="date" class="form-control" />
-                                            </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class="col-md-6">
-                                                <label>Quyết định</label>
-                                                <input name="QuyetDinh" class="form-control" />
-                                            </div>
-                                           
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                                    <button type="button" class="btn btn-primary" id="btnLuuDaoTao">Lưu</button>
+                                    </div>
+
+                                    <style>
+                                        .modal-content {
+                                            border-radius: 1rem;
+                                            box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+                                            transition: all 0.3s ease-in-out;
+                                        }
+
+                                            .modal-content .btn {
+                                                transition: transform 0.2s;
+                                            }
+
+                                                .modal-content .btn:hover {
+                                                    transform: scale(1.05);
+                                                }
+                                    </style>
+
+
+
+
+
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+            <script>
+                function modalXacNhan() {
+                    $('#modalXacNhanCapNhat').modal('show');
+                }
+            </script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="/js/TM_DTLoad.js"></script>
+            <script>
+                     // Load combobox cho form Thêm mới
+                document.addEventListener("DOMContentLoaded", function () {
+                loadSelectHTDT('ID_htdaotao', '/api/HinhThucDaoTao', 'ID_htdaotao', 'HinhThuc');
+                    LoadDaoTao();
+                });
+            </script>
+
+
+
 </body>
 </html>
 

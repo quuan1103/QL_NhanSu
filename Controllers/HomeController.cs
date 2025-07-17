@@ -59,11 +59,11 @@ namespace WebAPP.Controllers
         //{
         //    return View("~/Views/Home/Web/Soyeu.cshtml");
         //}
-        public IActionResult ReactApp()
-        {
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "react", "index.html");
-            return PhysicalFile(filePath, "text/html");
-        }
+        //public IActionResult ReactApp()
+        //{
+        //    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "react", "index.html");
+        //    return PhysicalFile(filePath, "text/html");
+        //}
 
     }
 }

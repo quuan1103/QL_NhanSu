@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "D8/yTCkS56dssQIJOsFbj+BSrWM1B6y7aPSBTMqJuR4=",
+  "Hash": "AmkDSuHLHSxC4gJvT76W6cksobRMADE6ipoi3dEhkeQ=",
   "Source": "WebAPP",
   "BasePath": "_content/WebAPP",
   "Mode": "Default",
@@ -1438,8 +1438,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "mc6y23e7dt",
-      "Integrity": "Wt1MFox9Npu2/4w4jHioT+IodVQd/FJYIQRB2RRIzmA=",
+      "Fingerprint": "xfwt1t2s1t",
+      "Integrity": "fZ4Vhk6LI6cZZrA1k37nnOAx1GQPjGKH4lYa2LKNrkc=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Alldanhmuc.js"
@@ -1485,6 +1485,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "D:\\HOC\\WebAPP\\wwwroot\\js\\TM_DTLoad.js",
+      "SourceId": "WebAPP",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HOC\\WebAPP\\wwwroot\\",
+      "BasePath": "_content/WebAPP",
+      "RelativePath": "js/TM_DTLoad#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "txd5ucvkur",
+      "Integrity": "L6xh9z0o/FTQeQpHu1mRDl6kLtJaN3vpnJw4SAIB7DY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\TM_DTLoad.js"
     },
     {
       "Identity": "D:\\HOC\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
@@ -2787,48 +2808,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Quanlyhoso\\anh_e0908d4edfba45079d0c2edf7f4cc0e7.png"
-    },
-    {
-      "Identity": "D:\\HOC\\WebAPP\\wwwroot\\react\\daotao\\build\\asset-manifest.json",
-      "SourceId": "WebAPP",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\HOC\\WebAPP\\wwwroot\\",
-      "BasePath": "_content/WebAPP",
-      "RelativePath": "react/daotao/build/asset-manifest#[.{fingerprint}]?.json",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "7hfci2fjyx",
-      "Integrity": "pdy9zaaFd26Uu1RjiWs+6E2kHyca0g9rtxzLBHkqi9Y=",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\react\\daotao\\build\\asset-manifest.json"
-    },
-    {
-      "Identity": "D:\\HOC\\WebAPP\\wwwroot\\react\\daotao\\build\\manifest.json",
-      "SourceId": "WebAPP",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\HOC\\WebAPP\\wwwroot\\",
-      "BasePath": "_content/WebAPP",
-      "RelativePath": "react/daotao/build/manifest#[.{fingerprint}]?.json",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "4bysstsvp2",
-      "Integrity": "ULPYw5A68/eNhxuUVXqxT045yhkurKPSz6hjyGcnmhQ=",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\react\\daotao\\build\\manifest.json"
     }
   ],
   "Endpoints": [
@@ -5473,7 +5452,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "20148"
+          "Value": "25620"
         },
         {
           "Name": "Content-Type",
@@ -5481,11 +5460,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Wt1MFox9Npu2/4w4jHioT+IodVQd/FJYIQRB2RRIzmA=\""
+          "Value": "\"fZ4Vhk6LI6cZZrA1k37nnOAx1GQPjGKH4lYa2LKNrkc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 29 Jun 2025 16:18:09 GMT"
+          "Value": "Sat, 12 Jul 2025 04:24:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5495,12 +5474,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Wt1MFox9Npu2/4w4jHioT+IodVQd/FJYIQRB2RRIzmA="
+          "Value": "sha256-fZ4Vhk6LI6cZZrA1k37nnOAx1GQPjGKH4lYa2LKNrkc="
         }
       ]
     },
     {
-      "Route": "js/Alldanhmuc.mc6y23e7dt.js",
+      "Route": "js/Alldanhmuc.xfwt1t2s1t.js",
       "AssetFile": "D:\\HOC\\WebAPP\\wwwroot\\js\\Alldanhmuc.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -5510,7 +5489,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "20148"
+          "Value": "25620"
         },
         {
           "Name": "Content-Type",
@@ -5518,11 +5497,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Wt1MFox9Npu2/4w4jHioT+IodVQd/FJYIQRB2RRIzmA=\""
+          "Value": "\"fZ4Vhk6LI6cZZrA1k37nnOAx1GQPjGKH4lYa2LKNrkc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 29 Jun 2025 16:18:09 GMT"
+          "Value": "Sat, 12 Jul 2025 04:24:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5532,7 +5511,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "mc6y23e7dt"
+          "Value": "xfwt1t2s1t"
         },
         {
           "Name": "label",
@@ -5540,7 +5519,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Wt1MFox9Npu2/4w4jHioT+IodVQd/FJYIQRB2RRIzmA="
+          "Value": "sha256-fZ4Vhk6LI6cZZrA1k37nnOAx1GQPjGKH4lYa2LKNrkc="
         }
       ]
     },
@@ -5705,6 +5684,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-zu7BDS1sOxTLnkpka7OefrYi7suFkcdbd0DLiJU87dA="
+        }
+      ]
+    },
+    {
+      "Route": "js/TM_DTLoad.js",
+      "AssetFile": "D:\\HOC\\WebAPP\\wwwroot\\js\\TM_DTLoad.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13457"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"L6xh9z0o/FTQeQpHu1mRDl6kLtJaN3vpnJw4SAIB7DY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 16 Jul 2025 09:52:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-L6xh9z0o/FTQeQpHu1mRDl6kLtJaN3vpnJw4SAIB7DY="
+        }
+      ]
+    },
+    {
+      "Route": "js/TM_DTLoad.txd5ucvkur.js",
+      "AssetFile": "D:\\HOC\\WebAPP\\wwwroot\\js\\TM_DTLoad.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13457"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"L6xh9z0o/FTQeQpHu1mRDl6kLtJaN3vpnJw4SAIB7DY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 16 Jul 2025 09:52:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "txd5ucvkur"
+        },
+        {
+          "Name": "label",
+          "Value": "js/TM_DTLoad.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-L6xh9z0o/FTQeQpHu1mRDl6kLtJaN3vpnJw4SAIB7DY="
         }
       ]
     },
@@ -10793,170 +10854,6 @@
       ]
     },
     {
-      "Route": "react/daotao/build/asset-manifest.7hfci2fjyx.json",
-      "AssetFile": "D:\\HOC\\WebAPP\\wwwroot\\react\\daotao\\build\\asset-manifest.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "369"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"pdy9zaaFd26Uu1RjiWs+6E2kHyca0g9rtxzLBHkqi9Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Jul 2025 07:22:48 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7hfci2fjyx"
-        },
-        {
-          "Name": "label",
-          "Value": "react/daotao/build/asset-manifest.json"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-pdy9zaaFd26Uu1RjiWs+6E2kHyca0g9rtxzLBHkqi9Y="
-        }
-      ]
-    },
-    {
-      "Route": "react/daotao/build/asset-manifest.json",
-      "AssetFile": "D:\\HOC\\WebAPP\\wwwroot\\react\\daotao\\build\\asset-manifest.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "369"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"pdy9zaaFd26Uu1RjiWs+6E2kHyca0g9rtxzLBHkqi9Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Jul 2025 07:22:48 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-pdy9zaaFd26Uu1RjiWs+6E2kHyca0g9rtxzLBHkqi9Y="
-        }
-      ]
-    },
-    {
-      "Route": "react/daotao/build/manifest.4bysstsvp2.json",
-      "AssetFile": "D:\\HOC\\WebAPP\\wwwroot\\react\\daotao\\build\\manifest.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "492"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ULPYw5A68/eNhxuUVXqxT045yhkurKPSz6hjyGcnmhQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 09 Jul 2025 16:26:40 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "4bysstsvp2"
-        },
-        {
-          "Name": "label",
-          "Value": "react/daotao/build/manifest.json"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ULPYw5A68/eNhxuUVXqxT045yhkurKPSz6hjyGcnmhQ="
-        }
-      ]
-    },
-    {
-      "Route": "react/daotao/build/manifest.json",
-      "AssetFile": "D:\\HOC\\WebAPP\\wwwroot\\react\\daotao\\build\\manifest.json",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "492"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/json"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ULPYw5A68/eNhxuUVXqxT045yhkurKPSz6hjyGcnmhQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 09 Jul 2025 16:26:40 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ULPYw5A68/eNhxuUVXqxT045yhkurKPSz6hjyGcnmhQ="
-        }
-      ]
-    },
-    {
       "Route": "WebAPP.4rkul8f3ue.bundle.scp.css",
       "AssetFile": "D:\\HOC\\WebAPP\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebAPP.bundle.scp.css",
       "Selectors": [],
@@ -10979,7 +10876,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Jul 2025 18:07:49 GMT"
+          "Value": "Wed, 16 Jul 2025 08:28:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11024,7 +10921,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Jul 2025 18:07:49 GMT"
+          "Value": "Wed, 16 Jul 2025 08:28:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11069,7 +10966,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Jul 2025 18:07:49 GMT"
+          "Value": "Wed, 16 Jul 2025 08:28:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11106,7 +11003,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 10 Jul 2025 18:07:49 GMT"
+          "Value": "Wed, 16 Jul 2025 08:28:46 GMT"
         },
         {
           "Name": "Cache-Control",

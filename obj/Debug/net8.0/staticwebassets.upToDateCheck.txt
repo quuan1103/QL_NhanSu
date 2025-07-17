@@ -6,6 +6,7 @@ wwwroot\img\logo4.png
 wwwroot\js\Alldanhmuc.js
 wwwroot\js\script.js
 wwwroot\js\site.js
+wwwroot\js\TM_DTLoad.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
@@ -68,5 +69,3 @@ wwwroot\Quanlyhoso\anh_8dca2ce8cf1c44f6a1a1ec8b6182c2ce.png
 wwwroot\Quanlyhoso\anh_8e820068b4794cf8b2b7ed8f237beb69.jpg
 wwwroot\Quanlyhoso\anh_d95dae4dd4ec4c6a86c07a7b424653af.jpg
 wwwroot\Quanlyhoso\anh_e0908d4edfba45079d0c2edf7f4cc0e7.png
-wwwroot\react\daotao\build\asset-manifest.json
-wwwroot\react\daotao\build\manifest.json

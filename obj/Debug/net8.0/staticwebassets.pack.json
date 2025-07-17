@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets\\js\\Alldanhmuc.js"
     },
     {
+      "Id": "D:\\HOC\\WebAPP\\wwwroot\\js\\TM_DTLoad.js",
+      "PackagePath": "staticwebassets\\js\\TM_DTLoad.js"
+    },
+    {
       "Id": "D:\\HOC\\WebAPP\\wwwroot\\js\\script.js",
       "PackagePath": "staticwebassets\\js\\script.js"
     },
@@ -283,14 +287,6 @@
     {
       "Id": "D:\\HOC\\WebAPP\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
-    },
-    {
-      "Id": "D:\\HOC\\WebAPP\\wwwroot\\react\\daotao\\build\\asset-manifest.json",
-      "PackagePath": "staticwebassets\\react\\daotao\\build\\asset-manifest.json"
-    },
-    {
-      "Id": "D:\\HOC\\WebAPP\\wwwroot\\react\\daotao\\build\\manifest.json",
-      "PackagePath": "staticwebassets\\react\\daotao\\build\\manifest.json"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebAPP.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

@@ -1,0 +1,2 @@
+D:\HOC\WebAPP\wwwroot\react\daotao\build\asset-manifest.json
+D:\HOC\WebAPP\wwwroot\react\daotao\build\manifest.json

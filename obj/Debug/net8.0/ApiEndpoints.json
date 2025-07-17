@@ -64,8 +64,8 @@
   },
   {
     "ContainingType": "DaoTaoController",
-    "Method": "GetAll",
-    "RelativePath": "api/DaoTao",
+    "Method": "GetDaotao",
+    "RelativePath": "api/DaoTao/get-daotao",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -74,15 +74,151 @@
   },
   {
     "ContainingType": "DaoTaoController",
-    "Method": "Create",
-    "RelativePath": "api/DaoTao",
+    "Method": "GetDaoTaoByMaNV",
+    "RelativePath": "api/DaoTao/get-daotao-by-manv/{maNhanVien}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "maNhanVien",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DaoTaoController",
+    "Method": "GetThongTinTheoMaNV",
+    "RelativePath": "api/DaoTao/GetByMaNV/{maNV}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "maNV",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DaoTaoController",
+    "Method": "GetDanhSachQuocGia",
+    "RelativePath": "api/DaoTao/GetDanhSachQuocGia",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DaoTaoController",
+    "Method": "InsertDaoTao",
+    "RelativePath": "api/DaoTao/insert-daotao",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
+        "Name": "modal",
+        "Type": "WebAPP.Models.DaoTao.Daotao",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DaoTaoController",
+    "Method": "GetDanhSachNhanVien",
+    "RelativePath": "api/DaoTao/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DaoTaoController",
+    "Method": "PutDaoTaoByMaNhanVien",
+    "RelativePath": "api/DaoTao/update-daotao/{maNhanVien}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "maNhanVien",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
         "Name": "model",
         "Type": "WebAPP.Models.DaoTao.Daotao",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HinhThucDaoTaoDM",
+    "Method": "PostChucVu",
+    "RelativePath": "api/HinhThucDaoTao",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "hinhthucdaotao",
+        "Type": "WebAPP.Models.ModelDanhMuc.HinhThucDTDM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HinhThucDaoTaoDM",
+    "Method": "GetAll",
+    "RelativePath": "api/HinhThucDaoTao",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HinhThucDaoTaoDM",
+    "Method": "Delete",
+    "RelativePath": "api/HinhThucDaoTao/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HinhThucDaoTaoDM",
+    "Method": "PutHinhThucDaoTao",
+    "RelativePath": "api/HinhThucDaoTao/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "hinhthucdaotao",
+        "Type": "WebAPP.Models.ModelDanhMuc.HinhThucDTDM",
         "IsRequired": true
       }
     ],
