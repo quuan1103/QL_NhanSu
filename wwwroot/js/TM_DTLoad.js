@@ -140,7 +140,7 @@ function loadAllDropdownDetailDT(dt) {
     loadSelectHTDTdetail('ID_QGDetail', '/api/DaoTao/GetDanhSachQuocGia', 'ID_QG', 'TenQuocGia', dt.ID_QG);
     loadSelectHTDTdetail('ID_PhongBanDetail', '/api/PhongBan', 'ID_Phongban', 'Tenphongban', dt.ID_PhongBan);
     loadSelectHTDTdetail('ID_ChucVuDetail', '/api/ChucVu', 'ID_ChucVu', 'TenChucVu', dt.ID_ChucVu);
-   
+
 
 }
 
@@ -161,16 +161,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 QuyetDinh: document.getElementById("QuyetDinh").value || "",
                 ThoiGianTu: document.querySelector("input[name='ThoiGianTu']").value || null,
                 ThoiGianDen: document.querySelector("input[name='ThoiGianDen']").value || null,
-                ID_TrangThai: 1
+                ID_TrangThai: 4 // Mặc định là 4 (Tạo mới), có thể thay đổi nếu cần
             };
 
             console.log("Dữ liệu gửi:", JSON.stringify(model));
 
-            if (!model.MaNhanVien || !model.ID_htdaotao  || !model.ThoiGianTu) {
+            if (!model.MaNhanVien || !model.ID_htdaotao || !model.ThoiGianTu) {
                 alert("Vui lòng điền đầy đủ các trường bắt buộc!");
                 return;
             }
-          
+
 
             try {
                 const response = await fetch("/api/DaoTao/insert-daotao", {
@@ -188,9 +188,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     if (result.success) {
                         alert(result.message || "Lưu thành công!");
-                        resetModalForm(); 
-                        $('#modalThemMoi').modal('hide'); 
-                        LoadDaoTao(); 
+                        resetModalForm();
+                        $('#modalThemMoi').modal('hide');
+                        LoadDaoTao();
                     } else {
                         alert("Lỗi: " + result.message);
                     }
@@ -208,42 +208,63 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 //Load nhân viên
+
+
+
 function LoadDaoTao() {
     fetch('/api/DaoTao/get-daotao')
         .then(response => response.json())
         .then(data => {
             if (Array.isArray(data)) {
                 let html = '';
+
+                // Hàm xác định class theo ID_TrangThai
+                function getBadgeClass(idTrangThai) {
+                    switch (idTrangThai) {
+                        case 1: return "bg-warning";   // Chưa duyệt
+                        case 2: return "bg-success";   // Đã duyệt
+                        case 3: return "bg-danger";    // Hết hạn
+                        case 4: return "bg-info";      // Tạo mới
+                        default: return "bg-secondary"; // Không xác định
+                    }
+                }
+
                 data.forEach((dt, index) => {
+                    const badgeClass = getBadgeClass(dt.ID_TrangThai);
+
                     html += `<tr>
-                                <td>${index + 1}</td>
-                                <td>${dt.MaNhanVien}</td>
-                                <td>${dt.HoTen}</td>
-                                <td>${dt.TenPhongBan ?? ''}</td>
-                                <td>${dt.TenChucVu}</td>
-                                <td>${dt.TenQuocGia}</td>
-                                <td>${dt.HinhThuc}</td>
-                                <td>${dt.ThoiGianTu ? formatDate(dt.ThoiGianTu) : ''}</td>
-                                <td>${dt.ThoiGianDen ? formatDate(dt.ThoiGianDen) : ''}</td>
-                                <td>${dt.QuyetDinh || ''}</td>
-                                <td>
-                                    <button class="btn btn-sm btn-primary" 
-                                            onclick="ChiTietDaoTao('${dt.MaNhanVien}')">
-                                        Chi tiết
-                                    </button>
-                                </td>
-                            </tr>`;
+                        <td><input type="checkbox" class="rowCheckbox" data-id="${dt.MaNhanVien}" /></td>
+                        
+                        <td>${dt.MaNhanVien}</td>
+                        <td>${dt.HoTen}</td>
+                        <td>${dt.TenPhongBan ?? ''}</td>
+                        <td>${dt.TenChucVu}</td>
+                        <td>${dt.HinhThuc}</td>
+                        <td>${dt.ThoiGianTu ? formatDate(dt.ThoiGianTu) : ''}</td>
+                        <td>${dt.ThoiGianDen ? formatDate(dt.ThoiGianDen) : ''}</td>
+                        <td><span class="badge ${badgeClass}">${dt.TenTrangThai}</span></td>
+                        <td>
+                            <button class="btn btn-sm btn-primary" 
+                                    onclick="ChiTietDaoTao('${dt.MaNhanVien}')">
+                                Chi tiết
+                            </button>
+                        </td>
+                    </tr>`;
                 });
+
                 document.getElementById('tblQTdaotao').innerHTML = html;
             }
         })
         .catch(err => console.error("Lỗi:", err));
 }
 
+
+
+
 //Chi Tiết
 function ChiTietDaoTao(maNhanVien) {
     debugger
-if (!maNhanVien) {
+    if (!maNhanVien) {
         alert('Mã nhân viên không hợp lệ!');
         return;
     }
@@ -332,8 +353,37 @@ function LuuDaoTaoDetail() {
         })
 
 
+        //Duyệt 
+    $(document).ready(function () {
+        $('#btnDuyet').click(function () {
+            var selectedIds = [];
 
-   
+            $('.rowCheckbox:checked').each(function () {
+                selectedIds.push($(this).data('id'));
+            });
+
+            if (selectedIds.length === 0) {
+                alert("Vui lòng chọn ít nhất một dòng để duyệt.");
+                return;
+            }
+
+            $.ajax({
+                url: '/Duyet-daotao',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(selectedIds),
+                success: function () {
+                    alert('Duyệt thành công!');
+                    location.reload();
+                },
+                error: function () {
+                    alert('Có lỗi xảy ra!');
+                }
+            });
+        });
+    });
+
+
 }
 
 

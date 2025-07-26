@@ -1,0 +1,79 @@
+﻿@model IEnumerable<WebAPP.Models.PhanQuyen.VaiTro>
+
+@{
+    ViewData["Title"] = "Phân quyền vai trò";
+    Layout = "~/Views/Shared/WebGD.cshtml";
+}
+
+
+<div class="container-fluid mt-4">
+    <div class="row mb-3">
+        <div class="col-12">
+            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                <h4 class="mb-sm-0 font-size-18">Danh sách vai trò</h4>
+                <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item">Trang chủ</li>
+                        <li class="breadcrumb-item">Lý lịch VCNLĐ</li>
+                        <li class="breadcrumb-item active">Vai trò</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .mw-95 {
+            min-width: 95px;
+        }
+
+        .card-header .card-title {
+            color: #000;
+        }
+    </style>
+    <!-- CARD chính -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">DANH SÁCH VAI TRÒ</h5>
+                    <a class="btn btn-outline-primary btn-sm" asp-action="ThemMoi" asp-controller="PhanQuyen">
+                        <i class="bi bi-plus-circle"></i> Thêm mới
+                    </a>
+                </div>
+                <div class="card-body">
+                    <table id="tblVaiTro" class="table table-bordered table-hover table-striped">
+                        <thead class="table-light">
+                            <tr>
+                                <th style="width: 40%">Tên vai trò</th>
+                                <th style="width: 40%">Nội dung</th>
+                                <th style="width: 20%">Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.TenVaiTro</td>
+                                    <td>@item.MoTa</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-outline-primary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="bi bi-list"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                @* <li><a class="dropdown-item" asp-action="ChiTiet" asp-route-id="@item.Id">Chi tiết</a></li>
+                                                <li><a class="dropdown-item" asp-action="Sua" asp-route-id="@item.Id">Chỉnh sửa</a></li>
+                                                <li><a class="dropdown-item text-danger" asp-action="Xoa" asp-route-id="@item.Id">Xóa</a></li> *@
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div> <!-- card-body -->
+            </div> <!-- card -->
+        </div> <!-- col -->
+    </div> <!-- row -->
+</div> <!-- container-fluid -->
+

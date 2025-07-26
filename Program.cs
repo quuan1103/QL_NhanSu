@@ -4,10 +4,11 @@ using WebAPP.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 // Dapper
 builder.Services.AddSingleton<DapperContext>();
 
-// 🔧 Thêm ApplicationDbContext
+// EF DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -21,12 +22,30 @@ builder.Services.AddControllers()
         options.JsonSerializerOptions.PropertyNamingPolicy = null;
     });
 
+// Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Session
+builder.Services.AddSession();
+
+
+builder.Services.AddAuthentication("MyCookieAuth")
+    .AddCookie("MyCookieAuth", options =>
+    {
+        options.Cookie.Name = "MyAppAuth";
+        options.LoginPath = "/Account/Login";
+        options.LogoutPath = "/Account/Logout";
+        options.AccessDeniedPath = "/Account/AccessDenied";
+    });
+
+builder.Services.AddAuthorization();
+
+// BUILD APP
 var app = builder.Build();
 
-// Middleware
+// MIDDLEWARE PIPELINE
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -49,15 +68,20 @@ app.UseStaticFiles(new StaticFileOptions
 });
 
 app.UseRouting();
-app.UseAuthorization();
 
+// Session và Auth phải nằm đúng thứ tự
+app.UseSession();          // Session cho thông tin người dùng
+app.UseAuthentication();   // Xác thực
+app.UseAuthorization();    // Phân quyền
+
+// Route
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Login}/{action=indexDangnhap}/{id?}");
 
 app.MapRazorPages();
 
-// Route fallback về React nếu không khớp route API/MVC
-//app.MapFallbackToController("ReactApp", "Home");
+// app.MapFallbackToController("ReactApp", "Home"); // nếu dùng React thì mở lại
 
+// ✅ 4. CHẠY ỨNG DỤNG
 app.Run();

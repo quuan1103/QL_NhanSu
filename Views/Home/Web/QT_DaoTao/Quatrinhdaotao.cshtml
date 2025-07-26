@@ -82,13 +82,19 @@
                 <div class="card-body">
                     <div class="d-sm-flex justify-content-between align-items-center mb-3" style="min-height: 50px;">
                         <h5 class="mb-0">Danh sách quá trình đào tạo</h5>
+                        <div class="d-flex align-items-center gap-2">
+                            <!-- Nút Duyệt -->
+                            <button id="btnDuyet" class="btn btn-success d-flex align-items-center">
+                                <i class="fa fa-check-circle me-2"></i> Duyệt
+                            </button>
                         <a href="javascript:void(0);"
                            class="btn btn-outline-primary d-flex align-items-center"
                            data-bs-toggle="modal"
                            data-bs-target="#modalThemMoi">
-                            <i class="fa fa-plus-circle me-2"></i> Thêm mới
-                        </a>
-
+                            <i class="fa fa-plus-circle me-2"></i> Thêm mới                           
+                        </a>   
+                        </div>
+                        
                     </div>
 
 
@@ -115,22 +121,23 @@
                             <table class="table table-bordered table-striped custom-table" style="width: 1250px;">
                                 <thead class="table-light">
                                     <tr>
-                                        <th>STT</th>
-
+                                        <th>Chọn</th>
+                                       
                                         <th>Mã VC/NLĐ</th>
                                         <th>Họ Tên</th>
                                         <th>Đơn Vị</th>
                                         <th>Chức vụ</th>
-                                        <th>Quốc gia</th>
+                                        @* <th>Quốc gia</th> *@
                                         <th>Hình Thức Đào Tạo</th>
                                         <th>Từ Ngày</th>
                                         <th>Đến Ngày</th>
-                                        <th>Quyết định</th>
+                                       @*  <th>Quyết định</th> *@
+                                        <th>Trạng thái</th>
                                         <th>Thao tác</th>
-
                                     </tr>
                                 </thead>
                                 <tbody id="tblQTdaotao">
+                               
                                     @* Dữ liệu nhân viên sẽ được load từ controller *@
                                 </tbody>
                             </table>

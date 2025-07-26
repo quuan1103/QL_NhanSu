@@ -3,68 +3,52 @@
   "WorkspaceRootPath": "D:\\HOC\\WebAPP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\daotao\\tm_daotaoapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\daotao\\tm_daotaoapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\home\\web\\qt_daotao\\quatrinhdaotao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\home\\web\\qt_daotao\\quatrinhdaotao.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\models\\daotao\\daotao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:models\\daotao\\daotao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\wwwroot\\js\\tm_dtload.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:wwwroot\\js\\tm_dtload.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\wwwroot\\js\\alldanhmuc.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:wwwroot\\js\\alldanhmuc.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\daotao\\tm_daotaoapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\daotao\\tm_daotaoapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\models\\quocgia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:models\\quocgia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\models\\daotao\\daotao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:models\\daotao\\daotao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\danhmuccontroller\\phongbandanhmuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\danhmuccontroller\\phongbandanhmuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\wwwroot\\js\\loadhoso.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:wwwroot\\js\\loadhoso.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\home\\web\\lylich\\soyeu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\home\\web\\lylich\\soyeu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\phanquyenct\\phanquyenapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\phanquyenct\\phanquyenapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\hoso\\themmoillapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\hoso\\themmoillapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\danhmuccontroller\\hinhthucdaotaodm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\danhmuccontroller\\hinhthucdaotaodm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\wwwroot\\js\\loadhoso.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:wwwroot\\js\\loadhoso.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\phanquyen\\danhsachvaitro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\phanquyen\\danhsachvaitro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\models\\hoso\\lylich.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:models\\hoso\\lylich.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\danhmuc_phongban\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\danhmuc_phongban\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\models\\modeldanhmuc\\chucvudm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:models\\modeldanhmuc\\chucvudm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\shared\\webgd.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\shared\\webgd.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\danhmuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\danhmuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\phanquyenct\\phanquyencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\phanquyenct\\phanquyencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\wwwroot\\js\\chitiethr.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:wwwroot\\js\\chitiethr.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\models\\phanquyen\\phanquyen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:models\\phanquyen\\phanquyen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\quanlyhoso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,16 +59,72 @@
       "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\models\\modeldanhmuc\\chucvudm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:models\\modeldanhmuc\\chucvudm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\wwwroot\\js\\alldanhmuc.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:wwwroot\\js\\alldanhmuc.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\wwwroot\\js\\chitiethr.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:wwwroot\\js\\chitiethr.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\wwwroot\\js\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:wwwroot\\js\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\models\\taikhoannhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:models\\taikhoannhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\home\\login\\indexdangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\home\\login\\indexdangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\models\\quocgia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:models\\quocgia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\danhmuccontroller\\phongbandanhmuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\danhmuccontroller\\phongbandanhmuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\home\\web\\lylich\\soyeu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\home\\web\\lylich\\soyeu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\danhmuccontroller\\hinhthucdaotaodm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\danhmuccontroller\\hinhthucdaotaodm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\models\\hoso\\lylich.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:models\\hoso\\lylich.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\danhmuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\danhmuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\views\\home\\web\\lylich\\themmoisyll.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:views\\home\\web\\lylich\\themmoisyll.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\danhmuccontroller\\trinhdodanhmuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\danhmuccontroller\\trinhdodanhmuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|d:\\hoc\\webapp\\controllers\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1824B009-4772-43C4-9515-438DD845D1FB}|WebAPP.csproj|solutionrelative:controllers\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,44 +134,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "TM_DaoTaoAPI.cs",
               "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\DaoTao\\TM_DaoTaoAPI.cs",
               "RelativeDocumentMoniker": "Controllers\\DaoTao\\TM_DaoTaoAPI.cs",
               "ToolTip": "D:\\HOC\\WebAPP\\Controllers\\DaoTao\\TM_DaoTaoAPI.cs",
               "RelativeToolTip": "Controllers\\DaoTao\\TM_DaoTaoAPI.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAqwG4AAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAALgAAAAAAAAAAAAgwMUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-12T19:48:20.564Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Quatrinhdaotao.cshtml",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\Home\\Web\\QT_DaoTao\\Quatrinhdaotao.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Web\\QT_DaoTao\\Quatrinhdaotao.cshtml",
+              "ToolTip": "D:\\HOC\\WebAPP\\Views\\Home\\Web\\QT_DaoTao\\Quatrinhdaotao.cshtml",
+              "RelativeToolTip": "Views\\Home\\Web\\QT_DaoTao\\Quatrinhdaotao.cshtml",
+              "ViewState": "AgIAAE8AAAAAAAAAAAApwGMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-12T19:49:44.552Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Quatrinhdaotao.cshtml",
-              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\Home\\Web\\QT_DaoTao\\Quatrinhdaotao.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Web\\QT_DaoTao\\Quatrinhdaotao.cshtml",
-              "ToolTip": "D:\\HOC\\WebAPP\\Views\\Home\\Web\\QT_DaoTao\\Quatrinhdaotao.cshtml",
-              "RelativeToolTip": "Views\\Home\\Web\\QT_DaoTao\\Quatrinhdaotao.cshtml",
-              "ViewState": "AgIAAAMBAAAAAAAAAAAAACABAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-12T19:49:44.552Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "TM_DTLoad.js",
               "DocumentMoniker": "D:\\HOC\\WebAPP\\wwwroot\\js\\TM_DTLoad.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\TM_DTLoad.js",
               "ToolTip": "D:\\HOC\\WebAPP\\wwwroot\\js\\TM_DTLoad.js",
               "RelativeToolTip": "wwwroot\\js\\TM_DTLoad.js",
-              "ViewState": "AgIAABYBAAAAAAAAAAAAADIBAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAGEBAAAAAAAAAAAYwH8BAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-07-12T19:48:44.131Z",
               "IsPinned": true
@@ -147,6 +187,126 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "PhanQuyenAPI.cs",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\PhanQuyenCT\\PhanQuyenAPI.cs",
+              "RelativeDocumentMoniker": "Controllers\\PhanQuyenCT\\PhanQuyenAPI.cs",
+              "ToolTip": "D:\\HOC\\WebAPP\\Controllers\\PhanQuyenCT\\PhanQuyenAPI.cs",
+              "RelativeToolTip": "Controllers\\PhanQuyenCT\\PhanQuyenAPI.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-20T18:10:17.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\DanhMuc_Phongban\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\DanhMuc_Phongban\\Index.cshtml",
+              "ToolTip": "D:\\HOC\\WebAPP\\Views\\DanhMuc_Phongban\\Index.cshtml",
+              "RelativeToolTip": "Views\\DanhMuc_Phongban\\Index.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADAAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-20T11:13:26.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "WebGD.cshtml",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\Shared\\WebGD.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\WebGD.cshtml",
+              "ToolTip": "D:\\HOC\\WebAPP\\Views\\Shared\\WebGD.cshtml",
+              "RelativeToolTip": "Views\\Shared\\WebGD.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAADkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-20T09:32:34.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DanhSachVaiTro.cshtml",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\PhanQuyen\\DanhSachVaiTro.cshtml",
+              "RelativeDocumentMoniker": "Views\\PhanQuyen\\DanhSachVaiTro.cshtml",
+              "ToolTip": "D:\\HOC\\WebAPP\\Views\\PhanQuyen\\DanhSachVaiTro.cshtml",
+              "RelativeToolTip": "Views\\PhanQuyen\\DanhSachVaiTro.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACcAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-20T09:31:25.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PhanQuyenController.cs",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\PhanQuyenCT\\PhanQuyenController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PhanQuyenCT\\PhanQuyenController.cs",
+              "ToolTip": "D:\\HOC\\WebAPP\\Controllers\\PhanQuyenCT\\PhanQuyenController.cs",
+              "RelativeToolTip": "Controllers\\PhanQuyenCT\\PhanQuyenController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwA4AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-20T09:25:20.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PhanQuyen.cs",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\Models\\PhanQuyen\\PhanQuyen.cs",
+              "RelativeDocumentMoniker": "Models\\PhanQuyen\\PhanQuyen.cs",
+              "ToolTip": "D:\\HOC\\WebAPP\\Models\\PhanQuyen\\PhanQuyen.cs",
+              "RelativeToolTip": "Models\\PhanQuyen\\PhanQuyen.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAcwAYAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-20T09:24:03.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "site.js",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
+              "ToolTip": "D:\\HOC\\WebAPP\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-07-17T08:58:58.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "script.js",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\wwwroot\\js\\script.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\script.js",
+              "ToolTip": "D:\\HOC\\WebAPP\\wwwroot\\js\\script.js",
+              "RelativeToolTip": "wwwroot\\js\\script.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-07-17T08:58:52.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "TaiKhoanNhanVien.cs",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\Models\\TaiKhoanNhanVien.cs",
+              "RelativeDocumentMoniker": "Models\\TaiKhoanNhanVien.cs",
+              "ToolTip": "D:\\HOC\\WebAPP\\Models\\TaiKhoanNhanVien.cs",
+              "RelativeToolTip": "Models\\TaiKhoanNhanVien.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAwwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T08:37:44.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "indexDangnhap.cshtml",
+              "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\Home\\Login\\indexDangnhap.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Login\\indexDangnhap.cshtml",
+              "ToolTip": "D:\\HOC\\WebAPP\\Views\\Home\\Login\\indexDangnhap.cshtml",
+              "RelativeToolTip": "Views\\Home\\Login\\indexDangnhap.cshtml",
+              "ViewState": "AgIAABoAAAAAAAAAAAAQwEMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-17T08:27:39.553Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "Alldanhmuc.js",
               "DocumentMoniker": "D:\\HOC\\WebAPP\\wwwroot\\js\\Alldanhmuc.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\Alldanhmuc.js",
@@ -158,7 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 24,
               "Title": "PhongBanDanhMuc.cs",
               "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\DanhMucController\\PhongBanDanhMuc.cs",
               "RelativeDocumentMoniker": "Controllers\\DanhMucController\\PhongBanDanhMuc.cs",
@@ -170,19 +330,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "LoadHoso.js",
               "DocumentMoniker": "D:\\HOC\\WebAPP\\wwwroot\\js\\LoadHoso.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\LoadHoso.js",
               "ToolTip": "D:\\HOC\\WebAPP\\wwwroot\\js\\LoadHoso.js",
               "RelativeToolTip": "wwwroot\\js\\LoadHoso.js",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCEAAABjAAAAAAAAAA==",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAAwC4AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-07-14T07:23:30.164Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 28,
               "Title": "DanhMuc.cs",
               "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\DanhMuc.cs",
               "RelativeDocumentMoniker": "Controllers\\DanhMuc.cs",
@@ -194,7 +354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "ChiTietHR.js",
               "DocumentMoniker": "D:\\HOC\\WebAPP\\wwwroot\\js\\ChiTietHR.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\ChiTietHR.js",
@@ -206,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 23,
               "Title": "QuocGia.cs",
               "DocumentMoniker": "D:\\HOC\\WebAPP\\Models\\QuocGia.cs",
               "RelativeDocumentMoniker": "Models\\QuocGia.cs",
@@ -218,31 +378,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Daotao.cs",
               "DocumentMoniker": "D:\\HOC\\WebAPP\\Models\\DaoTao\\Daotao.cs",
               "RelativeDocumentMoniker": "Models\\DaoTao\\Daotao.cs",
               "ToolTip": "D:\\HOC\\WebAPP\\Models\\DaoTao\\Daotao.cs",
               "RelativeToolTip": "Models\\DaoTao\\Daotao.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-13T10:25:41.257Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\HOC\\WebAPP\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\HOC\\WebAPP\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-13T10:00:29.551Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 27,
               "Title": "LyLich.cs",
               "DocumentMoniker": "D:\\HOC\\WebAPP\\Models\\HoSo\\LyLich.cs",
               "RelativeDocumentMoniker": "Models\\HoSo\\LyLich.cs",
@@ -254,31 +414,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "ChucVuDM.cs",
               "DocumentMoniker": "D:\\HOC\\WebAPP\\Models\\ModelDanhMuc\\ChucVuDM.cs",
               "RelativeDocumentMoniker": "Models\\ModelDanhMuc\\ChucVuDM.cs",
               "ToolTip": "D:\\HOC\\WebAPP\\Models\\ModelDanhMuc\\ChucVuDM.cs",
               "RelativeToolTip": "Models\\ModelDanhMuc\\ChucVuDM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-13T07:56:36.332Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "ThemMoiLLAPI.cs",
               "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\HoSo\\ThemMoiLLAPI.cs",
               "RelativeDocumentMoniker": "Controllers\\HoSo\\ThemMoiLLAPI.cs",
               "ToolTip": "D:\\HOC\\WebAPP\\Controllers\\HoSo\\ThemMoiLLAPI.cs",
               "RelativeToolTip": "Controllers\\HoSo\\ThemMoiLLAPI.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAAwG4AAABYAAAAAAAAAA==",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAgwGwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-13T07:54:57.476Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 30,
               "Title": "TrinhDoDanhMuc.cs",
               "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\DanhMucController\\TrinhDoDanhMuc.cs",
               "RelativeDocumentMoniker": "Controllers\\DanhMucController\\TrinhDoDanhMuc.cs",
@@ -290,43 +450,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 13,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "D:\\HOC\\WebAPP\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-13T05:34:26.446Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 16,
               "Title": "Login.cs",
               "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\Login.cs",
               "RelativeDocumentMoniker": "Controllers\\Login.cs",
               "ToolTip": "D:\\HOC\\WebAPP\\Controllers\\Login.cs",
               "RelativeToolTip": "Controllers\\Login.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAAwLUAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-13T05:34:26.028Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 12,
               "Title": "Quanlyhoso.cs",
               "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\Quanlyhoso.cs",
               "RelativeDocumentMoniker": "Controllers\\Quanlyhoso.cs",
               "ToolTip": "D:\\HOC\\WebAPP\\Controllers\\Quanlyhoso.cs",
               "RelativeToolTip": "Controllers\\Quanlyhoso.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAYwDcAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAuwEYAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-13T05:33:58.879Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 29,
               "Title": "ThemmoiSYLL.cshtml",
               "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\Home\\Web\\LyLich\\ThemmoiSYLL.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Web\\LyLich\\ThemmoiSYLL.cshtml",
@@ -338,7 +498,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 25,
               "Title": "Soyeu.cshtml",
               "DocumentMoniker": "D:\\HOC\\WebAPP\\Views\\Home\\Web\\LyLich\\Soyeu.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Web\\LyLich\\Soyeu.cshtml",
@@ -350,7 +510,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 26,
               "Title": "HinhThucDaoTaoDM.cs",
               "DocumentMoniker": "D:\\HOC\\WebAPP\\Controllers\\DanhMucController\\HinhThucDaoTaoDM.cs",
               "RelativeDocumentMoniker": "Controllers\\DanhMucController\\HinhThucDaoTaoDM.cs",

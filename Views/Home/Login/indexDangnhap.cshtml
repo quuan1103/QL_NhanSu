@@ -16,7 +16,8 @@
         <h2>Đăng Nhập</h2>
 
         @* Form đăng nhập *@
-        <form method="post" asp-controller="Login" asp-action="indexDangnhap">
+      @*   <form method="post" asp-controller="Login" asp-action="indexDangnhap"> *@
+            <form asp-action="IndexDangNhap" asp-controller="Login" method="post">
             <div class="input-field">
                 <input type="text" name="TenDangNhap" placeholder="Tên đăng nhập" required />
             </div>

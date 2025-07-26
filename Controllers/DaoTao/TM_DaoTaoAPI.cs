@@ -66,7 +66,7 @@ public class DaoTaoController : ControllerBase
     }
 
 
-    // ✅ Thêm nhân viên
+    // ✅ Thêm đào tạo
     [HttpPost("insert-daotao")]
     public async Task<IActionResult> InsertDaoTao([FromBody] Daotao modal)
     {
@@ -110,12 +110,13 @@ public class DaoTaoController : ControllerBase
                 string sql = @"
                         SELECT dt.MaNhanVien,  dt.HoTen,
                                dt.ID_PhongBan, dt.ID_ChucVu,dt.ID_htdaotao, dt.ID_QG, dt.QuyetDinh, dt.ThoiGianTu, dt.ThoiGianDen, dt.ID_TrangThai,
-                               pb.TenPhongBan, cv.TenChucVu, ht.HinhThuc, qg.TenQuocGia
+                               pb.TenPhongBan, cv.TenChucVu, ht.HinhThuc, qg.TenQuocGia, tt.TenTrangThai
                              
                         FROM DaoTao dt
                         LEFT JOIN PhongBan pb ON dt.ID_PhongBan = pb.ID_PhongBan
                         LEFT JOIN ChucVu cv ON dt.ID_ChucVu = cv.ID_ChucVu
                         LEFT JOIN HinhThucDaoTao ht ON dt.ID_htdaotao = ht.ID_htdaotao
+                        LEFT JOIN TrangThai tt ON dt.ID_TrangThai = tt.ID_TrangThai
                         LEFT JOIN QuocGia qg ON dt.ID_QG = qg.ID_QG";
 
 
@@ -189,6 +190,31 @@ public class DaoTaoController : ControllerBase
         }
         catch (Exception ex)
         {
+            return BadRequest(new { success = false, message = ex.Message });
+        }
+    }
+
+    // ✅ Sự kiện duyêt
+    [HttpPost("Duyet-daotao")]
+    public async Task<IActionResult> DuyetDaoTao([FromBody] Daotao modal)
+    {
+        try
+        {
+            using (var connection = _context.CreateConnection())
+            {
+                var parameters = new DynamicParameters();
+                parameters.Add("@ID_DaoTao", modal.ID_DaoTao);
+               
+
+                await connection.ExecuteAsync("Duyetdaotao ", parameters, commandType: CommandType.StoredProcedure);
+            }
+
+            return Ok(new { success = true, message = "Duyệt thành công!" });
+        }
+        catch (Exception ex)
+        {
+            // Log lỗi chi tiết để debug
+            Console.WriteLine("Lỗi Duyetdaotao: " + ex.ToString());
             return BadRequest(new { success = false, message = ex.Message });
         }
     }

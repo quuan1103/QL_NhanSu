@@ -55,10 +55,10 @@ namespace WebAPP.Controllers
         {
             return View(ViewName);
         }
-        //public IActionResult Soyeu()
-        //{
-        //    return View("~/Views/Home/Web/Soyeu.cshtml");
-        //}
+        public IActionResult Soyeu()
+        {
+            return View("~/Views/Home/Web/Lylich/Soyeu.cshtml");
+        }
         //public IActionResult ReactApp()
         //{
         //    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "react", "index.html");

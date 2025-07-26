@@ -6,6 +6,7 @@ namespace WebAPP.Models.DaoTao
     public class Daotao 
     {
        // public Guid ID_NV { get; set; } = Guid.NewGuid(); // Mã định danh duy nhất cho nhân viên
+        public int ID_DaoTao { get; set; }
         public string MaNhanVien { get; set; }
         public string HoTen { get; set; }
         public int? ID_PhongBan { get; set; }

@@ -283,6 +283,37 @@
         }
       }
     },
+    "/api/DaoTao/Duyet-daotao": {
+      "post": {
+        "tags": [
+          "DaoTao"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Daotao"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Daotao"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Daotao"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/HinhThucDaoTao": {
       "post": {
         "tags": [
@@ -480,6 +511,49 @@
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/LoaiHopDong"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PhanQuyenApi/NhanVien": {
+      "get": {
+        "tags": [
+          "PhanQuyenApi"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PhanQuyenApi/CapNhatQuyenNhanVien": {
+      "post": {
+        "tags": [
+          "PhanQuyenApi"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PhanQuyenNhanVienModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PhanQuyenNhanVienModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PhanQuyenNhanVienModel"
               }
             }
           }
@@ -991,6 +1065,10 @@
       "Daotao": {
         "type": "object",
         "properties": {
+          "ID_DaoTao": {
+            "type": "integer",
+            "format": "int32"
+          },
           "MaNhanVien": {
             "type": "string",
             "nullable": true
@@ -1161,6 +1239,20 @@
             "nullable": true
           },
           "ID_LoaiHopDong": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PhanQuyenNhanVienModel": {
+        "type": "object",
+        "properties": {
+          "id_nv": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "id_quyen": {
             "type": "integer",
             "format": "int32"
           }

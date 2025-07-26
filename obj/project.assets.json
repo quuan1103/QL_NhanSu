@@ -1960,6 +1960,15 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Microsoft.Office.Interop.Word/15.0.4797.1004": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Office.Interop.Word.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Office.Interop.Word.dll": {}
+        }
+      },
       "Microsoft.OpenApi/1.6.23": {
         "type": "package",
         "compile": {
@@ -6456,6 +6465,19 @@
         "runtime.json"
       ]
     },
+    "Microsoft.Office.Interop.Word/15.0.4797.1004": {
+      "sha512": "lavTOrMGK/o/t3+gGr7JuVrL8XDdnS0DwPLcYv/StOiysXO4L0C36IXTVtEJo1Mh9Aoxo9a8dgGcPi+faTlv0g==",
+      "type": "package",
+      "path": "microsoft.office.interop.word/15.0.4797.1004",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/Microsoft.Office.Interop.Word.dll",
+        "lib/netstandard2.0/Microsoft.Office.Interop.Word.dll",
+        "microsoft.office.interop.word.15.0.4797.1004.nupkg.sha512",
+        "microsoft.office.interop.word.nuspec"
+      ]
+    },
     "Microsoft.OpenApi/1.6.23": {
       "sha512": "tZ1I0KXnn98CWuV8cpI247A17jaY+ILS9vvF7yhI0uPPEqF4P1d7BWL5Uwtel10w9NucllHB3nTkfYTAcHAh8g==",
       "type": "package",
@@ -8624,6 +8646,7 @@
       "Microsoft.AspNetCore.Identity.UI >= 8.0.14",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.14",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.14",
+      "Microsoft.Office.Interop.Word >= 15.0.4797.1004",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.7",
       "Swashbuckle.AspNetCore >= 8.1.4"
     ]
@@ -8707,6 +8730,10 @@
           "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
             "version": "[8.0.14, )"
+          },
+          "Microsoft.Office.Interop.Word": {
+            "target": "Package",
+            "version": "[15.0.4797.1004, )"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",

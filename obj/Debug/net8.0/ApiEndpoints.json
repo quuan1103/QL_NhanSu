@@ -64,6 +64,22 @@
   },
   {
     "ContainingType": "DaoTaoController",
+    "Method": "DuyetDaoTao",
+    "RelativePath": "api/DaoTao/Duyet-daotao",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "modal",
+        "Type": "WebAPP.Models.DaoTao.Daotao",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DaoTaoController",
     "Method": "GetDaotao",
     "RelativePath": "api/DaoTao/get-daotao",
     "HttpMethod": "GET",
@@ -285,6 +301,32 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.Api.PhanQuyenApiController",
+    "Method": "CapNhatQuyenNhanVien",
+    "RelativePath": "api/PhanQuyenApi/CapNhatQuyenNhanVien",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "WebAPP.Controllers.Api.PhanQuyenNhanVienModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.Api.PhanQuyenApiController",
+    "Method": "GetNhanVien",
+    "RelativePath": "api/PhanQuyenApi/NhanVien",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

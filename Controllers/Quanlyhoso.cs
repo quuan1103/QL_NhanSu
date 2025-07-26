@@ -66,6 +66,10 @@ namespace WebAPP.Controllers
 
             return View("~/Views/Home/Web/ChiTietHR.cshtml", nhanVien);
         }
+        public IActionResult DanhSachVaiTro()
+        {
+            return View("~/Views/PhanQuyen/DanhSachVaiTro.cshtml");
+        }
         private byte[] HashPassword(string matKhau, byte[] salt)
         {
             throw new NotImplementedException();
