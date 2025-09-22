@@ -1,0 +1,97 @@
+@model WebAPP.Controllers.ThongKeViewModel
+@{
+    Layout = "~/Views/Shared/WebGD.cshtml";
+}
+
+<style>
+.thongke-container {
+    background: #f8f9fa;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.main-content-frame {
+    background: white;
+    border: 1px solid #dee2e6;
+    overflow: hidden;
+}
+
+.thongke-header {
+    background: #dc3545;
+    color: white;
+    padding: 15px 20px;
+    margin: 0;
+    border-bottom: 1px solid #c82333;
+}
+
+.thongke-title {
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.stat-card {
+    background: white;
+    border: 1px solid #dee2e6;
+    padding: 20px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #dc3545;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: #6c757d;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+</style>
+
+<div class="thongke-container">
+    <div class="main-content-frame">
+        <div class="thongke-header">
+            <h1 class="thongke-title">
+                Thống kê hệ thống
+            </h1>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">@Model.TotalNhanVien</div>
+                <div class="stat-label">Tổng nhân viên</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-number">@Model.TotalPhongBan</div>
+                <div class="stat-label">Phòng ban</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-number">@Model.TotalBangLuong</div>
+                <div class="stat-label">Bảng lương</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-number">@Model.TotalDaoTao</div>
+                <div class="stat-label">Khóa đào tạo</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-number">@Model.TongThucLinh.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</div>
+                <div class="stat-label">Tổng thực lĩnh (VNĐ)</div>
+            </div>
+        </div>
+    </div>
+</div>

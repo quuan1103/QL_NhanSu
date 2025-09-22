@@ -24,6 +24,7 @@ namespace WebAPP.Data
         public DbSet<ChucVuDM> ChucVuDM { get; set; }
         public DbSet<BangLuong> BangLuong { get; set; }
         public DbSet<LyLich> LyLich { get; set; }
+        public DbSet<WebAPP.Models.DaoTao.Daotao> DaoTao { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -41,6 +42,13 @@ namespace WebAPP.Data
             {
                 entity.HasKey(e => e.ID_NV);
                 entity.ToTable("LyLich");
+            });
+
+            // Khai báo khóa chính cho Daotao
+            modelBuilder.Entity<WebAPP.Models.DaoTao.Daotao>(entity =>
+            {
+                entity.HasKey(e => e.ID_DaoTao);
+                entity.ToTable("DaoTao");
             });
 
         }
