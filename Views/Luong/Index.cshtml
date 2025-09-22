@@ -2,57 +2,282 @@
 @{
 	Layout = "~/Views/Shared/WebGD.cshtml";
 }
-<div class="container mt-4">
-<div class="payroll-page">
-<div class="d-flex justify-content-between align-items-center payroll-actions">
-	<h2>Quản lý lương</h2>
-	<a class="btn btn-primary" asp-action="Create">+ Thêm bảng lương</a>
-</div>
-</div>
 
-<div class="card">
-<div class="card-body p-0">
-<table class="table table-hover mb-0">
-	<thead>
-		<tr>
-			<th>Nhân viên</th>
-			<th>Tháng</th>
-			<th>Năm</th>
-			<th>Lương cơ bản</th>
-			<th>Phụ cấp</th>
-			<th>Thưởng</th>
-			<th>Khấu trừ</th>
-			<th>Bảo hiểm</th>
-			<th>Thuế TNCN</th>
-			<th>Thực lĩnh</th>
-			<th></th>
-		</tr>
-	</thead>
-	<tbody>
-		@foreach (var item in Model)
+<style>
+.payroll-container {
+	background: #f8f9fa;
+	min-height: 100vh;
+	padding: 20px;
+}
+
+.main-content-frame {
+	background: white;
+	border: 1px solid #dee2e6;
+	overflow: hidden;
+}
+
+.payroll-header {
+	background: #dc3545;
+	color: white;
+	padding: 15px 20px;
+	margin: 0;
+	border-bottom: 1px solid #c82333;
+}
+
+.payroll-title {
+	color: white;
+	font-weight: 600;
+	font-size: 1.5rem;
+	margin: 0;
+}
+
+.btn-add-salary {
+	background: #dc3545;
+	border: 1px solid #c82333;
+	padding: 8px 16px;
+	font-weight: 500;
+	text-decoration: none;
+	color: white;
+}
+
+.btn-add-salary:hover {
+	background: #c82333;
+	color: white;
+	text-decoration: none;
+}
+
+.salary-card {
+	background: white;
+}
+
+.salary-table {
+	margin: 0;
+}
+
+.salary-table thead th {
+	background: #6c757d;
+	color: white;
+	font-weight: 600;
+	padding: 12px 8px;
+	border: none;
+	font-size: 0.9rem;
+}
+
+.salary-table tbody tr {
+	border-bottom: 1px solid #dee2e6;
+}
+
+.salary-table tbody tr:hover {
+	background: #f8f9fa;
+}
+
+.salary-table tbody td {
+	padding: 12px 8px;
+	vertical-align: middle;
+	border: none;
+	font-size: 0.9rem;
+}
+
+.employee-name {
+	font-weight: 500;
+	color: #212529;
+}
+
+.salary-amount {
+	font-weight: 500;
+	color: #28a745;
+}
+
+.salary-amount.negative {
+	color: #dc3545;
+}
+
+.action-buttons {
+	display: flex;
+	gap: 5px;
+}
+
+.btn-action {
+	padding: 4px 8px;
+	font-size: 0.8rem;
+	font-weight: 500;
+	text-decoration: none;
+	border: 1px solid;
+	border-radius: 3px;
+}
+
+.btn-view {
+	background: #007bff;
+	color: white;
+	border-color: #007bff;
+}
+
+.btn-view:hover {
+	background: #0056b3;
+	color: white;
+	text-decoration: none;
+}
+
+.btn-edit {
+	background: #ffc107;
+	color: #212529;
+	border-color: #ffc107;
+}
+
+.btn-edit:hover {
+	background: #e0a800;
+	color: #212529;
+	text-decoration: none;
+}
+
+.btn-delete {
+	background: #dc3545;
+	color: white;
+	border-color: #dc3545;
+}
+
+.btn-delete:hover {
+	background: #c82333;
+	color: white;
+	text-decoration: none;
+}
+
+.no-data {
+	text-align: center;
+	padding: 40px 20px;
+	color: #6c757d;
+}
+
+.stats-row {
+	display: flex;
+	gap: 15px;
+	margin: 15px 20px;
+}
+
+.stat-card {
+	flex: 1;
+	background: #f8f9fa;
+	padding: 15px;
+	border: 1px solid #dee2e6;
+	text-align: center;
+}
+
+.stat-number {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: #212529;
+	margin-bottom: 5px;
+}
+
+.stat-label {
+	color: #6c757d;
+	font-weight: 500;
+	font-size: 0.8rem;
+}
+</style>
+
+<div class="payroll-container">
+	<div class="main-content-frame">
+		<div class="payroll-header">
+			<div class="d-flex justify-content-between align-items-center">
+				<h1 class="payroll-title">
+					Quản lý lương
+				</h1>
+				<a class="btn btn-add-salary" asp-action="Create">
+					Thêm bảng lương
+				</a>
+			</div>
+		</div>
+
+		@if (Model.Any())
 		{
-			<tr>
-				<td>@(string.IsNullOrEmpty(item.HoTen) ? item.NhanVienId.ToString() : item.HoTen)</td>
-				<td>@item.Thang</td>
-				<td>@item.Nam</td>
-                <td>@item.LuongCoBan.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</td>
-                <td>@item.PhuCap.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</td>
-                <td>@item.Thuong.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</td>
-                <td>@item.KhauTru.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</td>
-                <td>@item.BaoHiem.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</td>
-                <td>@item.ThueTNCN.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</td>
-                <td>@item.ThucLinh.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</td>
-				<td>
-					<a asp-action="Details" asp-route-id="@item.Id">Xem</a> |
-					<a asp-action="Edit" asp-route-id="@item.Id">Sửa</a> |
-					<a asp-action="Delete" asp-route-id="@item.Id">Xóa</a>
-				</td>
-			</tr>
+			<div class="stats-row">
+				<div class="stat-card">
+					<div class="stat-number">@Model.Count()</div>
+					<div class="stat-label">Tổng bảng lương</div>
+				</div>
+				<div class="stat-card">
+					<div class="stat-number">@Model.Sum(x => x.ThucLinh).ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</div>
+					<div class="stat-label">Tổng thực lĩnh (VNĐ)</div>
+				</div>
+				<div class="stat-card">
+					<div class="stat-number">@Model.GroupBy(x => x.NhanVienId).Count()</div>
+					<div class="stat-label">Nhân viên</div>
+				</div>
+			</div>
 		}
-	</tbody>
-</table>
-</div>
-</div>
+
+		<div class="salary-card">
+			@if (Model.Any())
+			{
+				<table class="table salary-table">
+					<thead>
+						<tr>
+							<th>Nhân viên</th>
+							<th>Tháng</th>
+							<th>Năm</th>
+							<th>Lương cơ bản</th>
+							<th>Phụ cấp</th>
+							<th>Thưởng</th>
+							<th>Khấu trừ</th>
+							<th>Bảo hiểm</th>
+							<th>Thuế TNCN</th>
+							<th>Thực lĩnh</th>
+							<th>Thao tác</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in Model)
+						{
+							<tr>
+								<td>
+									<div class="employee-name">
+										@(string.IsNullOrEmpty(item.HoTen) ? item.NhanVienId.ToString() : item.HoTen)
+									</div>
+								</td>
+								<td>
+									<span class="badge bg-primary">@item.Thang</span>
+								</td>
+								<td>
+									<span class="badge bg-info">@item.Nam</span>
+								</td>
+								<td class="salary-amount">@item.LuongCoBan.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</td>
+								<td class="salary-amount">@item.PhuCap.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</td>
+								<td class="salary-amount">@item.Thuong.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</td>
+								<td class="salary-amount negative">@item.KhauTru.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</td>
+								<td class="salary-amount negative">@item.BaoHiem.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</td>
+								<td class="salary-amount negative">@item.ThueTNCN.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</td>
+								<td class="salary-amount" style="font-size: 1.2rem; font-weight: 800;">@item.ThucLinh.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</td>
+								<td>
+									<div class="action-buttons">
+										<a class="btn-action btn-view" asp-action="Details" asp-route-id="@item.Id">
+											Xem
+										</a>
+										<a class="btn-action btn-edit" asp-action="Edit" asp-route-id="@item.Id">
+											Sửa
+										</a>
+										<a class="btn-action btn-delete" asp-action="Delete" asp-route-id="@item.Id">
+											Xóa
+										</a>
+									</div>
+								</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			}
+			else
+			{
+				<div class="no-data">
+					<h4>Chưa có dữ liệu lương</h4>
+					<p>Hãy thêm bảng lương đầu tiên để bắt đầu quản lý</p>
+					<a class="btn btn-add-salary mt-3" asp-action="Create">
+						Thêm bảng lương
+					</a>
+				</div>
+			}
+		</div>
+	</div>
 </div>
 
 
