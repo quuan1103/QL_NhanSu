@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2KCXa5lvgKGMGccbRERQ422vaR9Gvx06HUKcTek4rKM=",
+  "Hash": "jpxu+H1kDy6s9e5UXmTetKskmKM4RwkPrPpRqra5yLk=",
   "Source": "WebAPP",
   "BasePath": "_content/WebAPP",
   "Mode": "Default",
@@ -1361,6 +1361,27 @@
       "OriginalItemSpec": "wwwroot\\css\\Menu.css"
     },
     {
+      "Identity": "D:\\HOC\\WebAPP\\wwwroot\\css\\payroll.css",
+      "SourceId": "WebAPP",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HOC\\WebAPP\\wwwroot\\",
+      "BasePath": "_content/WebAPP",
+      "RelativePath": "css/payroll#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "g067ye1ndx",
+      "Integrity": "0Lt2hT0UMz+8IwlUlwtX74H4T7oDhP1bCxKrb2hh0MA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\payroll.css"
+    },
+    {
       "Identity": "D:\\HOC\\WebAPP\\wwwroot\\css\\ThemmoiLL.css",
       "SourceId": "WebAPP",
       "SourceType": "Discovered",
@@ -1501,8 +1522,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ntuyizzq2x",
-      "Integrity": "dcHt7mAMVnztO8Aty1Os52B/eVW1fjnnlvzkkjhPrbI=",
+      "Fingerprint": "z6nese34th",
+      "Integrity": "6zDkUecA5H13LOFuLopRPSt0fXW2xZqs7k/alnDwsac=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\TM_DTLoad.js"
@@ -2972,6 +2993,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-O6hZrI5vVhdiS/M2gXtSKnIZv60q4AVHAfLTKxizV54="
+        }
+      ]
+    },
+    {
+      "Route": "css/payroll.css",
+      "AssetFile": "D:\\HOC\\WebAPP\\wwwroot\\css\\payroll.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "226"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0Lt2hT0UMz+8IwlUlwtX74H4T7oDhP1bCxKrb2hh0MA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 15 Sep 2025 09:57:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0Lt2hT0UMz+8IwlUlwtX74H4T7oDhP1bCxKrb2hh0MA="
+        }
+      ]
+    },
+    {
+      "Route": "css/payroll.g067ye1ndx.css",
+      "AssetFile": "D:\\HOC\\WebAPP\\wwwroot\\css\\payroll.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "226"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0Lt2hT0UMz+8IwlUlwtX74H4T7oDhP1bCxKrb2hh0MA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 15 Sep 2025 09:57:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "g067ye1ndx"
+        },
+        {
+          "Name": "label",
+          "Value": "css/payroll.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0Lt2hT0UMz+8IwlUlwtX74H4T7oDhP1bCxKrb2hh0MA="
         }
       ]
     },
@@ -5698,7 +5801,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "15045"
+          "Value": "21906"
         },
         {
           "Name": "Content-Type",
@@ -5706,11 +5809,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dcHt7mAMVnztO8Aty1Os52B/eVW1fjnnlvzkkjhPrbI=\""
+          "Value": "\"6zDkUecA5H13LOFuLopRPSt0fXW2xZqs7k/alnDwsac=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Jul 2025 07:25:34 GMT"
+          "Value": "Sun, 24 Aug 2025 06:55:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5720,12 +5823,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-dcHt7mAMVnztO8Aty1Os52B/eVW1fjnnlvzkkjhPrbI="
+          "Value": "sha256-6zDkUecA5H13LOFuLopRPSt0fXW2xZqs7k/alnDwsac="
         }
       ]
     },
     {
-      "Route": "js/TM_DTLoad.ntuyizzq2x.js",
+      "Route": "js/TM_DTLoad.z6nese34th.js",
       "AssetFile": "D:\\HOC\\WebAPP\\wwwroot\\js\\TM_DTLoad.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -5735,7 +5838,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "15045"
+          "Value": "21906"
         },
         {
           "Name": "Content-Type",
@@ -5743,11 +5846,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dcHt7mAMVnztO8Aty1Os52B/eVW1fjnnlvzkkjhPrbI=\""
+          "Value": "\"6zDkUecA5H13LOFuLopRPSt0fXW2xZqs7k/alnDwsac=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Jul 2025 07:25:34 GMT"
+          "Value": "Sun, 24 Aug 2025 06:55:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5757,7 +5860,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ntuyizzq2x"
+          "Value": "z6nese34th"
         },
         {
           "Name": "label",
@@ -5765,7 +5868,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-dcHt7mAMVnztO8Aty1Os52B/eVW1fjnnlvzkkjhPrbI="
+          "Value": "sha256-6zDkUecA5H13LOFuLopRPSt0fXW2xZqs7k/alnDwsac="
         }
       ]
     },
@@ -10876,7 +10979,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 20 Jul 2025 17:55:17 GMT"
+          "Value": "Fri, 19 Sep 2025 08:57:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10921,7 +11024,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 20 Jul 2025 17:55:17 GMT"
+          "Value": "Fri, 19 Sep 2025 08:57:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10966,7 +11069,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 20 Jul 2025 17:55:17 GMT"
+          "Value": "Fri, 19 Sep 2025 08:57:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11003,7 +11106,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 20 Jul 2025 17:55:17 GMT"
+          "Value": "Fri, 19 Sep 2025 08:57:39 GMT"
         },
         {
           "Name": "Cache-Control",

@@ -26,7 +26,7 @@ namespace WebAPP.Controllers
 
             try
             {
-                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Quanlyhoso");
+                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Quanlyhoso", "Soyeu");
                 if (!Directory.Exists(uploadsFolder))
                     Directory.CreateDirectory(uploadsFolder);
 
@@ -38,7 +38,7 @@ namespace WebAPP.Controllers
                     await file.CopyToAsync(stream);
                 }
 
-                var relativePath = Path.Combine("Quanlyhoso", fileName).Replace("\\", "/");
+                var relativePath = Path.Combine("Quanlyhoso", "Soyeu", fileName).Replace("\\", "/");
                 return Ok(new { success = true, path = relativePath });
             }
             catch (Exception ex)
@@ -49,7 +49,7 @@ namespace WebAPP.Controllers
 
         // ✅ Thêm nhân viên
         [HttpPost("insert-nhanvien")]
-        public async Task<IActionResult> InsertNhanVien([FromBody] LyLich model)
+        public async Task<IActionResult> InsertNhanVien([FromForm] LyLich model)
         {
             try
             {

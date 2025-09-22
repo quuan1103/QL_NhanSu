@@ -35,6 +35,7 @@ $(document).ready(function () {
         });
     });
 });
+
 //Load danh sách mã nhân viên
 function LoadDanhSachMaNhanVien() {
     $.ajax({
@@ -207,10 +208,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+
+
+
 //Load nhân viên
-
-
-
 function LoadDaoTao() {
     fetch('/api/DaoTao/get-daotao')
         .then(response => response.json())
@@ -221,10 +223,11 @@ function LoadDaoTao() {
                 // Hàm xác định class theo ID_TrangThai
                 function getBadgeClass(idTrangThai) {
                     switch (idTrangThai) {
-                        case 1: return "bg-warning";   // Chưa duyệt
-                        case 2: return "bg-success";   // Đã duyệt
-                        case 3: return "bg-danger";    // Hết hạn
+                        case 3: return "bg-warning";   // Hết hạn
+                        case 1: return "bg-success";   // Đã duyệt
+                        case 5: return "bg-danger";    // Huỷ
                         case 4: return "bg-info";      // Tạo mới
+                        case 6: return "bg-primary";   // Gia hạn
                         default: return "bg-secondary"; // Không xác định
                     }
                 }
@@ -233,7 +236,7 @@ function LoadDaoTao() {
                     const badgeClass = getBadgeClass(dt.ID_TrangThai);
 
                     html += `<tr>
-                        <td><input type="checkbox" class="rowCheckbox" data-id="${dt.MaNhanVien}" /></td>
+                        <td><input type="checkbox" class="rowCheckbox" data-id="${dt.ID_DaoTao}" /></td>
                         
                         <td>${dt.MaNhanVien}</td>
                         <td>${dt.HoTen}</td>
@@ -312,7 +315,7 @@ function formatDate(dateString) {
     return date.toISOString().split('T')[0];
 }
 
-//Sửa đào tạo 
+//Sửa đào tạo Lưu
 function LuuDaoTaoDetail() {
     const maNhanVien = document.getElementById('MaNhanVienDetail').value;
 
@@ -326,7 +329,7 @@ function LuuDaoTaoDetail() {
         ThoiGianTu: document.getElementById('ThoiGianTuDetail').value,
         ThoiGianDen: document.getElementById('ThoiGianDenDetail').value,
         QuyetDinh: document.getElementById('QuyetDinhDetail').value || null,
-        ID_TrangThai: 1 // hoặc giá trị mặc định nếu cần
+       // ID_TrangThai: 1 // hoặc giá trị mặc định nếu cần
     };
 
     fetch('/api/DaoTao/update-daotao/' + data.MaNhanVien, {
@@ -351,40 +354,218 @@ function LuuDaoTaoDetail() {
             $('body').removeClass('modal-open');
             $('.modal-backdrop').remove(); // <-- đảm bảo xóa lớp mờ
         })
+}
 
 
-        //Duyệt 
-    $(document).ready(function () {
-        $('#btnDuyet').click(function () {
-            var selectedIds = [];
 
+//DUyệt 
+$(document).ready(function () {  
+        $('#btnDuyet').click(async function () {
+            // Hiển thị trạng thái loading
+            const btn = $(this);
+            btn.prop('disabled', true).html('<i class="fa fa-spinner fa-spin me-2"></i> Đang duyệt...');
+
+            try {
+                // Lấy danh sách ID đã chọn
+                const selectedIds = [];
+                $('.rowCheckbox:checked').each(function () {
+                    const id = parseInt($(this).data('id'));
+                    if (!isNaN(id)) selectedIds.push(id);
+                });
+
+                if (selectedIds.length === 0) {
+                    alert("Vui lòng chọn ít nhất một dòng để duyệt.");
+                    return;
+                }
+
+                // Gọi API bằng fetch()
+                const response = await fetch('/api/DaoTao/Duyet-daotao', {
+                   
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(selectedIds)
+                });
+
+                // Xử lý kết quả
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const result = await response.json();
+
+                if (result.success) {
+                    alert(`Duyệt thành công ${selectedIds.length} dòng!`);
+                    location.reload();
+                } else {
+                    alert(result.message || "Có lỗi xảy ra khi duyệt");
+                }
+            } catch (error) {
+                console.error("Lỗi khi duyệt:", error);
+                alert("Lỗi hệ thống: " + (error.message || "Không thể kết nối đến server"));
+            } finally {
+                // Khôi phục trạng thái nút
+                btn.prop('disabled', false).html('<i class="fa fa-check-circle me-2"></i> Duyệt');
+            }
+        });
+});
+
+//Huỷ duyệt
+$(document).ready(function () {
+  
+    $('#btnHuyduyet').click(async function () {
+        // Hiển thị trạng thái loading
+        const btn = $(this);
+        btn.prop('disabled', true).html('<i class="fa fa-spinner fa-spin me-2"></i> Đang huỷ duyệt...');
+
+        try {
+            // Lấy danh sách ID đã chọn
+            const selectedIds = [];
             $('.rowCheckbox:checked').each(function () {
-                selectedIds.push($(this).data('id'));
+                const id = parseInt($(this).data('id'));
+                if (!isNaN(id)) selectedIds.push(id);
             });
 
             if (selectedIds.length === 0) {
-                alert("Vui lòng chọn ít nhất một dòng để duyệt.");
+                alert("Vui lòng chọn ít nhất một dòng để huỷ duyệt.");
                 return;
             }
 
-            $.ajax({
-                url: '/Duyet-daotao',
-                type: 'POST',
-                contentType: 'application/json',
-                data: JSON.stringify(selectedIds),
-                success: function () {
-                    alert('Duyệt thành công!');
-                    location.reload();
+            // Gọi API bằng fetch()
+            const response = await fetch('/api/DaoTao/HuyDuyet-daotao', {
+
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
                 },
-                error: function () {
-                    alert('Có lỗi xảy ra!');
-                }
+                body: JSON.stringify(selectedIds)
             });
-        });
+
+            // Xử lý kết quả
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const result = await response.json();
+
+            if (result.success) {
+                alert(`Huỷ duyệt thành công ${selectedIds.length} dòng!`);
+                location.reload();
+            } else {
+                alert(result.message || "Có lỗi xảy ra khi huỷ duyệt");
+            }
+        } catch (error) {
+            console.error("Lỗi khi duyệt:", error);
+            alert("Lỗi hệ thống: " + (error.message || "Không thể kết nối đến server"));
+        } finally {
+            // Khôi phục trạng thái nút
+            btn.prop('disabled', false).html('<i class="fa fa-check-circle me-2"></i> Huỷ Duyệt');
+        }
     });
+});
 
 
+
+//Gia hạn mở form
+document.getElementById('btnGiaHan').addEventListener('click', async function () {
+    // Kiểm tra xem có checkbox nào được chọn không
+    const selectedCheckbox = document.querySelector('.rowCheckbox:checked');
+    if (!selectedCheckbox) {
+        alert("Vui lòng chọn ít nhất một đào tạo để gia hạn!");
+        return;
+    }
+
+    const idDaoTao = selectedCheckbox.getAttribute('data-id');
+    try {
+        const response = await fetch(`/api/DaoTao/GiaHanDaoTao?ID_DaoTao=${idDaoTao}`);
+        const result = await response.json();
+        console.log("API Response:", result);
+
+        if (!result.success) {
+            alert(result.message || "Lỗi khi lấy dữ liệu đào tạo!");
+            return;
+        }
+
+        // Hiển thị dữ liệu lên modal
+        document.getElementById('ThoiGianTu').value = formatDateForInput(result.data.ThoiGianTu);
+        document.getElementById('ThoiGianDen').value = formatDateForInput(result.data.ThoiGianDen);
+
+        // Mở modal
+        const modal = new bootstrap.Modal(document.getElementById('modalGiahan'));
+        modal.show();
+
+    } catch (error) {
+        console.error("Lỗi:", error);
+        alert("Đã xảy ra lỗi khi gọi API!");
+    }
+});
+
+// Hàm chuyển đổi ngày thành định dạng YYYY-MM-DD (dành cho input type="date")
+function formatDateForInput(dateString) {
+    if (!dateString) return '';
+    const date = new Date(dateString);
+    return date.toISOString().split('T')[0];
 }
+
+
+//Lưu gia hạn 
+$(document).ready(function () {
+   
+    $('#btnGiaHanLuu').click(async function () {
+        // Hiển thị trạng thái loading
+        const btn = $(this);
+        btn.prop('disabled', true).html('<i class="fa fa-spinner fa-spin me-2"></i> Đang gia hạn...');
+
+        try {
+            // Lấy danh sách ID đã chọn
+            const selectedIds = [];
+            $('.rowCheckbox:checked').each(function () {
+                const id = parseInt($(this).data('id'));
+                if (!isNaN(id)) selectedIds.push(id);
+            });
+
+            if (selectedIds.length === 0) {
+                alert("Vui lòng chọn ít nhất một dòng để gia hạn.");
+                return;
+            }
+
+            // Gọi API bằng fetch()
+            const response = await fetch('/api/DaoTao/LuuGiaHan', {
+
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(selectedIds)
+            });
+
+            // Xử lý kết quả
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const result = await response.json();
+
+            if (result.success) {
+                alert(`Gia hạn thành công !`);
+                location.reload();
+            } else {
+                alert(result.message || "Có lỗi xảy ra khi huỷ gia hạn");
+            }
+        } catch (error) {
+            console.error("Lỗi khi duyệt:", error);
+            alert("Lỗi hệ thống: " + (error.message || "Không thể kết nối đến server"));
+        } finally {
+            // Khôi phục trạng thái nút
+            btn.prop('disabled', false).html('<i class="fa fa-check-circle me-2"></i> Huỷ Gia hạn');
+        }
+    });
+});
+
 
 
 

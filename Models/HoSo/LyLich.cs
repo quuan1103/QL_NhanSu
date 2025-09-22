@@ -6,6 +6,7 @@ namespace WebAPP.Models.HoSo
 {
     public class LyLich
     {
+        [Key]
         public Guid ID_NV { get; set; } = Guid.NewGuid();
         public string MaNhanVien { get; set; }
         public string HoTen { get; set; }

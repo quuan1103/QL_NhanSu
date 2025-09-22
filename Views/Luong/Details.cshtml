@@ -1,0 +1,72 @@
+@model WebAPP.Models.Luong.BangLuongDetailVM
+@{
+	Layout = "~/Views/Shared/WebGD.cshtml";
+}
+<div class="container mt-4">
+<div class="payroll-page">
+<h2>Chi tiết bảng lương</h2>
+<div class="card">
+<div class="card-body">
+    <div class="row g-3">
+        <div class="col-md-3">
+            @{ 
+                string src;
+                if (string.IsNullOrWhiteSpace(Model.HinhAnh))
+                {
+                    src = Url.Content("~/img/logo4.png");
+                }
+                else
+                {
+                    var path = Model.HinhAnh.Trim();
+                    if (path.StartsWith("data:image", System.StringComparison.OrdinalIgnoreCase))
+                    {
+                        // Base64 data URL lưu trực tiếp trong DB
+                        src = path;
+                    }
+                    else if (path.StartsWith("http", System.StringComparison.OrdinalIgnoreCase))
+                    {
+                        src = path;
+                    }
+                    else if (path.StartsWith("~/") || path.StartsWith("/"))
+                    {
+                        src = Url.Content("~/" + path.TrimStart('~','/'));
+                    }
+                    else if (path.StartsWith("Quanlyhoso", System.StringComparison.OrdinalIgnoreCase))
+                    {
+                        // DB đã lưu tương đối: Quanlyhoso/... → thêm ~/ phía trước
+                        src = Url.Content("~/" + path);
+                    }
+                    else
+                    {
+                        // chỉ là tên file => mặc định nằm trong wwwroot/Quanlyhoso/Soyeu
+                        src = Url.Content("~/Quanlyhoso/Soyeu/" + path);
+                    }
+                }
+            }
+            <img src="@src" class="img-thumbnail" alt="Ảnh nhân viên" />
+        </div>
+        <div class="col-md-9">
+            <div class="row g-2">
+                <div class="col-md-6"><strong>ID:</strong> @Model.BangLuong.Id</div>
+                <div class="col-md-6"><strong>Nhân viên:</strong> @(Model.HoTen ?? Model.BangLuong.NhanVienId.ToString())</div>
+                <div class="col-md-6"><strong>Tháng/Năm:</strong> @Model.BangLuong.Thang/@Model.BangLuong.Nam</div>
+                <div class="col-md-6"><strong>Lương cơ bản:</strong> @Model.BangLuong.LuongCoBan.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</div>
+                <div class="col-md-6"><strong>Phụ cấp:</strong> @Model.BangLuong.PhuCap.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</div>
+                <div class="col-md-6"><strong>Thưởng:</strong> @Model.BangLuong.Thuong.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</div>
+                <div class="col-md-6"><strong>Khấu trừ:</strong> @Model.BangLuong.KhauTru.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</div>
+                <div class="col-md-6"><strong>Bảo hiểm:</strong> @Model.BangLuong.BaoHiem.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</div>
+                <div class="col-md-6"><strong>Thuế TNCN:</strong> @Model.BangLuong.ThueTNCN.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</div>
+                <div class="col-md-6"><strong>Thực lĩnh:</strong> @Model.BangLuong.ThucLinh.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-3 d-flex gap-2">
+        <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.BangLuong.Id">Sửa</a>
+        <a class="btn btn-light" asp-action="Index">Quay lại</a>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+

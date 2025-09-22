@@ -72,6 +72,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxXZWJcV2ViLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/HOC/WebAPP/Views/Luong/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTHVvbmdcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HOC/WebAPP/Views/Luong/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTHVvbmdcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HOC/WebAPP/Views/Luong/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTHVvbmdcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HOC/WebAPP/Views/Luong/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTHVvbmdcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HOC/WebAPP/Views/Luong/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTHVvbmdcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/HOC/WebAPP/Views/PhanQuyen/DanhSachVaiTro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhhblF1eWVuXERhbmhTYWNoVmFpVHJvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

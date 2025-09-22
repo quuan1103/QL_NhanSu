@@ -167,12 +167,10 @@ namespace WebAPP.Data.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderKey")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
@@ -209,12 +207,10 @@ namespace WebAPP.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");
@@ -224,29 +220,134 @@ namespace WebAPP.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("WebAPP.Models.TaiKhoan", b =>
+            modelBuilder.Entity("WebAPP.Models.Luong.BangLuong", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("BaoHiem")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("KhauTru")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("LuongCoBan")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Nam")
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<DateTime>("NgayTao")
+                        .HasColumnType("datetime2");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid>("NhanVienId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("MatKhau")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal>("PhuCap")
+                        .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Thang")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("ThucLinh")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("ThueTNCN")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("Thuong")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("TaiKhoan");
+                    b.ToTable("BangLuong");
+                });
+
+            modelBuilder.Entity("WebAPP.Models.ModelDanhMuc.ChucVuDM", b =>
+                {
+                    b.Property<int>("ID_ChucVu")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID_ChucVu"));
+
+                    b.Property<int>("ID_TrangThai")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MotaCV")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TenChucVu")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID_ChucVu");
+
+                    b.ToTable("ChucVuDM");
+                });
+
+            modelBuilder.Entity("WebAPP.Models.ModelDanhMuc.Phongban", b =>
+                {
+                    b.Property<int>("ID_Phongban")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID_Phongban"));
+
+                    b.Property<int>("ID_trangthai")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Maphongban")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MoTa")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Tenphongban")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID_Phongban");
+
+                    b.ToTable("PhongBan");
+                });
+
+            modelBuilder.Entity("WebAPP.Models.TaiKhoanNhanVien", b =>
+                {
+                    b.Property<Guid>("ID_TaiKhoan")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ID_NV")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int?>("ID_TrangThai")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("NgayTao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<byte[]>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("QuyenHan")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<byte[]>("Salt")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("TenDangNhap")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID_TaiKhoan");
+
+                    b.ToTable("TaiKhoanNhanVien");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

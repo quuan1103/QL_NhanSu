@@ -99,7 +99,7 @@ public class DaoTaoController : ControllerBase
         }
     }
 
-    // ✅ Lấy danh sách nhân viên
+    // ✅ Lấy danh sách nhân viên load danh sách đào tạo
     [HttpGet("get-daotao")]
     public async Task<IActionResult> GetDaotao()
     {
@@ -108,7 +108,7 @@ public class DaoTaoController : ControllerBase
             using (var connection = _context.CreateConnection())
             {
                 string sql = @"
-                        SELECT dt.MaNhanVien,  dt.HoTen,
+                        SELECT dt.MaNhanVien,  dt.HoTen, dt.ID_DaoTao,
                                dt.ID_PhongBan, dt.ID_ChucVu,dt.ID_htdaotao, dt.ID_QG, dt.QuyetDinh, dt.ThoiGianTu, dt.ThoiGianDen, dt.ID_TrangThai,
                                pb.TenPhongBan, cv.TenChucVu, ht.HinhThuc, qg.TenQuocGia, tt.TenTrangThai
                              
@@ -168,7 +168,7 @@ public class DaoTaoController : ControllerBase
     // ✅ Cập nhật đào tạo
     [HttpPut("update-daotao/{maNhanVien}")]
     public async Task<IActionResult> PutDaoTaoByMaNhanVien(string maNhanVien, [FromBody] Daotao model)
-    {       
+    {
         try
         {
             var parameters = new DynamicParameters();
@@ -196,27 +196,105 @@ public class DaoTaoController : ControllerBase
 
     // ✅ Sự kiện duyêt
     [HttpPost("Duyet-daotao")]
-    public async Task<IActionResult> DuyetDaoTao([FromBody] Daotao modal)
+    public async Task<IActionResult> DuyetDaoTao([FromBody] List<int> ids)
     {
         try
         {
             using (var connection = _context.CreateConnection())
             {
-                var parameters = new DynamicParameters();
-                parameters.Add("@ID_DaoTao", modal.ID_DaoTao);
-               
-
-                await connection.ExecuteAsync("Duyetdaotao ", parameters, commandType: CommandType.StoredProcedure);
+                foreach (var id in ids)
+                {
+                    var parameters = new DynamicParameters();
+                    parameters.Add("@ID_DaoTao", id);
+                    await connection.ExecuteAsync("Duyetdaotao", parameters, commandType: CommandType.StoredProcedure);
+                }
             }
-
-            return Ok(new { success = true, message = "Duyệt thành công!" });
+            return Ok(new { success = true, message = $"Duyệt thành công {ids.Count} dòng!" });
         }
         catch (Exception ex)
         {
-            // Log lỗi chi tiết để debug
             Console.WriteLine("Lỗi Duyetdaotao: " + ex.ToString());
             return BadRequest(new { success = false, message = ex.Message });
         }
     }
+
+    //Sự kiện nút Huỷ duyệt
+    [HttpPost("HuyDuyet-daotao")]
+    public async Task<IActionResult> HuyDuyetDaoTao([FromBody] List<int> ids)
+    {
+        try
+        {
+            using (var connection = _context.CreateConnection())
+            {
+                foreach (var id in ids)
+                {
+                    var parameters = new DynamicParameters();
+                    parameters.Add("@ID_DaoTao", id);
+                    await connection.ExecuteAsync("HuyDuyetDaoTao", parameters, commandType: CommandType.StoredProcedure);
+                }
+            }
+            return Ok(new { success = true, message = $"Huỷ duyệt thành công {ids.Count} dòng!" });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Lỗi Duyetdaotao: " + ex.ToString());
+            return BadRequest(new { success = false, message = ex.Message });
+        }
+    }
+    //Gia hạn đào tạo mở form 
+    [HttpGet("GiaHanDaoTao")]
+    public async Task<IActionResult> GetGiaHanDaoTao(int ID_DaoTao)
+    {
+        try
+        {
+            using (var connection = _context.CreateConnection())
+            {
+                string sql = @"Select ThoiGianTu, ThoiGianDen From Daotao where ID_DaoTao = @ID_DaoTao";
+                var result = await connection.QueryFirstOrDefaultAsync(sql, new { ID_DaoTao });
+
+                if (result == null)
+                    return NotFound(new { success = false, message = "Không tìm thấy nhân viên!" });
+
+                return Ok(new { success = true, data = result });
+            }
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(new { success = false, message = ex.Message });
+        }
+    }
+
+
+    //Lưu Gia hạn
+    [HttpPost("LuuGiaHan")]
+    public async Task<IActionResult> LuuGiaHan([FromBody] List<int> ids)
+    {
+        try
+        {
+            using (var connection = _context.CreateConnection())
+            {
+                foreach (var id in ids)
+                {
+                    var paramenters = new DynamicParameters();
+                    paramenters.Add("@ID_DaoTao", id);
+                    await connection.ExecuteAsync("LuuGiaHanDaoTao", paramenters, commandType: CommandType.StoredProcedure);
+                }
+            }
+            return Ok(new { success = true, message = $"Gia hạn thành công {ids.Count} dòng!" });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Lỗi LuuGiaHan: " + ex.ToString());
+            return BadRequest(new { success = false, message = ex.Message });
+
+        }
+    }
 }
+
+
+
+
+
+
+
 

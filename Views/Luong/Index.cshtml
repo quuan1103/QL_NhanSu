@@ -1,0 +1,58 @@
+@model IEnumerable<WebAPP.Models.Luong.BangLuongListVM>
+@{
+	Layout = "~/Views/Shared/WebGD.cshtml";
+}
+<div class="container mt-4">
+<div class="payroll-page">
+<div class="d-flex justify-content-between align-items-center payroll-actions">
+	<h2>Quản lý lương</h2>
+	<a class="btn btn-primary" asp-action="Create">+ Thêm bảng lương</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-body p-0">
+<table class="table table-hover mb-0">
+	<thead>
+		<tr>
+			<th>Nhân viên</th>
+			<th>Tháng</th>
+			<th>Năm</th>
+			<th>Lương cơ bản</th>
+			<th>Phụ cấp</th>
+			<th>Thưởng</th>
+			<th>Khấu trừ</th>
+			<th>Bảo hiểm</th>
+			<th>Thuế TNCN</th>
+			<th>Thực lĩnh</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@(string.IsNullOrEmpty(item.HoTen) ? item.NhanVienId.ToString() : item.HoTen)</td>
+				<td>@item.Thang</td>
+				<td>@item.Nam</td>
+                <td>@item.LuongCoBan.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</td>
+                <td>@item.PhuCap.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</td>
+                <td>@item.Thuong.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</td>
+                <td>@item.KhauTru.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</td>
+                <td>@item.BaoHiem.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</td>
+                <td>@item.ThueTNCN.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</td>
+                <td>@item.ThucLinh.ToString("#,0", new System.Globalization.CultureInfo("vi-VN"))</td>
+				<td>
+					<a asp-action="Details" asp-route-id="@item.Id">Xem</a> |
+					<a asp-action="Edit" asp-route-id="@item.Id">Sửa</a> |
+					<a asp-action="Delete" asp-route-id="@item.Id">Xóa</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+

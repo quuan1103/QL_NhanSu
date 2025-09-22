@@ -37,6 +37,10 @@
       "PackagePath": "staticwebassets\\css\\login.css"
     },
     {
+      "Id": "D:\\HOC\\WebAPP\\wwwroot\\css\\payroll.css",
+      "PackagePath": "staticwebassets\\css\\payroll.css"
+    },
+    {
       "Id": "D:\\HOC\\WebAPP\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

@@ -1,5 +1,6 @@
 wwwroot\css\login.css
 wwwroot\css\Menu.css
+wwwroot\css\payroll.css
 wwwroot\css\ThemmoiLL.css
 wwwroot\favicon.ico
 wwwroot\img\logo4.png

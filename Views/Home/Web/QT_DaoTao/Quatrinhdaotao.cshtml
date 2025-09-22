@@ -87,14 +87,22 @@
                             <button id="btnDuyet" class="btn btn-success d-flex align-items-center">
                                 <i class="fa fa-check-circle me-2"></i> Duyệt
                             </button>
-                        <a href="javascript:void(0);"
-                           class="btn btn-outline-primary d-flex align-items-center"
-                           data-bs-toggle="modal"
-                           data-bs-target="#modalThemMoi">
-                            <i class="fa fa-plus-circle me-2"></i> Thêm mới                           
-                        </a>   
+                            <!-- Nút Huỷ Duyệt -->
+                            <button id="btnHuyduyet" class="btn btn-danger d-flex align-items-center">
+                                <i class="fa fa-times-circle me-2"></i> Huỷ Duyệt
+                            </button>
+                            <button id="btnGiaHan" class="btn btn-warning d-flex align-items-center">
+                                <i class="fa fa-sync me-2"></i> Gia hạn
+                            </button>
+
+                            <a href="javascript:void(0);"
+                               class="btn btn-outline-primary d-flex align-items-center"
+                               data-bs-toggle="modal"
+                               data-bs-target="#modalThemMoi">
+                                <i class="fa fa-plus-circle me-2"></i> Thêm mới
+                            </a>
                         </div>
-                        
+
                     </div>
 
 
@@ -122,7 +130,7 @@
                                 <thead class="table-light">
                                     <tr>
                                         <th>Chọn</th>
-                                       
+
                                         <th>Mã VC/NLĐ</th>
                                         <th>Họ Tên</th>
                                         <th>Đơn Vị</th>
@@ -131,13 +139,13 @@
                                         <th>Hình Thức Đào Tạo</th>
                                         <th>Từ Ngày</th>
                                         <th>Đến Ngày</th>
-                                       @*  <th>Quyết định</th> *@
+                                        @*  <th>Quyết định</th> *@
                                         <th>Trạng thái</th>
                                         <th>Thao tác</th>
                                     </tr>
                                 </thead>
                                 <tbody id="tblQTdaotao">
-                               
+
                                     @* Dữ liệu nhân viên sẽ được load từ controller *@
                                 </tbody>
                             </table>
@@ -384,7 +392,45 @@
                                 </div>
                             </div>
 
+                        </div> <!-- KẾT THÚC CHI TIẾT ĐÀO TẠO-->
+
+
+
+
+
+                        <!--Gia hạn đào tạo-->
+                        <div class="modal fade" id="modalGiahan" tabindex="-1" aria-labelledby="modalGiahanLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Gia hạn đào tạo</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="row mb-3">
+                                               
+                                                <div class="col-md-6">
+                                                    <label for="ThoiGianTu" class="form-label fw-bold">Thời gian từ</label>
+                                                    <input type="text" class="form-control bg-light" id="ThoiGianTu" readonly />
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="ThoiGianDen" class="form-label fw-bold">Thời gian đến</label>
+                                                    <input type="date" class="form-control" id="ThoiGianDen" />
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                            <button type="button" class="btn btn-primary" id="btnGiaHanLuu">Lưu</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -404,6 +450,9 @@
                     LoadDaoTao();
                 });
             </script>
+
+
+
 
 
 

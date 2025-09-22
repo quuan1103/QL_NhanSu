@@ -71,8 +71,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "modal",
-        "Type": "WebAPP.Models.DaoTao.Daotao",
+        "Name": "ids",
+        "Type": "System.Collections.Generic.List\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": true
       }
     ],
@@ -132,6 +132,38 @@
   },
   {
     "ContainingType": "DaoTaoController",
+    "Method": "GetGiaHanDaoTao",
+    "RelativePath": "api/DaoTao/GiaHanDaoTao",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID_DaoTao",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DaoTaoController",
+    "Method": "HuyDuyetDaoTao",
+    "RelativePath": "api/DaoTao/HuyDuyet-daotao",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ids",
+        "Type": "System.Collections.Generic.List\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DaoTaoController",
     "Method": "InsertDaoTao",
     "RelativePath": "api/DaoTao/insert-daotao",
     "HttpMethod": "POST",
@@ -154,6 +186,22 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DaoTaoController",
+    "Method": "LuuGiaHan",
+    "RelativePath": "api/DaoTao/LuuGiaHan",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ids",
+        "Type": "System.Collections.Generic.List\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -427,9 +475,104 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "model",
-        "Type": "WebAPP.Models.HoSo.LyLich",
-        "IsRequired": true
+        "Name": "ID_NV",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "MaNhanVien",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "HoTen",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GioiTinh",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NgaySinh",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CCCD",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NgayCapCCCD",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "NoiCapCCCD",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DiaChi",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SoDienThoai",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ID_PhongBan",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ID_ChucVu",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ID_TrinhDo",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "NgayVaoLam",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "HinhAnh",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "HinhAnhFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "ID_TrangThai",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "GhiChu",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ID_LoaiHopDong",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

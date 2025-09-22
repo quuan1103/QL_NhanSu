@@ -292,17 +292,137 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Daotao"
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Daotao"
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Daotao"
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DaoTao/HuyDuyet-daotao": {
+      "post": {
+        "tags": [
+          "DaoTao"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DaoTao/GiaHanDaoTao": {
+      "get": {
+        "tags": [
+          "DaoTao"
+        ],
+        "parameters": [
+          {
+            "name": "ID_DaoTao",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DaoTao/LuuGiaHan": {
+      "post": {
+        "tags": [
+          "DaoTao"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
               }
             }
           }
@@ -708,19 +828,143 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/LyLich"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LyLich"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/LyLich"
+                "type": "object",
+                "properties": {
+                  "ID_NV": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "MaNhanVien": {
+                    "type": "string"
+                  },
+                  "HoTen": {
+                    "type": "string"
+                  },
+                  "GioiTinh": {
+                    "type": "string"
+                  },
+                  "NgaySinh": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "CCCD": {
+                    "type": "string"
+                  },
+                  "NgayCapCCCD": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "NoiCapCCCD": {
+                    "type": "string"
+                  },
+                  "DiaChi": {
+                    "type": "string"
+                  },
+                  "SoDienThoai": {
+                    "type": "string"
+                  },
+                  "Email": {
+                    "type": "string"
+                  },
+                  "ID_PhongBan": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "ID_ChucVu": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "ID_TrinhDo": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "NgayVaoLam": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "HinhAnh": {
+                    "type": "string"
+                  },
+                  "HinhAnhFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "ID_TrangThai": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "GhiChu": {
+                    "type": "string"
+                  },
+                  "ID_LoaiHopDong": {
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                }
+              },
+              "encoding": {
+                "ID_NV": {
+                  "style": "form"
+                },
+                "MaNhanVien": {
+                  "style": "form"
+                },
+                "HoTen": {
+                  "style": "form"
+                },
+                "GioiTinh": {
+                  "style": "form"
+                },
+                "NgaySinh": {
+                  "style": "form"
+                },
+                "CCCD": {
+                  "style": "form"
+                },
+                "NgayCapCCCD": {
+                  "style": "form"
+                },
+                "NoiCapCCCD": {
+                  "style": "form"
+                },
+                "DiaChi": {
+                  "style": "form"
+                },
+                "SoDienThoai": {
+                  "style": "form"
+                },
+                "Email": {
+                  "style": "form"
+                },
+                "ID_PhongBan": {
+                  "style": "form"
+                },
+                "ID_ChucVu": {
+                  "style": "form"
+                },
+                "ID_TrinhDo": {
+                  "style": "form"
+                },
+                "NgayVaoLam": {
+                  "style": "form"
+                },
+                "HinhAnh": {
+                  "style": "form"
+                },
+                "HinhAnhFile": {
+                  "style": "form"
+                },
+                "ID_TrangThai": {
+                  "style": "form"
+                },
+                "GhiChu": {
+                  "style": "form"
+                },
+                "ID_LoaiHopDong": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -1154,93 +1398,6 @@
           "MoTaLHD": {
             "type": "string",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "LyLich": {
-        "type": "object",
-        "properties": {
-          "ID_NV": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "MaNhanVien": {
-            "type": "string",
-            "nullable": true
-          },
-          "HoTen": {
-            "type": "string",
-            "nullable": true
-          },
-          "GioiTinh": {
-            "type": "string",
-            "nullable": true
-          },
-          "NgaySinh": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "CCCD": {
-            "type": "string",
-            "nullable": true
-          },
-          "NgayCapCCCD": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "NoiCapCCCD": {
-            "type": "string",
-            "nullable": true
-          },
-          "DiaChi": {
-            "type": "string",
-            "nullable": true
-          },
-          "SoDienThoai": {
-            "type": "string",
-            "nullable": true
-          },
-          "Email": {
-            "type": "string",
-            "nullable": true
-          },
-          "ID_PhongBan": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "ID_ChucVu": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "ID_TrinhDo": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "NgayVaoLam": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "HinhAnh": {
-            "type": "string",
-            "nullable": true
-          },
-          "HinhAnhFile": {
-            "type": "string",
-            "format": "binary",
-            "nullable": true
-          },
-          "ID_TrangThai": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "GhiChu": {
-            "type": "string",
-            "nullable": true
-          },
-          "ID_LoaiHopDong": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false

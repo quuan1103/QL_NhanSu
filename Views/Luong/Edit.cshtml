@@ -1,0 +1,64 @@
+@model WebAPP.Models.Luong.BangLuong
+@{
+	Layout = "~/Views/Shared/WebGD.cshtml";
+}
+<div class="container mt-4">
+<div class="payroll-page">
+<h2>Sửa bảng lương</h2>
+<div class="card">
+<div class="card-body">
+<form asp-action="Edit" method="post" class="row g-3">
+	<input type="hidden" asp-for="Id" />
+	<div class="col-md-4">
+		<label class="form-label">Nhân viên</label>
+		<select class="form-select" asp-for="NhanVienId" asp-items="ViewBag.NhanVienList">
+			<option value="">-- Chọn nhân viên --</option>
+		</select>
+	</div>
+	<div class="col-md-4">
+		<label class="form-label">Tháng</label>
+		<input class="form-control" asp-for="Thang" type="number" />
+	</div>
+	<div class="col-md-4">
+		<label class="form-label">Năm</label>
+		<input class="form-control" asp-for="Nam" type="number" />
+	</div>
+	<div class="col-md-4">
+		<label class="form-label">Lương cơ bản</label>
+		<input class="form-control" asp-for="LuongCoBan" type="number" step="0.01" />
+	</div>
+	<div class="col-md-4">
+		<label class="form-label">Phụ cấp</label>
+		<input class="form-control" asp-for="PhuCap" type="number" step="0.01" />
+	</div>
+	<div class="col-md-4">
+		<label class="form-label">Thưởng</label>
+		<input class="form-control" asp-for="Thuong" type="number" step="0.01" />
+	</div>
+	<div class="col-md-4">
+		<label class="form-label">Khấu trừ</label>
+		<input class="form-control" asp-for="KhauTru" type="number" step="0.01" />
+	</div>
+	<div class="col-md-4">
+		<label class="form-label">Bảo hiểm</label>
+		<input class="form-control" asp-for="BaoHiem" type="number" step="0.01" />
+	</div>
+	<div class="col-md-4">
+		<label class="form-label">Thuế TNCN</label>
+		<input class="form-control" asp-for="ThueTNCN" type="number" step="0.01" />
+	</div>
+	<div class="col-md-4">
+		<label class="form-label">Thực lĩnh</label>
+		<input class="form-control" asp-for="ThucLinh" type="number" step="0.01" />
+	</div>
+	<div class="col-12 d-flex gap-2">
+		<button class="btn btn-primary" type="submit">Lưu</button>
+		<a class="btn btn-light" asp-action="Index">Hủy</a>
+	</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+

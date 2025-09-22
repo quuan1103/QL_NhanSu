@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿  using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using WebAPP.Models;
 using Microsoft.AspNetCore.Mvc.Filters;
@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using System.ComponentModel.DataAnnotations;
 using WebAPP.Models.ModelDanhMuc;
+ using WebAPP.Models.Luong;
+ using WebAPP.Models.HoSo;
 
 namespace WebAPP.Data
 {
@@ -20,6 +22,8 @@ namespace WebAPP.Data
         public DbSet<TaiKhoanNhanVien> TaiKhoanNhanVien { get; set; }
         public DbSet<Phongban> PhongBan { get; set; }
         public DbSet<ChucVuDM> ChucVuDM { get; set; }
+        public DbSet<BangLuong> BangLuong { get; set; }
+        public DbSet<LyLich> LyLich { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -31,6 +35,13 @@ namespace WebAPP.Data
             modelBuilder.Ignore<ModelMetadata>();
             modelBuilder.Ignore<IModelMetadataProvider>();
             modelBuilder.Ignore<ValidationContext>();
+
+            // Khai báo khóa chính cho LyLich để EF nhận diện entity đúng
+            modelBuilder.Entity<LyLich>(entity =>
+            {
+                entity.HasKey(e => e.ID_NV);
+                entity.ToTable("LyLich");
+            });
 
         }
         // Override OnConfiguring nếu cần thiết để cấu hình retry khi gặp lỗi tạm thời

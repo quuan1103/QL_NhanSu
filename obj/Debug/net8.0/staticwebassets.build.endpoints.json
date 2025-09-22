@@ -2659,7 +2659,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 20 Jul 2025 17:55:17 GMT"
+          "Value": "Fri, 19 Sep 2025 08:57:39 GMT"
         }
       ],
       "EndpointProperties": [
@@ -2704,7 +2704,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 20 Jul 2025 17:55:17 GMT"
+          "Value": "Fri, 19 Sep 2025 08:57:39 GMT"
         }
       ],
       "EndpointProperties": [
@@ -2957,6 +2957,88 @@
         {
           "Name": "label",
           "Value": "css/login.css"
+        }
+      ]
+    },
+    {
+      "Route": "css/payroll.css",
+      "AssetFile": "css/payroll.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "226"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0Lt2hT0UMz+8IwlUlwtX74H4T7oDhP1bCxKrb2hh0MA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 15 Sep 2025 09:57:31 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0Lt2hT0UMz+8IwlUlwtX74H4T7oDhP1bCxKrb2hh0MA="
+        }
+      ]
+    },
+    {
+      "Route": "css/payroll.g067ye1ndx.css",
+      "AssetFile": "css/payroll.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "226"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0Lt2hT0UMz+8IwlUlwtX74H4T7oDhP1bCxKrb2hh0MA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 15 Sep 2025 09:57:31 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "g067ye1ndx"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0Lt2hT0UMz+8IwlUlwtX74H4T7oDhP1bCxKrb2hh0MA="
+        },
+        {
+          "Name": "label",
+          "Value": "css/payroll.css"
         }
       ]
     },
@@ -3221,7 +3303,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "15045"
+          "Value": "21906"
         },
         {
           "Name": "Content-Type",
@@ -3229,22 +3311,22 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dcHt7mAMVnztO8Aty1Os52B/eVW1fjnnlvzkkjhPrbI=\""
+          "Value": "\"6zDkUecA5H13LOFuLopRPSt0fXW2xZqs7k/alnDwsac=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Jul 2025 07:25:34 GMT"
+          "Value": "Sun, 24 Aug 2025 06:55:14 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-dcHt7mAMVnztO8Aty1Os52B/eVW1fjnnlvzkkjhPrbI="
+          "Value": "sha256-6zDkUecA5H13LOFuLopRPSt0fXW2xZqs7k/alnDwsac="
         }
       ]
     },
     {
-      "Route": "js/TM_DTLoad.ntuyizzq2x.js",
+      "Route": "js/TM_DTLoad.z6nese34th.js",
       "AssetFile": "js/TM_DTLoad.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3258,7 +3340,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "15045"
+          "Value": "21906"
         },
         {
           "Name": "Content-Type",
@@ -3266,21 +3348,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dcHt7mAMVnztO8Aty1Os52B/eVW1fjnnlvzkkjhPrbI=\""
+          "Value": "\"6zDkUecA5H13LOFuLopRPSt0fXW2xZqs7k/alnDwsac=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Jul 2025 07:25:34 GMT"
+          "Value": "Sun, 24 Aug 2025 06:55:14 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ntuyizzq2x"
+          "Value": "z6nese34th"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-dcHt7mAMVnztO8Aty1Os52B/eVW1fjnnlvzkkjhPrbI="
+          "Value": "sha256-6zDkUecA5H13LOFuLopRPSt0fXW2xZqs7k/alnDwsac="
         },
         {
           "Name": "label",
