@@ -15,7 +15,7 @@ $(document).ready(function () {
 
         // API lấy thông tin viên chức theo mã nhân viên
         $.ajax({
-            url: '/api/DaoTao/GetByMaNV/' + maNV,
+            url: '/api/BoiDuong/GetByMaNV/' + maNV,
             method: 'GET',
             success: function (res) {
                 if (res.success) {
@@ -38,8 +38,8 @@ $(document).ready(function () {
 
 //Load danh sách mã nhân viên
 function LoadDanhSachMaNhanVien() {
-    $.ajax({
-        url: '/api/DaoTao/List',
+        $.ajax({
+            url: '/api/BoiDuong/GetDanhSachMaNhanVien',
         method: 'GET',
         success: function (res) {
             if (res.success) {
@@ -61,8 +61,8 @@ function LoadDanhSachMaNhanVien() {
 
 //Load danh sách quốc gia
 $(document).ready(function () {
-    $.ajax({
-        url: '/api/DaoTao/GetDanhSachQuocGia',
+        $.ajax({
+            url: '/api/BoiDuong/GetDanhSachQuocGia',
         method: 'GET',
         success: function (res) {
             if (res.success) {
@@ -82,8 +82,8 @@ $(document).ready(function () {
     });
 });
 
-//lOAD HÌNH THỨC ĐÀO TẠO
-function loadSelectHTDT(id, url, valueField, textField, selectedValue) {
+//lOAD HÌNH THỨC Bồi Dưỡng
+function loadSelectHTBD(id, url, valueField, textField, selectedValue) {
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -110,7 +110,7 @@ function loadSelectHTDT(id, url, valueField, textField, selectedValue) {
 }
 
 
-function loadSelectHTDTdetail(id, url, valueField, textField, selectedValue) {
+function loadSelectHTBDdetail(id, url, valueField, textField, selectedValue) {
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -136,11 +136,11 @@ function loadSelectHTDTdetail(id, url, valueField, textField, selectedValue) {
         .catch(error => console.error('Lỗi khi gọi API:', error));
 }
 
-function loadAllDropdownDetailDT(dt) {
-    loadSelectHTDTdetail('ID_htdaotaoDetail', '/api/HinhThucDaoTao', 'ID_htdaotao', 'HinhThuc', dt.ID_htdaotao);
-    loadSelectHTDTdetail('ID_QGDetail', '/api/DaoTao/GetDanhSachQuocGia', 'ID_QG', 'TenQuocGia', dt.ID_QG);
-    loadSelectHTDTdetail('ID_PhongBanDetail', '/api/PhongBan', 'ID_Phongban', 'Tenphongban', dt.ID_PhongBan);
-    loadSelectHTDTdetail('ID_ChucVuDetail', '/api/ChucVu', 'ID_ChucVu', 'TenChucVu', dt.ID_ChucVu);
+function loadAllDropdownDetailBD(dt) {
+    loadSelectHTBDdetail('  ', '/api/HinhThucDaoTao', 'ID_htdaotao', 'HinhThuc', dt.ID_htdaotao);
+    loadSelectHTBDdetail('ID_QGDetail', '/api/DaoTao/GetDanhSachQuocGia', 'ID_QG', 'TenQuocGia', dt.ID_QG);
+    loadSelectHTBDdetail('ID_PhongBanDetail', '/api/PhongBan', 'ID_Phongban', 'Tenphongban', dt.ID_PhongBan);
+    loadSelectHTBDdetail('ID_ChucVuDetail', '/api/ChucVu', 'ID_ChucVu', 'TenChucVu', dt.ID_ChucVu);
 
 
 }
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 HoTen: document.getElementById("HoTen").value || null,
                 ID_PhongBan: parseInt(document.getElementById("ID_PhongBan").value) || null,
                 ID_ChucVu: parseInt(document.getElementById("ID_ChucVu").value) || null,
-                ID_htdaotao: parseInt(document.getElementById("ID_htdaotao").value) || null,
+                ID_htboiDuong: parseInt(document.getElementById("ID_htboiDuong").value) || null,
                 ID_QG: parseInt(document.getElementById("ID_QG").value) || null,
                 QuyetDinh: document.getElementById("QuyetDinh").value || "",
                 ThoiGianTu: document.querySelector("input[name='ThoiGianTu']").value || null,
@@ -167,14 +167,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
             console.log("Dữ liệu gửi:", JSON.stringify(model));
 
-            if (!model.MaNhanVien || !model.ID_htdaotao || !model.ThoiGianTu) {
+            if (!model.MaNhanVien || !model.ID_htboiDuong || !model.ThoiGianTu) {
                 alert("Vui lòng điền đầy đủ các trường bắt buộc!");
                 return;
             }
 
 
             try {
-                const response = await fetch("/api/DaoTao/insert-daotao", {
+                const response = await fetch("/api/BoiDuong/insert-boiduong", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -213,8 +213,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //Load nhân viên
-function LoadDaoTao() {
-    fetch('/api/DaoTao/get-daotao')
+function LoadBoiDuong() {
+    fetch('/api/BoiDuong/get-boiduong')
         .then(response => response.json())
         .then(data => {
             if (Array.isArray(data)) {
@@ -265,14 +265,14 @@ function LoadDaoTao() {
 
 
 //Chi Tiết
-function ChiTietDaoTao(maNhanVien) {
+function ChiTietBoiDuong(maNhanVien) {
     debugger
     if (!maNhanVien) {
         alert('Mã nhân viên không hợp lệ!');
         return;
     }
 
-    fetch(`/api/DaoTao/get-daotao-by-manv/${maNhanVien}`)
+        fetch(`/api/BoiDuong/get-boiduong-by-manv/${maNhanVien}`)
         .then(response => {
             if (!response.ok) throw new Error('Lỗi kết nối');
             return response.json();
@@ -316,7 +316,7 @@ function formatDate(dateString) {
 }
 
 //Sửa đào tạo Lưu
-function LuuDaoTaoDetail() {
+function LuuBoiDuongDetail() {
     const maNhanVien = document.getElementById('MaNhanVienDetail').value;
 
     const data = {
@@ -332,7 +332,7 @@ function LuuDaoTaoDetail() {
        // ID_TrangThai: 1 // hoặc giá trị mặc định nếu cần
     };
 
-    fetch('/api/DaoTao/update-daotao/' + data.MaNhanVien, {
+    fetch('/api/BoiDuong/update-boiduong/' + data.MaNhanVien, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -379,7 +379,7 @@ $(document).ready(function () {
                 }
 
                 // Gọi API bằng fetch()
-                const response = await fetch('/api/DaoTao/Duyet-daotao', {
+                const response = await fetch('/api/BoiDuong/Duyet-boiduong', {
                    
                     method: 'POST',
                     headers: {
@@ -434,7 +434,7 @@ $(document).ready(function () {
             }
 
             // Gọi API bằng fetch()
-            const response = await fetch('/api/DaoTao/HuyDuyet-daotao', {
+            const response = await fetch('/api/BoiDuong/HuyDuyet-boiduong', {
 
                 method: 'POST',
                 headers: {
@@ -480,7 +480,7 @@ document.getElementById('btnGiaHan').addEventListener('click', async function ()
 
     const idDaoTao = selectedCheckbox.getAttribute('data-id');
     try {
-        const response = await fetch(`/api/DaoTao/GiaHanDaoTao?ID_DaoTao=${idDaoTao}`);
+        const response = await fetch(`/api/BoiDuong/GiaHanBoiDuong?ID_BoiDuong=${idDaoTao}`);
         const result = await response.json();
         console.log("API Response:", result);
 
@@ -533,7 +533,7 @@ $(document).ready(function () {
             }
 
             // Gọi API bằng fetch()
-            const response = await fetch('/api/DaoTao/LuuGiaHan', {
+            const response = await fetch('/api/BoiDuong/LuuGiaHan', {
 
                 method: 'POST',
                 headers: {

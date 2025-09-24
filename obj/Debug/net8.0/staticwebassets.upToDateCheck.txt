@@ -7,6 +7,7 @@ wwwroot\img\logo4.png
 wwwroot\js\Alldanhmuc.js
 wwwroot\js\script.js
 wwwroot\js\site.js
+wwwroot\js\TM_BDLoad.js
 wwwroot\js\TM_DTLoad.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

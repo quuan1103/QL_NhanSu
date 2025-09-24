@@ -42,9 +42,56 @@ namespace WebAPP.Controllers
 
             return View("~/Views/Home/Web/LyLich/Soyeu.cshtml", listNhanVien);
         }
-        public IActionResult Quatrinhdaotao()
+        public IActionResult Quatrinhdaotao(int page = 1, int pageSize = 10)
         {
-            return View("~/Views/Home/Web/QT_DaoTao/Quatrinhdaotao.cshtml");
+            using var connection = db.CreateConnection();
+
+            // Đếm tổng số dòng trong bảng DaoTao
+            var countQuery = "SELECT COUNT(*) FROM DaoTao";
+            var totalRecords = connection.ExecuteScalar<int>(countQuery);
+
+            // Tính toán phân trang
+            var totalPages = (int)Math.Ceiling((double)totalRecords / pageSize);
+            var offset = (page - 1) * pageSize;
+
+            // Lấy dữ liệu phân trang
+            var query = @"SELECT * FROM DaoTao
+                  ORDER BY ID_DaoTao DESC OFFSET @Offset ROWS FETCH NEXT @PageSize ROWS ONLY";
+            var listDaoTao = connection.Query<WebAPP.Models.DaoTao.Daotao>(query, new { Offset = offset, PageSize = pageSize }).ToList();
+
+            // Gửi kèm dữ liệu phân trang qua ViewBag
+            ViewBag.CurrentPage = page;
+            ViewBag.PageSize = pageSize;
+            ViewBag.TotalRecords = totalRecords;
+            ViewBag.TotalPages = totalPages;
+
+            return View("~/Views/Home/Web/QT_DaoTao/Quatrinhdaotao.cshtml", listDaoTao);
+        }
+
+        public IActionResult Quatrinhboiduong(int page = 1, int pageSize = 10)
+        {
+            using var connection = db.CreateConnection();
+
+            // Đếm tổng số dòng trong bảng BoiDuong
+            var countQuery = "SELECT COUNT(*) FROM BoiDuong";
+            var totalRecords = connection.ExecuteScalar<int>(countQuery);
+
+            // Tính toán phân trang
+            var totalPages = (int)Math.Ceiling((double)totalRecords / pageSize);
+            var offset = (page - 1) * pageSize;
+
+            // Lấy dữ liệu phân trang
+            var query = @"SELECT * FROM BoiDuong
+                  ORDER BY ID_BoiDuong DESC OFFSET @Offset ROWS FETCH NEXT @PageSize ROWS ONLY";
+            var listBoiDuong = connection.Query<WebAPP.Models.BoiDuong.BoiDuong>(query, new { Offset = offset, PageSize = pageSize }).ToList();
+
+            // Gửi kèm dữ liệu phân trang qua ViewBag
+            ViewBag.CurrentPage = page;
+            ViewBag.PageSize = pageSize;
+            ViewBag.TotalRecords = totalRecords;
+            ViewBag.TotalPages = totalPages;
+
+            return View("~/Views/Home/Web/QT_BoiDuong/Quatrinhboiduong.cshtml", listBoiDuong);
         }
         //Lý lịch - Thêm mới
         public IActionResult ThemmoiSYLL()

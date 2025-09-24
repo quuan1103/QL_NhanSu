@@ -53,6 +53,10 @@
       "PackagePath": "staticwebassets\\js\\Alldanhmuc.js"
     },
     {
+      "Id": "D:\\HOC\\WebAPP\\wwwroot\\js\\TM_BDLoad.js",
+      "PackagePath": "staticwebassets\\js\\TM_BDLoad.js"
+    },
+    {
       "Id": "D:\\HOC\\WebAPP\\wwwroot\\js\\TM_DTLoad.js",
       "PackagePath": "staticwebassets\\js\\TM_DTLoad.js"
     },

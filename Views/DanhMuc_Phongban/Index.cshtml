@@ -66,6 +66,7 @@
                     <a id="btnTrinhDo" class="nav-link mb-2" role="tab">Trình Độ</a>
                     <a id="btnLoaiHopDong" class="nav-link mb-2" role="tab">Loại hợp đồng</a>
                     <a id="btnHTDT" class="nav-link mb-2" role="tab">Hình thức đào tạo</a>
+                    <a id="btnHTBD" class="nav-link mb-2" role="tab">Hình thức bồi dưỡng</a>
                 </div>
             </div>
 
@@ -384,6 +385,71 @@
                         </div>
                     </div>
                 </div>
+
+
+
+                <!--HÌNH THỨC BỒI DƯỠNG-->
+                <div id="formHTBD" style="display: none;">
+                    <form id="formHTDT">
+                        <input type="hidden" id="txtTypeHTBD" />
+                        <input type="hidden" id="ID_htboiDuong" />
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Hình Thức Bồi Dưỡng</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label">Hình Thức Bồi Dưỡng</label>
+                                            <input class="form-control" id="HinhThuc" name="HinhThuc" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">Mô tả </label>
+                                            <textarea id="MoTaHTBD" class="form-control" placeholder="Nhập mô tả"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <button type="button" class="btn btn-outline-primary" onclick="HinhThucBoiDuongDMModule.SaveHinhThucBoiDuong()">
+                                        <i class="fa fa-save"></i> Lưu
+                                    </button>
+
+                                    <button type="button" class="btn btn-outline-danger" onclick="HinhThucBoiDuongDMModule.DeleteHinhThucBoiDuong()">
+                                        <i class="fas fa-trash-alt"></i> Xoá
+                                    </button>
+
+                                    <button type="button" class="btn btn-outline-info" onclick="HinhThucBoiDuongDMModule.fnClearHinhThucBoiDuong()">
+                                        <i class="fas fa-sync"></i> Làm mới
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="row mt-3">
+                        <div class="table-responsive">
+                            <table id="tblDataHinhThucBoiDuong" class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Tên Hình thức bồi dưỡng</th>
+                                        <th>Mô tả</th>
+                                        <th>Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Dữ liệu sẽ được đổ vào đây bằng JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
             </div> <!-- col-md-9 -->
         </div> <!-- row -->
 
@@ -414,6 +480,10 @@
             ShowFormHTDT();
         
         });
+        $("#btnHTBD").click(function(){
+            ShowFormHTBD();
+
+        });
         });
 
     function ShowFormPhongBan() {
@@ -427,12 +497,15 @@
         $("#formLoaiHD").hide();
         // Ẩn Hình thức đào tạo
         $("#formHTDT").hide();
+        // Ẩn Hình thức bồi dưỡng
+        $("#formHTBD").hide();
 
         // Active menu
         $("#btnPhongBan").addClass("active");
         $("#btnChucVu").removeClass("active");
         $("#btnTrinhDo").removeClass("active");
         $("#btnLoaiHopDong").removeClass("active");
+        $("btnHTBD").removeClass("active");
         $("#btnHTDT").removeClass("active");
 
         // Load data Phòng Ban
@@ -452,6 +525,8 @@
         $("#formLoaiHD").hide();
         // Ẩn Hình thức đào tạo
         $("#formHTDT").hide();
+        // Ẩn Hình thức bồi dưỡng
+        $("#formHTBD").hide();
 
         // Active menu
         $("#btnChucVu").addClass("active");
@@ -459,6 +534,7 @@
         $("#btnTrinhDo").removeClass("active");
         $("#btnLoaiHopDong").removeClass("active");
         $("#btnHTDT").removeClass("active");
+        $("btnHTBD").removeClass("active");
         // Load data Chức Vụ
         if (typeof ChucVuDMModule !== "undefined") {
             ChucVuDMModule.LoadChucVu();
@@ -473,6 +549,8 @@
             $("#formLoaiHD").hide();
             // Ẩn Hình thức đào tạo
             $("#formHTDT").hide();
+            // Ẩn Hình thức bồi dưỡng
+            $("#formHTBD").hide();
 
             // Active menu
             $("#btnTrinhDo").addClass("active");
@@ -480,6 +558,7 @@
             $("#btnChucVu").removeClass("active");
             $("#btnLoaiHopDong").removeClass("active");
             $("#btnHTDT").removeClass("active");
+            $("btnHTBD").removeClass("active");
 
             // Load data Trình Độ
             if (typeof TrinhDoDMModule !== "undefined") {
@@ -494,6 +573,8 @@
             $("#formTrinhDo").hide();
             // Ẩn Hình thức đào tạo
             $("#formHTDT").hide();
+            // Ẩn Hình thức bồi dưỡng
+            $("#formHTBD").hide();
 
             // Active menu
             $("#btnLoaiHopDong").addClass("active");
@@ -501,6 +582,7 @@
             $("#btnChucVu").removeClass("active");
             $("#btnTrinhDo").removeClass("active");
             $("#btnHTDT").removeClass("active");
+            $("btnHTBD").removeClass("active");
             // Load data Loại Hợp Đồng
             if (typeof LoaiHopDongDMModule !== "undefined") {
                 LoaiHopDongDMModule.LoadLoaiHopDong();
@@ -514,6 +596,8 @@
             $("#formTrinhDo").hide();
             // Ẩn form loại hợp đồng
             $("#formLoaiHD").hide();
+            // Ẩn Hình thức bồi dưỡng
+            $("#formHTBD").hide();
            
 
             // Active menu
@@ -522,9 +606,34 @@
             $("#btnChucVu").removeClass("active");
             $("#btnTrinhDo").removeClass("active");
             $("#btnLoaiHopDong").removeClass("active");
+            $("btnHTBD").removeClass("active");
             // Load data Loại Hợp Đồng
             if (typeof HinhThucDaoTaoDMModule !== "undefined") {
                 HinhThucDaoTaoDMModule.LoadHinhThucDaoTao();
             }
      }
+     function ShowFormHTBD() {
+            $("#formHTDT").hide();
+            // Ẩn Phòng Ban, Chức Vụ và Trình Độ
+            $("#formPhongBan").hide();
+            $("#formChucVu").hide();
+            $("#formTrinhDo").hide();
+            // Ẩn form loại hợp đồng
+            $("#formLoaiHD").hide();
+            // Ẩn Hình thức bồi dưỡng
+            $("#formHTBD").show();
+
+
+            // Active menu
+            $("#btnHTDT").removeClass("active");
+            $("#btnPhongBan").removeClass("active");
+            $("#btnChucVu").removeClass("active");
+            $("#btnTrinhDo").removeClass("active");
+            $("#btnLoaiHopDong").removeClass("active");
+            $("btnHTBD").addClass("active");
+            // Load data Loại Hợp Đồng
+            if (typeof HinhThucBoiDuongDMModule !== "undefined") {
+                HinhThucBoiDuongDMModule.LoadHinhThucBoiDuong();
+            }
+            }
 </script>

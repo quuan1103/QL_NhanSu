@@ -21,10 +21,12 @@ namespace WebAPP.Data
         // DbSet cho TaiKhoan
         public DbSet<TaiKhoanNhanVien> TaiKhoanNhanVien { get; set; }
         public DbSet<Phongban> PhongBan { get; set; }
-        public DbSet<ChucVuDM> ChucVuDM { get; set; }
+        public DbSet<ChucVuDM> ChucVu { get; set; }
         public DbSet<BangLuong> BangLuong { get; set; }
         public DbSet<LyLich> LyLich { get; set; }
         public DbSet<WebAPP.Models.DaoTao.Daotao> DaoTao { get; set; }
+
+        public DbSet<HinhThucBDDM> HinhThucDaoTao { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

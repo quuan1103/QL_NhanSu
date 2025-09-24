@@ -5,6 +5,333 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/BoiDuongAPI/get-boiduong": {
+      "get": {
+        "tags": [
+          "BoiDuongAPI"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BoiDuongAPI/get-boiduong-by-manv/{maNhanVien}": {
+      "get": {
+        "tags": [
+          "BoiDuongAPI"
+        ],
+        "parameters": [
+          {
+            "name": "maNhanVien",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BoiDuongAPI/insert-boiduong": {
+      "post": {
+        "tags": [
+          "BoiDuongAPI"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BoiDuong"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BoiDuong"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BoiDuong"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BoiDuongAPI/update-boiduong/{maNhanVien}": {
+      "put": {
+        "tags": [
+          "BoiDuongAPI"
+        ],
+        "parameters": [
+          {
+            "name": "maNhanVien",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BoiDuong"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BoiDuong"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BoiDuong"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BoiDuongAPI/Duyet-boiduong": {
+      "post": {
+        "tags": [
+          "BoiDuongAPI"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BoiDuongAPI/HuyDuyet-boiduong": {
+      "post": {
+        "tags": [
+          "BoiDuongAPI"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BoiDuongAPI/GiaHanBoiDuong": {
+      "get": {
+        "tags": [
+          "BoiDuongAPI"
+        ],
+        "parameters": [
+          {
+            "name": "ID_BoiDuong",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BoiDuongAPI/LuuGiaHan": {
+      "post": {
+        "tags": [
+          "BoiDuongAPI"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BoiDuongAPI/GetDanhSachHinhThucBoiDuong": {
+      "get": {
+        "tags": [
+          "BoiDuongAPI"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BoiDuongAPI/GetDanhSachQuocGia": {
+      "get": {
+        "tags": [
+          "BoiDuongAPI"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BoiDuongAPI/List": {
+      "get": {
+        "tags": [
+          "BoiDuongAPI"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BoiDuongAPI/GetDanhSachMaNhanVien": {
+      "get": {
+        "tags": [
+          "BoiDuongAPI"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BoiDuongAPI/GetByMaNV/{maNhanVien}": {
+      "get": {
+        "tags": [
+          "BoiDuongAPI"
+        ],
+        "parameters": [
+          {
+            "name": "maNhanVien",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/ChucVu": {
       "post": {
         "tags": [
@@ -423,6 +750,110 @@
                   "type": "integer",
                   "format": "int32"
                 }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/HinhThucBoiDuong": {
+      "post": {
+        "tags": [
+          "HinhThucBoiDuongDanhMuc"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HinhThucBDDM"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HinhThucBDDM"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HinhThucBDDM"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "HinhThucBoiDuongDanhMuc"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/HinhThucBoiDuong/{id}": {
+      "delete": {
+        "tags": [
+          "HinhThucBoiDuongDanhMuc"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "HinhThucBoiDuongDanhMuc"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HinhThucBDDM"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HinhThucBDDM"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HinhThucBDDM"
               }
             }
           }
@@ -1284,6 +1715,71 @@
   },
   "components": {
     "schemas": {
+      "BoiDuong": {
+        "type": "object",
+        "properties": {
+          "ID_BoiDuong": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ID_NV": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "MaNhanVien": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "HoTen": {
+            "maxLength": 255,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "ID_PhongBan": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "ID_ChucVu": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "ID_htboiDuong": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "ID_QG": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "ThoiGianTu": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "ThoiGianDen": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "QuyetDinh": {
+            "type": "string",
+            "nullable": true
+          },
+          "ID_TrangThai": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "ChucVuDM": {
         "type": "object",
         "properties": {
@@ -1358,6 +1854,24 @@
           "ID_TrangThai": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HinhThucBDDM": {
+        "type": "object",
+        "properties": {
+          "ID_htboiDuong": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "HinhThuc": {
+            "type": "string",
+            "nullable": true
+          },
+          "MoTaHTBD": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

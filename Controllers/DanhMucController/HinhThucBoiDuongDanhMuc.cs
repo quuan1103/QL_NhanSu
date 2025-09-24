@@ -3,32 +3,32 @@ using WebAPP.Data;
 using Dapper;
 using WebAPP.Models.ModelDanhMuc;
 
-[Route("api/HinhThucDaoTao")]
+[Route("api/HinhThucBoiDuong")]
 [ApiController]
-public class HinhThucDaoTaoDM : ControllerBase
+public class HinhThucBoiDuongDanhMuc : ControllerBase
 {
     private readonly DapperContext _context;
 
-    public HinhThucDaoTaoDM(DapperContext context)
+    public HinhThucBoiDuongDanhMuc(DapperContext context)
     {
         _context = context;
     }
 
-    // POST: api/HinhThucDT
+    // POST: api/HinhThucBD
     [HttpPost]
-    public async Task<IActionResult> PostDaoTao([FromBody] HinhThucDTDM hinhthucdaotao)
+    public async Task<IActionResult> PostBoiDuong([FromBody] HinhThucBDDM hinhthucboiduong)
     {
-        if (hinhthucdaotao == null || string.IsNullOrEmpty(hinhthucdaotao.HinhThuc) || string.IsNullOrEmpty(hinhthucdaotao.MoTa_HT))
+        if (hinhthucboiduong == null || string.IsNullOrEmpty(hinhthucboiduong.HinhThuc) || string.IsNullOrEmpty(hinhthucboiduong.MoTaHTBD))
             return BadRequest("Dữ liệu không hợp lệ");
 
-        hinhthucdaotao.ID_TrangThai = hinhthucdaotao.ID_TrangThai == 0 ? 1 : hinhthucdaotao.ID_TrangThai;
+        hinhthucboiduong.ID_htboiDuong = hinhthucboiduong.ID_htboiDuong == 0 ? 1 : hinhthucboiduong.ID_htboiDuong;
 
-        var query = @"INSERT INTO HinhThucDaoTao (HinhThuc, MoTa_HT, ID_TrangThai) 
-                      VALUES (@HinhThuc, @MoTa_HT, @ID_TrangThai)";
+        var query = @"INSERT INTO HinhThucBoiDuong (HinhThuc, MoTaHTDB) 
+                      VALUES (@HinhThuc, @MoTaHTDB)";
         try
         {
             using var connection = _context.CreateConnection();
-            var result = await connection.ExecuteAsync(query, hinhthucdaotao);
+            var result = await connection.ExecuteAsync(query, hinhthucboiduong);
             return Ok(new { success = true });
         }
         catch (Exception ex)
@@ -40,15 +40,15 @@ public class HinhThucDaoTaoDM : ControllerBase
 
 
 
-    // GET: api/HinhThucDT
+    // GET: api/HinhThucBD
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
-        var query = "SELECT * FROM HinhThucDaoTao";
+        var query = "SELECT * FROM HinhThucBoiDuong";
         try
         {
             using var connection = _context.CreateConnection();
-            var list = await connection.QueryAsync<HinhThucDTDM>(query);
+            var list = await connection.QueryAsync<HinhThucBDDM>(query);
             return Ok(new { success = true, data = list });
         }
         catch (Exception ex)
@@ -62,7 +62,7 @@ public class HinhThucDaoTaoDM : ControllerBase
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
     {
-        var query = "DELETE FROM HinhThucDaoTao WHERE ID_htdaotao = @Id";
+        var query = "DELETE FROM HinhThucBoiDuong WHERE ID_htboiDuong = @Id";
         try
         {
             using var connection = _context.CreateConnection();
@@ -79,19 +79,19 @@ public class HinhThucDaoTaoDM : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> PutHinhThucDaoTao(int id, [FromBody] HinhThucDTDM hinhthucdaotao)
+    public async Task<IActionResult> PutHinhThucBoiDuong(int id, [FromBody] HinhThucBDDM hinhthucboiduong)
     {
-        if (hinhthucdaotao == null || id != hinhthucdaotao.ID_htdaotao)
+        if (hinhthucboiduong == null || id != hinhthucboiduong.ID_htboiDuong)
             return BadRequest("Dữ liệu không hợp lệ");
 
-        var query = @"UPDATE HinhThucDaoTao
-                      SET HinhThuc = @HinhThuc, MoTa_HT = @MoTa_HT, ID_TrangThai = @ID_TrangThai 
-                      WHERE ID_htdaotao = @ID_htdaotao";
+        var query = @"UPDATE HinhThucBoiDuong
+                      SET HinhThuc = @HinhThuc, MoTaHTBD = @MoTaHTBD
+                      WHERE ID_htboiDuong = @ID_htboiDuong";
 
         try
         {
             using var connection = _context.CreateConnection();
-            var result = await connection.ExecuteAsync(query, hinhthucdaotao);
+            var result = await connection.ExecuteAsync(query, hinhthucboiduong);
             return Ok(new { success = true, message = "Cập nhật thành công" });
         }
         catch (Exception ex)

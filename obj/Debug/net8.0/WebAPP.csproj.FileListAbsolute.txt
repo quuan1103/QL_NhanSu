@@ -283,10 +283,10 @@ D:\HOC\WebAPP\obj\Debug\net8.0\staticwebassets\msbuild.build.WebAPP.props
 D:\HOC\WebAPP\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.WebAPP.props
 D:\HOC\WebAPP\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.WebAPP.props
 D:\HOC\WebAPP\obj\Debug\net8.0\staticwebassets.pack.json
+D:\HOC\WebAPP\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\HOC\WebAPP\obj\Debug\net8.0\WebAPP.csproj.Up2Date
 D:\HOC\WebAPP\obj\Debug\net8.0\WebAPP.dll
 D:\HOC\WebAPP\obj\Debug\net8.0\refint\WebAPP.dll
 D:\HOC\WebAPP\obj\Debug\net8.0\WebAPP.pdb
 D:\HOC\WebAPP\obj\Debug\net8.0\WebAPP.genruntimeconfig.cache
 D:\HOC\WebAPP\obj\Debug\net8.0\ref\WebAPP.dll
-D:\HOC\WebAPP\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

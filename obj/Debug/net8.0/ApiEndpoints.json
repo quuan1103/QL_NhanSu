@@ -1,5 +1,188 @@
 [
   {
+    "ContainingType": "WebAPP.Controllers.BoiDuong.BoiDuongAPI",
+    "Method": "DuyetBoiDuong",
+    "RelativePath": "api/BoiDuongAPI/Duyet-boiduong",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ids",
+        "Type": "System.Collections.Generic.List\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.BoiDuong.BoiDuongAPI",
+    "Method": "GetBoiDuong",
+    "RelativePath": "api/BoiDuongAPI/get-boiduong",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.BoiDuong.BoiDuongAPI",
+    "Method": "GetBoiDuongByMaNV",
+    "RelativePath": "api/BoiDuongAPI/get-boiduong-by-manv/{maNhanVien}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "maNhanVien",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.BoiDuong.BoiDuongAPI",
+    "Method": "GetByMaNV",
+    "RelativePath": "api/BoiDuongAPI/GetByMaNV/{maNhanVien}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "maNhanVien",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.BoiDuong.BoiDuongAPI",
+    "Method": "GetDanhSachHinhThucBoiDuong",
+    "RelativePath": "api/BoiDuongAPI/GetDanhSachHinhThucBoiDuong",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.BoiDuong.BoiDuongAPI",
+    "Method": "GetDanhSachMaNhanVien",
+    "RelativePath": "api/BoiDuongAPI/GetDanhSachMaNhanVien",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.BoiDuong.BoiDuongAPI",
+    "Method": "GetDanhSachQuocGia",
+    "RelativePath": "api/BoiDuongAPI/GetDanhSachQuocGia",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.BoiDuong.BoiDuongAPI",
+    "Method": "GiaHanBoiDuong",
+    "RelativePath": "api/BoiDuongAPI/GiaHanBoiDuong",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID_BoiDuong",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.BoiDuong.BoiDuongAPI",
+    "Method": "HuyDuyetBoiDuong",
+    "RelativePath": "api/BoiDuongAPI/HuyDuyet-boiduong",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ids",
+        "Type": "System.Collections.Generic.List\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.BoiDuong.BoiDuongAPI",
+    "Method": "InsertBoiDuong",
+    "RelativePath": "api/BoiDuongAPI/insert-boiduong",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "WebAPP.Models.BoiDuong.BoiDuong",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.BoiDuong.BoiDuongAPI",
+    "Method": "GetListMaNhanVien",
+    "RelativePath": "api/BoiDuongAPI/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.BoiDuong.BoiDuongAPI",
+    "Method": "LuuGiaHan",
+    "RelativePath": "api/BoiDuongAPI/LuuGiaHan",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ids",
+        "Type": "System.Collections.Generic.List\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPP.Controllers.BoiDuong.BoiDuongAPI",
+    "Method": "UpdateBoiDuong",
+    "RelativePath": "api/BoiDuongAPI/update-boiduong/{maNhanVien}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "maNhanVien",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "WebAPP.Models.BoiDuong.BoiDuong",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ChucVuController",
     "Method": "PostChucVu",
     "RelativePath": "api/ChucVu",
@@ -226,8 +409,71 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "HinhThucBoiDuongDanhMuc",
+    "Method": "PostBoiDuong",
+    "RelativePath": "api/HinhThucBoiDuong",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "hinhthucboiduong",
+        "Type": "WebAPP.Models.ModelDanhMuc.HinhThucBDDM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HinhThucBoiDuongDanhMuc",
+    "Method": "GetAll",
+    "RelativePath": "api/HinhThucBoiDuong",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HinhThucBoiDuongDanhMuc",
+    "Method": "Delete",
+    "RelativePath": "api/HinhThucBoiDuong/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HinhThucBoiDuongDanhMuc",
+    "Method": "PutHinhThucBoiDuong",
+    "RelativePath": "api/HinhThucBoiDuong/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "hinhthucboiduong",
+        "Type": "WebAPP.Models.ModelDanhMuc.HinhThucBDDM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "HinhThucDaoTaoDM",
-    "Method": "PostChucVu",
+    "Method": "PostDaoTao",
     "RelativePath": "api/HinhThucDaoTao",
     "HttpMethod": "POST",
     "IsController": true,

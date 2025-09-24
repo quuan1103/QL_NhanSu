@@ -120,8 +120,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>xfwt1t2s1t</Fingerprint>
-      <Integrity>fZ4Vhk6LI6cZZrA1k37nnOAx1GQPjGKH4lYa2LKNrkc=</Integrity>
+      <Fingerprint>kwlcjlii4z</Fingerprint>
+      <Integrity>5ACfxrVi0K5wPHVKxKmt05X31EcY+/rJQVymxcV5QcI=</Integrity>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\Alldanhmuc.js'))</OriginalItemSpec>
@@ -162,6 +162,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\TM_BDLoad.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>WebAPP</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/WebAPP</BasePath>
+      <RelativePath>js/TM_BDLoad.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>425mg9c97f</Fingerprint>
+      <Integrity>5Gh+uvGYtFyqgQbAzSrpzb0z0MwGpc7kkl6kHVFnOKw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\TM_BDLoad.js'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\TM_DTLoad.js'))">
       <SourceType>Package</SourceType>
       <SourceId>WebAPP</SourceId>
@@ -174,8 +192,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>z6nese34th</Fingerprint>
-      <Integrity>6zDkUecA5H13LOFuLopRPSt0fXW2xZqs7k/alnDwsac=</Integrity>
+      <Fingerprint>pvy77lgmjv</Fingerprint>
+      <Integrity>q/g9AxayKTSFE/XDRI3VAiScjSyg2x/eJGvIyxr+2nA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\TM_DTLoad.js'))</OriginalItemSpec>

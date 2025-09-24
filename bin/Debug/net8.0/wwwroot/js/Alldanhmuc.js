@@ -722,3 +722,140 @@ const HinhThucDaoTaoDMModule = (function () {
         )();
 
 
+
+// HÌNH THỨC BỖI DƯỠNG
+const HinhThucBoiDuongDMModule = (function () {
+    let isEditMode = false;
+    function SaveHinhThucBoiDuong() {
+        const HinhThuc = document.getElementById("HinhThuc").value.trim();
+        const MoTaHTBD = document.getElementById("MoTaHTBD").value.trim();
+        const ID_htboiDuong = document.getElementById("ID_htboiDuong") ? document.getElementById("ID_htboiDuong").value : "";
+        if (!HinhThuc || !MoTaHTBD) {
+            alert("Vui lòng nhập đầy đủ thông tin.");
+            return;
+        }
+        confirmMessage = isEditMode ? "Bạn có chắc muốn cập nhật hình thức bồi dưỡng này không?" : "Bạn có chắc muốn thêm mới hình thức bồi dưỡng này không?";
+        if (!confirm(confirmMessage)) {
+            return;
+        }
+        let htboiduongObj = {
+            HinhThuc: HinhThuc,
+            MoTaHTBD: MoTaHTBD
+        };
+        let url = '/api/HinhThucBoiDuong';
+        let method = 'POST';
+        if (isEditMode && ID_htboiDuong) {
+            htboiduongObj.ID_htboiDuong = ID_htboiDuong;
+            url = `/api/HinhThucBoiDuong/${ID_htboiDuong}`;
+            method = 'PUT';
+        }
+        fetch(url, {
+            method: method,
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(htboiduongObj)
+        })
+            .then(response => response.json())
+            .then(res => {
+                if (res && res.success) {
+                    alert(isEditMode ? "Cập nhật thành công!" : "Thêm mới thành công!");
+                    LoadHinhThucBoiDuong();
+                    fnClearHinhThucBoiDuong();
+                } else {
+                    alert("Có lỗi xảy ra.");
+                }
+            })
+            .catch(() => alert("Lỗi khi gửi dữ liệu."));
+    }
+
+    function DeleteHinhThucBoiDuong() {
+        const ID_htboiDuong = document.getElementById("ID_htboiDuong").value;
+        if (!ID_htboiDuong) {
+            alert("Vui lòng chọn hình thức bồi dưỡng để xoá.");
+            return;
+        }
+        if (!confirm("Bạn có chắc muốn xoá hình thức bồi dưỡng này?")) {
+            return;
+        }
+        fetch(`/api/HinhThucBoiDuong/${ID_htboiDuong}`, {
+            method: 'DELETE'
+        })
+            .then(response => response.json())
+            .then(res => {
+                if (res && res.success) {
+                    alert("Xoá thành công!");
+                    LoadHinhThucBoiDuong();
+                    fnClearHinhThucBoiDuong();
+                } else {
+                    alert("Không thể xoá.");
+                }
+            })
+            .catch(() => alert("Lỗi khi xoá."));
+    }
+
+    function LoadHinhThucBoiDuong() {
+        $.ajax({
+            url: '/api/HinhThucBoiDuong',
+            type: 'GET',
+            success: function (res) {
+                if (res.success) {
+                    console.log("Dữ liệu hình thức bồi dưỡng:", res.data);
+                    BindTableHinhThucBoiDuong(res.data);
+                } else {
+                    alert("Không thể tải danh sách.");
+                }
+            },
+            error: function () {
+                alert("Lỗi khi tải dữ liệu.");
+            }
+        });
+    }
+
+    function BindTableHinhThucBoiDuong(data) {
+        let html = '';
+        data.forEach(item => {
+            html += `
+                    <tr>
+                        <td>${item.HinhThuc}</td>
+                        <td>${item.MoTaHTBD}</td>
+                        <td>
+                            <button class="btnChitietHTBD btn btn-sm btn-info"
+                                data-idhtbd="${item.ID_htboiDuong}"
+                                data-hinhthuc="${item.HinhThuc}"
+                                data-motabd="${item.MoTaHTBD}">
+                                <i class="fas fa-info-circle"></i> Chi tiết
+                            </button>
+                        </td>
+                    </tr>
+                `;
+        });
+        $("#tblDataHinhThucBoiDuong tbody").html(html);
+    }
+    // Sự kiện click nút Chi tiết
+    $(document).on('click', '.btnChitietHTBD', function () {
+        const ID_htboiDuong = $(this).data('idhtbd');
+        const HinhThuc = $(this).data('hinhthuc');
+        const MoTaHTBD = $(this).data('motabd');
+        console.log("Chi tiết:", {
+            ID_htboiDuong, HinhThuc, MoTaHTBD
+        });
+        $("#ID_htboiDuong").val(ID_htboiDuong);
+        $("#HinhThuc").val(HinhThuc);
+        $("#MoTaHTBD").val(MoTaHTBD);
+        isEditMode = true;
+    });
+    function fnClearHinhThucBoiDuong() {
+        $("#ID_htboiDuong").val('');
+        $("#HinhThuc").val('');
+        $("#MoTaHTBD").val('');
+        isEditMode = false; // Reset trạng thái
+    }
+    return {
+        LoadHinhThucBoiDuong,
+        SaveHinhThucBoiDuong,
+        DeleteHinhThucBoiDuong,
+        fnClearHinhThucBoiDuong
+    };
+}
+)();
+
+
